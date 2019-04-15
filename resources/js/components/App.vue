@@ -1,0 +1,34 @@
+<template>
+    <div class="background-color">
+        <div>
+            <navbar></navbar>
+        </div>
+
+        <div>
+            <sidebar></sidebar>
+        </div>
+
+        <div class="card-group" style="margin: 10px; padding-top:50px; padding-left:50px">
+            <div class="card">
+                <div class="card-body">
+                    <router-view></router-view>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+
+    import Navbar from './Navbar';
+    import Sidebar from './Sidebar';
+
+    export default {
+        el: '#app',
+
+        components: {
+            Navbar,
+            Sidebar
+        }
+    }
+</script>
