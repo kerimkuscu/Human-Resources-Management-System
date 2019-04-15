@@ -1,0 +1,50 @@
+.modal-full {
+  width: 90%;
+}
+
+.modal.docked {
+  background-color: rgba(0, 0, 0, .25);
+
+  .modal-dialog {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    height: 100vh;
+    width: 1000px;
+  }
+
+  .modal-content {
+    border-radius: 0;
+    height: 100vh;
+  }
+
+  .modal-footer {
+    bottom: 0;
+    right: 0;
+  }
+
+  .btn-close-modal {
+    background-color: #222;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: -1.8em;
+    top: 20px;
+  }
+}
+
+.modal.docked.docked-left .modal-dialog {
+  left: 0;
+}
+
+.modal.docked.docked-right .modal-dialog {
+  right: 0;
+}
+
+/**
+.modal-body.docked {
+  height: 100vh;
+  min-height: 100vh;
+}
+/**/
