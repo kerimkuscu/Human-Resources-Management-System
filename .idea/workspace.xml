@@ -1,86 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e29c2270-10c4-46d4-b95a-5f82a87b53f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.php_cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.php_cs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserLeaveController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserLeaveTypeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/UserRoleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/JsonMiddleware.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/AttendanceFormRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/EmployeeFormRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/LoginFormRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UserFormRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UserLeaveFormRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UserLeaveTypeFormRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/UserRoleFormRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/AttendanceResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/EmployeeResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/UserLeaveResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/UserLeaveTypeResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/UsersRoleResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Attendance.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Employee.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/UserLeave.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/UserLeaveType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/UserProfile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/UserRole.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Traits/BelongsToUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/jwt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2013_03_01_115755_create_user_role_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2018_12_19_170651_create_user_profiles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2018_12_19_173427_create_user_leaves_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_02_28_110535_create_user_leave_types_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_03_13_145230_create_employee_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_04_12_112233_create_attendance_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/svg/403.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/svg/404.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/svg/500.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/svg/503.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Navbar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/NotFound.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/mixins/country.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/mixins/nationality.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/AuthLogin.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/router/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceDeleteForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/AttendanceSettings.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/AttendanceCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/LeavesCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/PeoplesCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UsersCard.vue" afterDir="false" />
+    <list default="true" id="e29c2270-10c4-46d4-b95a-5f82a87b53f1" name="Default Changelist" comment="refactor: add user leave resource">
       <change afterPath="$PROJECT_DIR$/resources/js/views/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeDeleteForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeavesSettings.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesDeleteForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/PeoplesSettings.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersListDetails.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersRoleForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesDeleteForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersSettings.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/sass/_modals.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/sass/_required.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/sass/_select.scss" afterDir="false" />
@@ -95,63 +17,8 @@
       <change afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/Feature/Api/UserLeaveTest.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/support/helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/human-resources-management-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/human-resources-management-system.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/broadcasting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/hashing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/logging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/queue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/console.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CreatesApplication.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.php_cs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.php_cs.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,13 +43,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+            <state relative-caret-position="291">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="e#7#27#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Bur</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -200,6 +75,7 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Traits/BelongsToUser.php" />
         <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
       </list>
     </option>
@@ -445,10 +321,354 @@
       <workItem from="1553433170480" duration="454000" />
       <workItem from="1555329963469" duration="1371000" />
     </task>
+    <task id="LOCAL-00003" summary="refactor: add attendance controller">
+      <created>1555334632074</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334632074</updated>
+    </task>
+    <task id="LOCAL-00004" summary="refactor: add employee controller">
+      <created>1555334643868</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334643868</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor: add user leave controller">
+      <created>1555334656322</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334656322</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor: add user leave type controller">
+      <created>1555334665576</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334665576</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactor: add user role controller">
+      <created>1555334676143</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334676143</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor: add attendance form request">
+      <created>1555334694151</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334694151</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor: add employee form request">
+      <created>1555334703811</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334703811</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactor: add login form form request">
+      <created>1555334719183</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334719183</updated>
+    </task>
+    <task id="LOCAL-00011" summary="refactor: add user form form request">
+      <created>1555334731677</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334731677</updated>
+    </task>
+    <task id="LOCAL-00012" summary="refactor: add user leave form request">
+      <created>1555334742100</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334742100</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactor: add user leave type form request">
+      <created>1555334750252</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334750252</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactor: add user role form request">
+      <created>1555334759478</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334759478</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor: add attendance resource">
+      <created>1555334774732</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334774732</updated>
+    </task>
+    <task id="LOCAL-00016" summary="refactor: add employee resource">
+      <created>1555334783743</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334783743</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor: add user leave resource">
+      <created>1555334792991</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334792991</updated>
+    </task>
+    <task id="LOCAL-00018" summary="refactor: add user leave type resource">
+      <created>1555334802080</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334802080</updated>
+    </task>
+    <task id="LOCAL-00019" summary="refactor: add user resource">
+      <created>1555334811767</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334811767</updated>
+    </task>
+    <task id="LOCAL-00020" summary="refactor: add user role resource">
+      <created>1555334825746</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334825746</updated>
+    </task>
+    <task id="LOCAL-00021" summary="refactor: add attendance model">
+      <created>1555334839311</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334839311</updated>
+    </task>
+    <task id="LOCAL-00022" summary="refactor: add employee resource">
+      <created>1555334849991</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334849991</updated>
+    </task>
+    <task id="LOCAL-00023" summary="refactor: add user resource">
+      <created>1555334859613</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334859613</updated>
+    </task>
+    <task id="LOCAL-00024" summary="refactor: add user leave resource">
+      <created>1555334869719</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334869719</updated>
+    </task>
+    <task id="LOCAL-00025" summary="refactor: add user leave model">
+      <created>1555334912969</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334912969</updated>
+    </task>
+    <task id="LOCAL-00026" summary="refactor: add user leave type model">
+      <created>1555334928463</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334928463</updated>
+    </task>
+    <task id="LOCAL-00027" summary="refactor: add user model">
+      <created>1555334940468</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334940468</updated>
+    </task>
+    <task id="LOCAL-00028" summary="refactor: add user role model">
+      <created>1555334952360</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334952360</updated>
+    </task>
+    <task id="LOCAL-00029" summary="refactor: add relation for user">
+      <created>1555334987006</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1555334987006</updated>
+    </task>
+    <task id="LOCAL-00030" summary="refactor: using jwt for vue auth">
+      <created>1555335007502</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335007502</updated>
+    </task>
+    <task id="LOCAL-00031" summary="refactor: add user role migration">
+      <created>1555335020444</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335020444</updated>
+    </task>
+    <task id="LOCAL-00032" summary="refactor: add user profile migration">
+      <created>1555335032843</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335032843</updated>
+    </task>
+    <task id="LOCAL-00033" summary="refactor: add user leave migration">
+      <created>1555335042824</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335042824</updated>
+    </task>
+    <task id="LOCAL-00034" summary="refactor: add user leave type migration">
+      <created>1555335053567</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335053567</updated>
+    </task>
+    <task id="LOCAL-00035" summary="refactor: add employee migration">
+      <created>1555335063944</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335063944</updated>
+    </task>
+    <task id="LOCAL-00036" summary="refactor: add attendance migration">
+      <created>1555335073709</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335073709</updated>
+    </task>
+    <task id="LOCAL-00037" summary="refactor: add user">
+      <created>1555335099989</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335099989</updated>
+    </task>
+    <task id="LOCAL-00038" summary="refactor: update assets">
+      <created>1555335125973</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335125973</updated>
+    </task>
+    <task id="LOCAL-00039" summary="refactor: add navbar">
+      <created>1555335145545</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335145545</updated>
+    </task>
+    <task id="LOCAL-00040" summary="refactor: add sidebar">
+      <created>1555335158082</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335158082</updated>
+    </task>
+    <task id="LOCAL-00041" summary="refactor: add main page">
+      <created>1555335180794</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335180794</updated>
+    </task>
+    <task id="LOCAL-00042" summary="refactor: add page not found file">
+      <created>1555335193666</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335193667</updated>
+    </task>
+    <task id="LOCAL-00043" summary="refactor: add country and nationality mixin for employee form">
+      <created>1555335210264</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335210264</updated>
+    </task>
+    <task id="LOCAL-00044" summary="refactor: add login page using vue auth">
+      <created>1555335228638</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335228638</updated>
+    </task>
+    <task id="LOCAL-00045" summary="refactor: update assets">
+      <created>1555335249774</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335249774</updated>
+    </task>
+    <task id="LOCAL-00046" summary="refactor: add attendance files">
+      <created>1555335278013</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335278013</updated>
+    </task>
+    <task id="LOCAL-00047" summary="refactor: add leave settings files">
+      <created>1555335299458</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335299458</updated>
+    </task>
+    <task id="LOCAL-00048" summary="refactor: add cards in dashboard">
+      <created>1555335336311</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335336311</updated>
+    </task>
+    <task id="LOCAL-00049" summary="refactor: add people settings files">
+      <created>1555335355052</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335355052</updated>
+    </task>
+    <task id="LOCAL-00050" summary="refactor: add user settings files">
+      <created>1555335370328</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335370329</updated>
+    </task>
+    <task id="LOCAL-00051" summary="refactor: add home file for cards">
+      <created>1555335390127</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335390127</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6228000" />
+    <option name="totallyTimeSpent" value="7201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -479,6 +699,60 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor: add user leave type model" />
+    <MESSAGE value="refactor: add user model" />
+    <MESSAGE value="refactor: add user role model" />
+    <MESSAGE value="refactor: add relation for user" />
+    <MESSAGE value="refactor: using jwt for vue auth" />
+    <MESSAGE value="refactor: add user role migration" />
+    <MESSAGE value="refactor: add user profile migration" />
+    <MESSAGE value="refactor: add user leave migration" />
+    <MESSAGE value="refactor: add user leave type migration" />
+    <MESSAGE value="refactor: add employee migration" />
+    <MESSAGE value="refactor: add attendance migration" />
+    <MESSAGE value="refactor: add user" />
+    <MESSAGE value="refactor: add navbar" />
+    <MESSAGE value="refactor: add sidebar" />
+    <MESSAGE value="refactor: add main page" />
+    <MESSAGE value="refactor: add page not found file" />
+    <MESSAGE value="refactor: add country and nationality mixin for employee form" />
+    <MESSAGE value="refactor: add login page using vue auth" />
+    <MESSAGE value="refactor: update assets" />
+    <MESSAGE value="refactor: add attendance files" />
+    <MESSAGE value="refactor: add leave settings files" />
+    <MESSAGE value="refactor: add cards in dashboard" />
+    <MESSAGE value="refactor: add people settings files" />
+    <MESSAGE value="refactor: add user settings files" />
+    <MESSAGE value="refactor: add home file for cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: add home file for cards" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
@@ -542,8 +816,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        <state relative-caret-position="291">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#7#27#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

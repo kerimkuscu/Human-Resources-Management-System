@@ -10718,23 +10718,6 @@ label.required:after {
   display: inline;
 }
 
-.v-select .dropdown-toggle {
-  padding: 0 !important;
-}
-
-.v-select .vs__actions {
-  padding: 0 14px 3px 0 !important;
-}
-
-.dropdown-toggle::after {
-  content: none !important;
-}
-
-.v-select input[type=search],
-.v-select input[type=search]:focus {
-  margin: 0 0 0 !important;
-}
-
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
