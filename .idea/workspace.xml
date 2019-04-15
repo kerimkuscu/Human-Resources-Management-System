@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e29c2270-10c4-46d4-b95a-5f82a87b53f1" name="Default Changelist" comment="refactor: add user leave resource">
-      <change afterPath="$PROJECT_DIR$/resources/js/views/Home.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_modals.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_required.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_select.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_sidebar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_theme.scss" afterDir="false" />
+    <list default="true" id="e29c2270-10c4-46d4-b95a-5f82a87b53f1" name="Default Changelist" comment="refactor: change select">
       <change afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storage/debugbar/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/Feature/Api/UserLeaveTest.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/support/helpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.php_cs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.php_cs.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,29 +22,7 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#7#27#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -71,12 +41,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Traits/BelongsToUser.php" />
         <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/sass/app.scss" />
       </list>
     </option>
   </component>
@@ -238,6 +208,17 @@
               <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
               <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="sass" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -320,48 +301,6 @@
       <workItem from="1552082095629" duration="1407000" />
       <workItem from="1553433170480" duration="454000" />
       <workItem from="1555329963469" duration="1371000" />
-    </task>
-    <task id="LOCAL-00003" summary="refactor: add attendance controller">
-      <created>1555334632074</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334632074</updated>
-    </task>
-    <task id="LOCAL-00004" summary="refactor: add employee controller">
-      <created>1555334643868</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334643868</updated>
-    </task>
-    <task id="LOCAL-00005" summary="refactor: add user leave controller">
-      <created>1555334656322</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334656322</updated>
-    </task>
-    <task id="LOCAL-00006" summary="refactor: add user leave type controller">
-      <created>1555334665576</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334665576</updated>
-    </task>
-    <task id="LOCAL-00007" summary="refactor: add user role controller">
-      <created>1555334676143</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334676143</updated>
-    </task>
-    <task id="LOCAL-00008" summary="refactor: add attendance form request">
-      <created>1555334694151</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334694151</updated>
     </task>
     <task id="LOCAL-00009" summary="refactor: add employee form request">
       <created>1555334703811</created>
@@ -664,15 +603,56 @@
       <option name="project" value="LOCAL" />
       <updated>1555335390127</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="refactor: change bootstrap modal css">
+      <created>1555335413585</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335413585</updated>
+    </task>
+    <task id="LOCAL-00053" summary="refactor: add required css for required input">
+      <created>1555335429981</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335429981</updated>
+    </task>
+    <task id="LOCAL-00054" summary="refactor: update assets">
+      <created>1555335580701</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335580701</updated>
+    </task>
+    <task id="LOCAL-00055" summary="refactor: change sidebar menu css">
+      <created>1555335599570</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335599570</updated>
+    </task>
+    <task id="LOCAL-00056" summary="refactor: add new css style for dark template">
+      <created>1555335628097</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335628097</updated>
+    </task>
+    <task id="LOCAL-00057" summary="refactor: delete vue select scss file">
+      <created>1555335648763</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1555335648763</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7201000" />
+    <option name="totallyTimeSpent" value="8058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49268293" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -727,11 +707,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: add user leave type model" />
-    <MESSAGE value="refactor: add user model" />
-    <MESSAGE value="refactor: add user role model" />
-    <MESSAGE value="refactor: add relation for user" />
-    <MESSAGE value="refactor: using jwt for vue auth" />
     <MESSAGE value="refactor: add user role migration" />
     <MESSAGE value="refactor: add user profile migration" />
     <MESSAGE value="refactor: add user leave migration" />
@@ -745,14 +720,19 @@
     <MESSAGE value="refactor: add page not found file" />
     <MESSAGE value="refactor: add country and nationality mixin for employee form" />
     <MESSAGE value="refactor: add login page using vue auth" />
-    <MESSAGE value="refactor: update assets" />
     <MESSAGE value="refactor: add attendance files" />
     <MESSAGE value="refactor: add leave settings files" />
     <MESSAGE value="refactor: add cards in dashboard" />
     <MESSAGE value="refactor: add people settings files" />
     <MESSAGE value="refactor: add user settings files" />
     <MESSAGE value="refactor: add home file for cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: add home file for cards" />
+    <MESSAGE value="refactor: change bootstrap modal css" />
+    <MESSAGE value="refactor: add required css for required input" />
+    <MESSAGE value="refactor: update assets" />
+    <MESSAGE value="refactor: change sidebar menu css" />
+    <MESSAGE value="refactor: add new css style for dark template" />
+    <MESSAGE value="refactor: delete vue select scss file" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: delete vue select scss file" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
@@ -786,13 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -817,10 +790,17 @@
     <entry file="file://$PROJECT_DIR$/database/seeds/UsersTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#7#27#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sass/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
