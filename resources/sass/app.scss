@@ -7,6 +7,15 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+//Modal
+@import "modals";
+//Sidebar
+@import "sidebar";
+//Required
+@import "required";
+//Vue Select
+@import "select";
+
 
 .navbar-laravel {
   background-color: #fff;

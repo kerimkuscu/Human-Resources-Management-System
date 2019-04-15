@@ -1,7 +1,5 @@
 <?php
 
-use App\User;
-use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
 /*
@@ -15,12 +13,25 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(\App\Models\User::class, function(Faker $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
+        'name'              => $faker->name,
+        'email'             => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-        'remember_token' => Str::random(10),
+        'password'          => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
+        'remember_token'    => str_random(10),
+    ];
+});
+
+$factory->define(\App\Models\UserLeave::class, function(Faker $faker) {
+
+    /** @var \Illuminate\Support\Carbon $date */
+    $date = $faker->date();
+
+    return [
+        'user_id'     => create(\App\Models\User::class),
+        'started_at'  => $date,
+        'ended_at'    => \Illuminate\Support\Carbon::createFromFormat('Y-m-d', $date)->addDays(15)->format('Y-m-d'),
+        'description' => $faker->paragraph,
     ];
 });

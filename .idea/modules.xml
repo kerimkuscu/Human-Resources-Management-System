@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/human-resources-management-system.iml" filepath="$PROJECT_DIR$/.idea/human-resources-management-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/hr.iml" filepath="$PROJECT_DIR$/.idea/hr.iml" />
     </modules>
   </component>
 </project>
