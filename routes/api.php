@@ -12,6 +12,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::group([
     'middleware' => 'api',
     'namespace'  => 'Auth',
@@ -57,7 +59,6 @@ Route::group(['middleware' => ['auth:api', 'json']], function() {
     Route::delete('users/employees/{id}', 'EmployeeController@destroy');
     Route::get('users/employees-title', 'EmployeeController@getTitles');
 
-
     //Attendance
     Route::get('users/attendance', 'AttendanceController@index');
     Route::get('users/attendance/{id}', 'AttendanceController@show');
@@ -65,8 +66,6 @@ Route::group(['middleware' => ['auth:api', 'json']], function() {
     Route::put('users/attendance/{id}', 'AttendanceController@update');
     Route::delete('users/attendance/{id}', 'AttendanceController@destroy');
     Route::get('users/attendance-title', 'AttendanceController@getTitles');
-
-
 
     //Users
     Route::get('users/', 'UserController@index');
