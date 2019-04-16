@@ -2,9 +2,8 @@
 
 namespace App\Models;
 
-use Eloquent;
+use Barryvdh\LaravelIdeHelper\Eloquent;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Carbon;
 
@@ -35,11 +34,14 @@ use Illuminate\Support\Carbon;
  * @property string      $department
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|Employee newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Employee newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Employee query()
  * @mixin Eloquent
+ *
  * @property string|null $deleted_at
+ *
  * @method static bool|null forceDelete()
  * @method static Builder|Employee onlyTrashed()
  * @method static bool|null restore()
@@ -73,8 +75,6 @@ use Illuminate\Support\Carbon;
  */
 class Employee extends Model
 {
-    use SoftDeletes;
-
     /**
      * @var array
      */
