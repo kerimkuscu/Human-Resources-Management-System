@@ -75,7 +75,6 @@ class EmployeeController extends Controller
     public function getTitles()
     {
         $data = ['name'              => 'Name',
-                 'nationality'       => 'Nationality',
                  'birthday'          => 'Birthday',
                  'gender'            => 'Gender',
                  'employment_status' => 'Employment Status',
