@@ -15,7 +15,7 @@ class CreateEmployeeTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->char('nationality', 2)->nullable();
-            $table->dateTime('birthday');
+            $table->date('birthday');
             $table->string('gender')->nullable();
             $table->string('marital_status')->nullable();
             $table->string('driver_license')->nullable();
@@ -32,9 +32,8 @@ class CreateEmployeeTable extends Migration
             $table->string('emergency_contact');
             $table->string('work_email')->unique()->nullable();
             $table->string('private_email')->unique()->nullable();
-            $table->dateTime('joined_date');
+            $table->date('joined_date');
             $table->string('department');
-            $table->softDeletes();
             $table->timestamps();
         });
     }
