@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserFormRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
-use Auth;
+use Tymon\JWTAuth\Contracts\Providers\Auth;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class UserController extends Controller
