@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Eloquent;
+use Barryvdh\LaravelIdeHelper\Eloquent;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Query\Builder;
 
@@ -40,11 +41,21 @@ class Attendance extends Model
      * @var array
      */
     protected $fillable = ['employee_id',
-                           'time_in_date',
-                           'time_in_time_hour',
-                           'time_in_time_minute',
-                           'time_out_date',
-                           'time_out_time_hour',
-                           'time_out_time_minute',
-                           'note', ];
+        'time_in_date',
+        'time_in_time_hour',
+        'time_in_time_minute',
+        'time_out_date',
+        'time_out_time_hour',
+        'time_out_time_minute',
+        'note', ];
+
+    /**
+     * Get the employee
+     *
+     * @return HasOne
+     */
+    public function employee()
+    {
+        return $this->hasOne(Employee::class);
+    }
 }
