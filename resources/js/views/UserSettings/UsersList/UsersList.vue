@@ -45,6 +45,7 @@
                         props: {
                             type: 'primary',
                             icon: 'fas fa-user-lock',
+                            size: 'mini',
                         },
                         handler: (row) => {
                             self.$router.push({name: 'user.user-role-form', params: {id: row.id}})
