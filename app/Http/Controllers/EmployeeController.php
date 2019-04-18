@@ -75,12 +75,12 @@ class EmployeeController extends Controller
     public function getTitles()
     {
         $data = ['name'              => 'Name',
-                 'birthday'          => 'Birthday',
-                 'gender'            => 'Gender',
-                 'employment_status' => 'Employment Status',
-                 'job_title'         => 'Job Title',
-                 'joined_date'       => 'Joined Date',
-                 'department'        => 'Department', ];
+            'birthday'          => 'Birthday',
+            'gender'            => 'Gender',
+            'employment_status' => 'Employment Status',
+            'job_title'         => 'Job Title',
+            'joined_date'       => 'Joined Date',
+            'department'        => 'Department', ];
 
         $data = collect($data)->map(function($item, $key) {
             return ['prop' => $key, 'label' => $item];
