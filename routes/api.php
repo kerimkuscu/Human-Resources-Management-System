@@ -26,7 +26,6 @@ Route::group([
     Route::post('register', 'RegisterController@register');
 });
 
-
 Route::group(['middleware' => ['auth:api', 'json']], function() {
     Route::get('me', 'UserController@me');
 
