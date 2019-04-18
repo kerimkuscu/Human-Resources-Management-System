@@ -6,7 +6,7 @@ import UsersRolesList from '../views/UserSettings/UsersRoles/UsersRolesList'
 import UsersRolesForm from '../views/UserSettings/UsersRoles/UsersRolesForm'
 import UsersRolesDeleteForm from '../views/UserSettings/UsersRoles/UsersRolesDeleteForm'
 import UsersIndex from '../views/UserSettings/UsersList/UsersList'
-import UsersDetails from '../views/UserSettings/UsersList/UsersListDetails'
+import UsersListDetails from '../views/UserSettings/UsersList/UsersListDetails'
 import UsersRoleForm from '../views/UserSettings/UsersList/UsersRoleForm'
 //Leaves Settings
 import LeavesSettings from '../views/LeaveSettings/LeavesSettings'
@@ -26,6 +26,7 @@ import PeoplesSettings from '../views/PeopleSettings/PeoplesSettings'
 import EmployeesList from '../views/PeopleSettings/Employees/EmployeesList'
 import EmployeesForm from '../views/PeopleSettings/Employees/EmployeesForm'
 import EmployeesDeleteForm from '../views/PeopleSettings/Employees/EmployeesDeleteForm'
+import EmployeesListDetails from "../views/PeopleSettings/Employees/EmployeesListDetails";
 //Attendance
 import AttendanceSettings from '../views/AttendanceSettings/AttendanceSettings'
 import AttendanceList from '../views/AttendanceSettings/Attendance/AttendanceList'
@@ -66,7 +67,7 @@ export default [
                     {
                         path: ':id',
                         name: 'user.show',
-                        component: UsersDetails,
+                        component: UsersListDetails,
                     },
                     {
                         path: ':id/role',
@@ -162,6 +163,11 @@ export default [
                         name: 'peoples.employees-form',
                         component: EmployeesForm,
 
+                    },
+                    {
+                        path: ':id',
+                        name: 'peoples.employees-show',
+                        component: EmployeesListDetails,
                     },
                     {
                         path: ':id/edit',
