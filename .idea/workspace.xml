@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e29c2270-10c4-46d4-b95a-5f82a87b53f1" name="Default Changelist" comment="refactor: update assets">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesListDetails.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.php_cs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.php_cs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_03_13_145230_create_employee_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_03_13_145230_create_employee_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,36 +19,87 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2013_03_01_115755_create_user_role_table.php">
+        <entry file="file://$PROJECT_DIR$/resources/js/router/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="187">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+              <folding>
+                <element signature="e#1214#1283#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_13_145230_create_employee_table.php">
+        <entry file="file://$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-              <folding>
-                <element signature="e#7#52#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="520">
+              <caret line="100" column="9" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="118" column="9" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Models/Employee.php">
+        <entry file="file://$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesListDetails.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="76" column="1" lean-forward="true" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
-              <folding>
-                <element signature="e#30#69#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="367">
+              <caret line="147" column="41" lean-forward="true" selection-start-line="147" selection-start-column="41" selection-end-line="147" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -79,16 +128,26 @@
         <option value="$PROJECT_DIR$/app/Traits/BelongsToUser.php" />
         <option value="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" />
         <option value="$PROJECT_DIR$/resources/sass/app.scss" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserLeaveTypeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserLeaveController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserRoleController.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/AttendanceResource.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_03_13_145230_create_employee_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" />
         <option value="$PROJECT_DIR$/app/Models/Employee.php" />
+        <option value="$PROJECT_DIR$/app/Models/Attendance.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_03_13_145230_create_employee_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_04_12_112233_create_attendance_table.php" />
+        <option value="$PROJECT_DIR$/resources/js/router/routes.js" />
+        <option value="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" />
+        <option value="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" />
+        <option value="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue" />
+        <option value="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" />
+        <option value="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" />
+        <option value="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesListDetails.vue" />
       </list>
     </option>
   </component>
@@ -229,13 +288,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
     </include_path>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
@@ -258,35 +310,6 @@
             <path>
               <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
               <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
-              <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -294,6 +317,30 @@
               <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="PeopleSettings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="human-resources-management-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="human-resources-management-system" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="PeopleSettings" type="462c0819:PsiDirectoryNode" />
+              <item name="Employees" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -376,119 +423,8 @@
       <workItem from="1552082095629" duration="1407000" />
       <workItem from="1553433170480" duration="454000" />
       <workItem from="1555329963469" duration="1371000" />
-      <workItem from="1555448192727" duration="388000" />
-    </task>
-    <task id="LOCAL-00015" summary="refactor: add attendance resource">
-      <created>1555334774732</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334774732</updated>
-    </task>
-    <task id="LOCAL-00016" summary="refactor: add employee resource">
-      <created>1555334783743</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334783743</updated>
-    </task>
-    <task id="LOCAL-00017" summary="refactor: add user leave resource">
-      <created>1555334792991</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334792991</updated>
-    </task>
-    <task id="LOCAL-00018" summary="refactor: add user leave type resource">
-      <created>1555334802080</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334802080</updated>
-    </task>
-    <task id="LOCAL-00019" summary="refactor: add user resource">
-      <created>1555334811767</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334811767</updated>
-    </task>
-    <task id="LOCAL-00020" summary="refactor: add user role resource">
-      <created>1555334825746</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334825746</updated>
-    </task>
-    <task id="LOCAL-00021" summary="refactor: add attendance model">
-      <created>1555334839311</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334839311</updated>
-    </task>
-    <task id="LOCAL-00022" summary="refactor: add employee resource">
-      <created>1555334849991</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334849991</updated>
-    </task>
-    <task id="LOCAL-00023" summary="refactor: add user resource">
-      <created>1555334859613</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334859613</updated>
-    </task>
-    <task id="LOCAL-00024" summary="refactor: add user leave resource">
-      <created>1555334869719</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334869719</updated>
-    </task>
-    <task id="LOCAL-00025" summary="refactor: add user leave model">
-      <created>1555334912969</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334912969</updated>
-    </task>
-    <task id="LOCAL-00026" summary="refactor: add user leave type model">
-      <created>1555334928463</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334928463</updated>
-    </task>
-    <task id="LOCAL-00027" summary="refactor: add user model">
-      <created>1555334940468</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334940468</updated>
-    </task>
-    <task id="LOCAL-00028" summary="refactor: add user role model">
-      <created>1555334952360</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334952360</updated>
-    </task>
-    <task id="LOCAL-00029" summary="refactor: add relation for user">
-      <created>1555334987006</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1555334987006</updated>
-    </task>
-    <task id="LOCAL-00030" summary="refactor: using jwt for vue auth">
-      <created>1555335007502</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1555335007502</updated>
+      <workItem from="1555448192727" duration="489000" />
+      <workItem from="1555617711262" duration="673000" />
     </task>
     <task id="LOCAL-00031" summary="refactor: add user role migration">
       <created>1555335020444</created>
@@ -721,19 +657,131 @@
       <option name="project" value="LOCAL" />
       <updated>1555448581845</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="refactor: add path">
+      <created>1555448598612</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1555448598612</updated>
+    </task>
+    <task id="LOCAL-00065" summary="refactor: add eloquent path and delete soft delete method">
+      <created>1555448624449</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1555448624449</updated>
+    </task>
+    <task id="LOCAL-00066" summary="refactor: change data type and delete soft delete">
+      <created>1555448639475</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1555448639476</updated>
+    </task>
+    <task id="LOCAL-00067" summary="refactor: add route path">
+      <created>1555448653988</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1555448653988</updated>
+    </task>
+    <task id="LOCAL-00068" summary="refactor: update assets">
+      <created>1555448658583</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1555448658583</updated>
+    </task>
+    <task id="LOCAL-00069" summary="refactor: add new datatable title">
+      <created>1555618223868</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1555618223869</updated>
+    </task>
+    <task id="LOCAL-00070" summary="style: style fixed">
+      <created>1555618249083</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1555618249083</updated>
+    </task>
+    <task id="LOCAL-00071" summary="refactor: add employees relation">
+      <created>1555618270742</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1555618270742</updated>
+    </task>
+    <task id="LOCAL-00072" summary="style: style fixed">
+      <created>1555618283218</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1555618283218</updated>
+    </task>
+    <task id="LOCAL-00073" summary="refactor: change data type">
+      <created>1555618296164</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1555618296164</updated>
+    </task>
+    <task id="LOCAL-00074" summary="refactor: update assets">
+      <created>1555618321813</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1555618321813</updated>
+    </task>
+    <task id="LOCAL-00075" summary="refactor: change users details file name and add employees details list">
+      <created>1555618354384</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1555618354384</updated>
+    </task>
+    <task id="LOCAL-00076" summary="refactor: change button size">
+      <created>1555618368070</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1555618368070</updated>
+    </task>
+    <task id="LOCAL-00077" summary="refactor: change button size">
+      <created>1555618377732</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1555618377732</updated>
+    </task>
+    <task id="LOCAL-00078" summary="refactor: change button size">
+      <created>1555618386826</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1555618386826</updated>
+    </task>
+    <task id="LOCAL-00079" summary="refactor: change button size">
+      <created>1555618394690</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1555618394690</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8714000" />
+    <option name="totallyTimeSpent" value="9488000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49268293" visible="true" weight="0.24962178" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49099836" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.50731707" side_tool="true" weight="0.24962178" />
+      <window_info id="npm" order="2" sideWeight="0.5090016" side_tool="true" visible="true" weight="0.25340393" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -798,16 +846,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: add employee migration" />
-    <MESSAGE value="refactor: add attendance migration" />
-    <MESSAGE value="refactor: add user" />
-    <MESSAGE value="refactor: add navbar" />
-    <MESSAGE value="refactor: add sidebar" />
-    <MESSAGE value="refactor: add main page" />
-    <MESSAGE value="refactor: add page not found file" />
-    <MESSAGE value="refactor: add country and nationality mixin for employee form" />
-    <MESSAGE value="refactor: add login page using vue auth" />
-    <MESSAGE value="refactor: add attendance files" />
     <MESSAGE value="refactor: add leave settings files" />
     <MESSAGE value="refactor: add cards in dashboard" />
     <MESSAGE value="refactor: add people settings files" />
@@ -821,9 +859,19 @@
     <MESSAGE value="refactor: laravel auth file" />
     <MESSAGE value="refactor: index page" />
     <MESSAGE value="refactor: add user leave api test" />
-    <MESSAGE value="refactor: update assets" />
     <MESSAGE value="refactor: delete nationality in data table title" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: delete nationality in data table title" />
+    <MESSAGE value="refactor: add path" />
+    <MESSAGE value="refactor: add eloquent path and delete soft delete method" />
+    <MESSAGE value="refactor: change data type and delete soft delete" />
+    <MESSAGE value="refactor: add route path" />
+    <MESSAGE value="refactor: add new datatable title" />
+    <MESSAGE value="refactor: add employees relation" />
+    <MESSAGE value="style: style fixed" />
+    <MESSAGE value="refactor: change data type" />
+    <MESSAGE value="refactor: update assets" />
+    <MESSAGE value="refactor: change users details file name and add employees details list" />
+    <MESSAGE value="refactor: change button size" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: change button size" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
@@ -884,36 +932,6 @@
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/js/router/routes.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-          <folding>
-            <element signature="e#8#390#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-          <folding>
-            <element signature="e#40#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-882">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -952,13 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Resources/EmployeeResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2013_03_01_115755_create_user_role_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -966,23 +977,124 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="75" column="31" lean-forward="true" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/EmployeeResource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Attendance.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding>
+            <element signature="e#30#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_03_13_145230_create_employee_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+        <state relative-caret-position="112">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
           <folding>
             <element signature="e#7#52#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_12_112233_create_attendance_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="73" column="7" lean-forward="true" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Employee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="76" column="1" lean-forward="true" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+        <state relative-caret-position="1513">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/router/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding>
-            <element signature="e#30#69#0#PHP" expanded="true" />
+            <element signature="e#1214#1283#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="100" column="9" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="109" column="9" selection-start-line="109" selection-start-column="9" selection-end-line="109" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="118" column="9" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="98" column="9" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesListDetails.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="147" column="41" lean-forward="true" selection-start-line="147" selection-start-column="41" selection-end-line="147" selection-end-column="41" />
         </state>
       </provider>
     </entry>
