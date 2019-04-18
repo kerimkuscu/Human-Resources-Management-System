@@ -47,6 +47,7 @@
                     props: {
                         type: 'primary',
                         icon: 'fas fa-edit',
+                        size: 'mini',
                     },
                     handler: (row) => {
                         self.$router.push({name: 'leaves.leave-type-edit', params: {id: row.id}})
@@ -54,7 +55,8 @@
                 }, {
                     props: {
                         type: 'danger',
-                        icon: 'fas fa-trash'
+                        icon: 'fas fa-trash',
+                        size: 'mini',
                     },
                     handler: (row) => {
                         self.$router.push({name: 'leaves.leave-type-delete', params: {id: row.id}})
