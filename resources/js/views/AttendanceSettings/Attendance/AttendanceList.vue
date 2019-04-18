@@ -47,6 +47,7 @@
                     props: {
                         type: 'primary',
                         icon: 'fas fa-edit',
+                        size: 'mini',
                     },
                     handler: (row) => {
                         self.$router.push({name: 'attendance.attendance-edit', params: {id: row.id}})
@@ -55,6 +56,7 @@
                     props: {
                         type: 'danger',
                         icon: 'fas fa-trash',
+                        size: 'mini',
                     },
                     handler: (row) => {
                         self.$router.push({name: 'attendance.attendance-delete', params: {id: row.id}})
