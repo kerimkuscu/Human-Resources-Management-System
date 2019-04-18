@@ -49,7 +49,8 @@
                     buttons: [{
                         props: {
                             type: 'danger',
-                            icon: 'fas fa-trash'
+                            icon: 'fas fa-trash',
+                            size: 'mini',
                         },
                         handler: (row) => {
                             self.$router.push({name: 'user.role-delete', params: {id: row.id}})
