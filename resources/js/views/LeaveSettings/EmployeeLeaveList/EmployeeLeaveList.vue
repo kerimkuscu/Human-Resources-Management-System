@@ -47,6 +47,7 @@
                     props: {
                         type: 'primary',
                         icon: 'fas fa-edit',
+                        size: 'mini',
                     },
                     handler: (row) => {
                         self.$router.push({name: 'leaves.edit', params: {id: row.id}})
