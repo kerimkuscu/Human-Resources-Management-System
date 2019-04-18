@@ -14,15 +14,17 @@ class CreateAttendanceTable extends Migration
         Schema::create('attendances', function(Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('employee_id')->nullable();
-            $table->dateTime('time_in_date');
+            $table->date('time_in_date');
             $table->unsignedInteger('time_in_time_hour');
             $table->unsignedInteger('time_in_time_minute');
-            $table->dateTime('time_out_date');
+            $table->date('time_out_date');
             $table->unsignedInteger('time_out_time_hour');
             $table->unsignedInteger('time_out_time_minute');
             $table->text('note')->nullable();
             $table->softDeletes();
             $table->timestamps();
+
+            $table->foreign('employee_id')->references('id')->on('employees');
         });
     }
 
