@@ -42,18 +42,20 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  * @mixins \Eloquent
  * @property string|null                                                $deleted_at
- * @property-read UserProfile            $profile
+ * @property-read UserProfile                                           $profile
  * @method static bool|null forceDelete()
  * @method static Builder|User onlyTrashed()
  * @method static bool|null restore()
  * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedAt($value)
  * @method static Builder|User withTrashed()
  * @method static Builder|User withoutTrashed()
- * @property-read Collection|UserLeave[] $leaves
+ * @property-read Collection|UserLeave[]                                $leaves
  * @mixin Eloquent
- * @property int|null                    $role_id
- * @property-read Collection|UserRole[]  $roles
+ * @property int|null                                                   $role_id
+ * @property-read Collection|UserRole[]                                 $roles
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRoleId($value)
+ * @method hasOne(string $class)
+ * @method hasMany(string $class)
  */
 class User extends Authenticatable implements JWTSubject
 {
