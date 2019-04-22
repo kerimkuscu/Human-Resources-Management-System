@@ -3,7 +3,7 @@
         <h4 class="card-title">Home</h4>
         <hr>
 
-        <div class="row">
+        <div class="row" style="margin-bottom: 15px">
             <div class="col-3">
                 <peoples-card></peoples-card>
             </div>
@@ -20,6 +20,16 @@
                 <attendance-card></attendance-card>
             </div>
         </div>
+
+        <div class="row" style="margin-bottom: 15px">
+            <div class="col-3">
+                <user-roles-card></user-roles-card>
+            </div>
+
+            <div class="col-3">
+                <project-card></project-card>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -28,13 +38,18 @@
     import UsersCard from './Dashboard/Cards/UsersCard';
     import LeavesCard from './Dashboard/Cards/LeavesCard';
     import AttendanceCard from './Dashboard/Cards/AttendanceCard';
+    import UserRolesCard from './Dashboard/Cards/UserRolesCard';
+    import ProjectCard from './Dashboard/Cards/ProjectCard';
 
     export default {
         components: {
             PeoplesCard,
             UsersCard,
             LeavesCard,
-            AttendanceCard
+            AttendanceCard,
+            UserRolesCard,
+            ProjectCard
+
         }
     }
 </script>
