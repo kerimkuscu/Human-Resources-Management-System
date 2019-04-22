@@ -3,7 +3,6 @@ import Home from '../views/Home'
 //User Settings
 import UsersSettings from '../views/UserSettings/UsersSettings'
 import UsersRolesList from '../views/UserSettings/UsersRoles/UsersRolesList'
-import UsersRolesForm from '../views/UserSettings/UsersRoles/UsersRolesForm'
 import UsersRolesDeleteForm from '../views/UserSettings/UsersRoles/UsersRolesDeleteForm'
 import UsersIndex from '../views/UserSettings/UsersList/UsersList'
 import UsersListDetails from '../views/UserSettings/UsersList/UsersListDetails'
@@ -32,6 +31,15 @@ import AttendanceSettings from '../views/AttendanceSettings/AttendanceSettings'
 import AttendanceList from '../views/AttendanceSettings/Attendance/AttendanceList'
 import AttendanceForm from '../views/AttendanceSettings/Attendance/AttendanceForm'
 import AttendanceDeleteForm from '../views/AttendanceSettings/Attendance/AttendanceDeleteForm'
+//Project
+import ProjectSettings from '../views/ProjectSettings/ProjectSettings'
+import ProjectList from '../views/ProjectSettings/Project/ProjectList'
+import ProjectForm from '../views/ProjectSettings/Project/ProjectForm'
+import ProjectDeleteForm from '../views/ProjectSettings/Project/ProjectDeleteForm'
+//Documentation
+import DocumentationList from '../views/ProjectSettings/Documentation/DocumentationList'
+import DocumentationForm from '../views/ProjectSettings/Documentation/DocumentationForm'
+import DocumentationDeleteForm from '../views/ProjectSettings/Documentation/DocumentationDeleteForm'
 
 
 export default [
@@ -81,11 +89,6 @@ export default [
                 name: 'user.role',
                 component: UsersRolesList,
                 children: [
-                    {
-                        path: 'create',
-                        name: 'user.role-form',
-                        component: UsersRolesForm
-                    },
                     {
                         path: ':id/delete',
                         name: 'user.role-delete',
@@ -211,6 +214,62 @@ export default [
                         path: ':id/delete',
                         name: 'attendance.attendance-delete',
                         component: AttendanceDeleteForm,
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        path: '/project/',
+        name: 'project',
+        component: ProjectSettings,
+        meta: {
+            auth: true
+        },
+        children: [
+            {
+                path: 'project/',
+                name: 'project.project-list',
+                component: ProjectList,
+                children: [
+                    {
+                        path: 'create',
+                        name: 'project.project-form',
+                        component: ProjectForm,
+
+                    },
+                    {
+                        path: ':id/edit',
+                        name: 'project.project-edit',
+                        component: ProjectForm,
+                    },
+                    {
+                        path: ':id/delete',
+                        name: 'project.project-delete',
+                        component: ProjectDeleteForm,
+                    }
+                ]
+            },
+            {
+                path: 'documentation/',
+                name: 'project.documentation-list',
+                component: DocumentationList,
+                children: [
+                    {
+                        path: 'create',
+                        name: 'project.documentation-form',
+                        component: DocumentationForm,
+
+                    },
+                    {
+                        path: ':id/edit',
+                        name: 'project.documentation-edit',
+                        component: DocumentationForm,
+                    },
+                    {
+                        path: ':id/delete',
+                        name: 'project.documentation-delete',
+                        component: DocumentationDeleteForm,
                     }
                 ]
             },
