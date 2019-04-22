@@ -2,8 +2,8 @@
     <div>
         <div class="card text-center card-border">
             <div class="card-body">
-                <h5 class="card-title">Attendance</h5>
-                <p class="card-text">0 Entries Last Week</p>
+                <h5 class="card-title title-color"><i class="far fa-clock"></i> Attendance</h5>
+                <h4 class="card-text">{{ items.length }} Entries Last Week</h4>
             </div>
         </div>
         <div class="card-footer text-center card-border" style="border-top:0">
@@ -11,3 +11,28 @@
         </div>
     </div>
 </template>
+
+<script>
+    export default {
+        data: () => ({
+            items: [],
+        }),
+
+        methods: {
+            allAttendance() {
+                this.$http.get('/api/users/attendance')
+                    .then(response => {
+                        this.items = response.data.data;
+                    }).catch(error => {
+                    this.error = error.response.data.message || error.message;
+                }).finally(() => {
+                    this.loading = false;
+                })
+            }
+        },
+
+        created() {
+            this.allAttendance();
+        }
+    }
+</script>
