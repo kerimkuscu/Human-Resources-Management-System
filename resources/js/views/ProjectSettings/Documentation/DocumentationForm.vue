@@ -4,34 +4,29 @@
             <form @submit.prevent="submit" autocomplete="off">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Users Role Form</h5>
+                        <h5 class="modal-title">Documentation Form</h5>
 
                         <button @click="cancelForm" type="button" class="close" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
 
-                    <div class="modal-body">
+                    <div class="modal-body" style="overflow: auto">
                         <div>
 
                             <div class="loading" v-if="loading">
                                 Loading...
                             </div>
 
-                            <div class="form-group row">
-                                <label class="col-3 col-form-label required" for="users-role">Users Role</label>
-                                <div class="col-9">
-                                    <input class="form-control" :class="{'is-invalid': form.errors.has('users_role')}" type="text" id="users-role" v-model="form.users_role" placeholder="Users Role">
-                                    <span class="invalid-feedback">{{ form.errors.first('users_role') }}</span>
-                                </div>
-                            </div>
+
+
                         </div>
                     </div>
 
                     <div class="modal-footer">
                         <div class="float-right">
-                            <button type="submit" class="btn btn-outline-secondary" @click="cancelForm">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="submit" class="btn btn-outline-secondary" @click="cancelForm"><i class="fas fa-times"></i> Cancel</button>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
                         </div>
                     </div>
                 </div>
@@ -48,16 +43,33 @@
 
         data: () => ({
             loading: false,
+            editingId: false,
 
             form: new Form({
-               users_role: '',
+
             })
         }),
 
+        mounted() {
+            if (this.$route.params.id) {
+                this.editingId = this.$route.params.id;
+
+                this.fetch(this.editingId);
+            }
+        },
+
         methods: {
+            async fetch(id) {
+                const response = await this.$http.get('/api/users/documentation/' + id);
+
+                this.form.populate(response.data.data);
+            },
 
             async submit() {
-                this.form.post('/api/users/roles');
+
+                const response = this.editingId
+                    ? await this.form.put('/api/users/documentation/' + this.editingId)
+                    : await this.form.post('/api/users/documentation');
 
                 this.cancelForm();
 
@@ -65,12 +77,12 @@
             },
 
             cancelForm() {
-                this.$router.push('/users/role');
+                this.$router.push('/documentation/documentation');
             },
 
             reloadForm() {
-                this.$router.go('/users/role');
-            }
+                this.$router.go('/documentation/documentation');
+            },
         }
     }
 </script>
