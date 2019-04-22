@@ -2,8 +2,8 @@
     <div>
         <div class="card text-center card-border">
             <div class="card-body">
-                <h5 class="card-title">Leaves</h5>
-                <p class="card-text">{{ items.length }} Upcoming</p>
+                <h5 class="card-title title-color"><i class="fas fa-calendar-alt"></i> Leaves</h5>
+                <h4 class="card-text">{{ items.length }} Upcoming</h4>
             </div>
         </div>
         <div class="card-footer text-center card-border" style="border-top:0">
@@ -19,16 +19,16 @@
         }),
 
         methods: {
-        allLeaves() {
-            this.$http.get('/api/users/leaves')
-                .then(response => {
-                    this.items = response.data.data;
-                }).catch(error => {
-                this.error = error.response.data.message || error.message;
-            }).finally(() => {
-                this.loading = false;
-            })
-        }
+            allLeaves() {
+                this.$http.get('/api/users/leaves')
+                    .then(response => {
+                        this.items = response.data.data;
+                    }).catch(error => {
+                    this.error = error.response.data.message || error.message;
+                }).finally(() => {
+                    this.loading = false;
+                })
+            }
         },
 
         created() {
