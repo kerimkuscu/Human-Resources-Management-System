@@ -2,8 +2,8 @@
     <div>
         <div class="card text-center card-border">
             <div class="card-body">
-                <h5 class="card-title">People</h5>
-                <p class="card-text">{{ items.length }} Employees</p>
+                <h5 class="card-title title-color"><i class="fas fa-users"></i> People</h5>
+                <h4 class="card-text">{{ items.length }} Employees</h4>
             </div>
         </div>
         <div class="card-footer text-center card-border" style="border-top:0">
