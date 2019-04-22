@@ -63,6 +63,20 @@
                                 title: 'Monitor Attendance'
                             }
                         ]
+                    },
+                    {
+                        title: 'Project',
+                        icon : 'fas fa-project-diagram',
+                        child: [
+                            {
+                                href: '/project/project',
+                                title: 'Project'
+                            },
+                            {
+                                href: '/project/documentation',
+                                title: 'Documentation'
+                            }
+                        ]
                     }
                 ]
             }
