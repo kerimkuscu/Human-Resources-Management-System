@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UserRoleFormRequest;
 use App\Http\Resources\UsersRoleResource;
 use App\Models\UserRole;
 use Illuminate\Http\JsonResponse;
@@ -30,18 +29,6 @@ class UserRoleController extends Controller
         })->values();
 
         return response()->json($data);
-    }
-
-    /**
-     * @param UserRoleFormRequest $request
-     *
-     * @return UsersRoleResource
-     */
-    public function store(UserRoleFormRequest $request)
-    {
-        $data = UserRole::create($request->all());
-
-        return new UsersRoleResource($data);
     }
 
     /**
