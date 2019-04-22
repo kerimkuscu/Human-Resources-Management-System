@@ -24,10 +24,8 @@ class UserLeaveTypeFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'leave_type'            => 'required|min:5',
-            'leave_accrue_enabled'  => 'required',
-            'leave_carried_forward' => 'required',
-            'leaves_per_day'        => 'required|min:0|integer',
+            'leave_type'     => 'required|min:5',
+            'leaves_per_day' => 'required|min:0|integer',
         ];
     }
 }
