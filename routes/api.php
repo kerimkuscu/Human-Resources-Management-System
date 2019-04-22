@@ -66,6 +66,22 @@ Route::group(['middleware' => ['auth:api', 'json']], function() {
     Route::delete('users/attendance/{id}', 'AttendanceController@destroy');
     Route::get('users/attendance-title', 'AttendanceController@getTitles');
 
+    //Project
+    Route::get('users/project', 'ProjectController@index');
+    Route::get('users/project/{id}', 'ProjectController@show');
+    Route::post('users/project', 'ProjectController@store');
+    Route::put('users/project/{id}', 'ProjectController@update');
+    Route::delete('users/project/{id}', 'ProjectController@destroy');
+    Route::get('users/project-title', 'ProjectController@getTitles');
+
+    //Documentation
+    Route::get('users/documentation', 'DocumentationController@index');
+    Route::get('users/documentation/{id}', 'DocumentationController@show');
+    Route::post('users/documentation', 'DocumentationController@store');
+    Route::put('users/documentation/{id}', 'DocumentationController@update');
+    Route::delete('users/documentation/{id}', 'DocumentationController@destroy');
+    Route::get('users/documentation-title', 'DocumentationController@getTitles');
+
     //Users
     Route::get('users/', 'UserController@index');
     Route::get('users/{id}', 'UserController@show');
