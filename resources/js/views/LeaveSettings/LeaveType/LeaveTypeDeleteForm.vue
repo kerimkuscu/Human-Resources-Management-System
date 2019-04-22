@@ -20,8 +20,8 @@
 
                 <div class="modal-footer">
                     <div class="float-right">
-                        <button type="button" class="btn btn-outline-secondary" @click="cancelForm">Cancel</button>
-                        <button type="button" class="btn btn-danger" @click="deleteForm">Delete</button>
+                        <button type="button" class="btn btn-outline-secondary" @click="cancelForm"><i class="fas fa-times"></i> Cancel</button>
+                        <button type="button" class="btn btn-danger" @click="deleteForm"><i class="fas fa-trash"></i> Delete</button>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
     export default {
 
         data:() => ({
-           deletingId: '',
+            deletingId: '',
         }),
 
         mounted() {
