@@ -22,14 +22,14 @@
                             <div class="form-group row">
                                 <label class="col-3 col-form-label" for="users-name">Name</label>
                                 <div class="col-9">
-                                    <input class="form-control" type="text" id="users-name" v-model="user.name" disabled>
+                                    <input class="form-control" type="text" id="users-name" v-model="name" disabled>
                                 </div>
                             </div>
 
                             <div class="form-group row">
                                 <label class="col-3 col-form-label" for="users-email">Email</label>
                                 <div class="col-9">
-                                    <input class="form-control" type="text" id="users-email" v-model="user.email" disabled>
+                                    <input class="form-control" type="text" id="users-email" v-model="email" disabled>
                                 </div>
                             </div>
 
@@ -51,8 +51,8 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button class="btn btn-outline-secondary" type="button" @click="cancelForm">Close</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button class="btn btn-outline-secondary" type="button" @click="cancelForm"><i class="fas fa-times"></i> Close</button>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
                     </div>
                 </div>
             </form>
@@ -77,6 +77,8 @@
                 user: [],
                 error: null,
                 roles: [],
+                name: null,
+                email: null,
 
                 form: new Form({
                     role_id: null,
@@ -97,6 +99,8 @@
                     .get('/api/users/' + this.$route.params.id)
                     .then(response => {
                         this.user = response.data.data;
+                        this.name = this.user.name;
+                        this.email = this.user.email;
                         console.log(this.user);
                     }).catch(error => {
                     this.error = error.response.data.message || error.message;
@@ -134,7 +138,7 @@
                 }).finally(() => {
                     this.loading = false;
                 });
-            }
+            },
         },
 
         created() {
