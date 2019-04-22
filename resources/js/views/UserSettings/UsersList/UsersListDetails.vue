@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button class="btn btn-outline-secondary" type="button" @click="goBack">Close</button>
+                    <button class="btn btn-outline-secondary" type="button" @click="goBack"><i class="fas fa-times"></i> Close</button>
                 </div>
             </div>
         </div>
