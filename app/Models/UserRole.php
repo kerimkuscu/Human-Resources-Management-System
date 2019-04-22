@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Traits\BelongsToUser;
-use Eloquent;
+use Barryvdh\LaravelIdeHelper\Eloquent;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -31,6 +31,7 @@ use Illuminate\Support\Carbon;
  * @method static Builder|UserRole whereId($value)
  * @method static Builder|UserRole whereUpdatedAt($value)
  * @method static Builder|UserRole whereUsersRole($value)
+ * @method belongsTo(string $class, string $string)
  * @mixin Eloquent
  * @property-read User|null $roles
  * @property-read User      $user
@@ -49,6 +50,9 @@ class UserRole extends Model
      */
     protected $dates = ['started_at', 'ended_at'];
 
+    /**
+     * @return mixed
+     */
     public function roles()
     {
         return $this->belongsTo(User::class, 'role_id');
