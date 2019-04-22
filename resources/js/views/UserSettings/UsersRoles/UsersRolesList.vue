@@ -11,10 +11,6 @@
 
             <hr>
 
-            <router-link :to="{ name:'user.role-form' }">
-                <button type="button" class="btn btn-success btn-sm float-right" data-tooltip="true" title="Users Role Form"><i class="fas fa-plus"></i></button>
-            </router-link>
-
             <h4 class="card-title">User Roles</h4>
 
             <hr>
