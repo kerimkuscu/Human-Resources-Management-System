@@ -62,8 +62,8 @@
 
                     <div class="modal-footer">
                         <div class="float-right">
-                            <button type="submit" class="btn btn-outline-secondary" @click="cancelForm">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="submit" class="btn btn-outline-secondary" @click="cancelForm"><i class="fas fa-times"></i> Cancel</button>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
                         </div>
                     </div>
                 </div>
