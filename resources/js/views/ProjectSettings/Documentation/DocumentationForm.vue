@@ -18,7 +18,12 @@
                                 Loading...
                             </div>
 
-
+                            <div class="form-group row">
+                                <label class="col-3 col-form-label required" for="dropzone">File</label>
+                                <div class="col-9">
+                                    <vue-dropzone ref="dropzone" id="dropzone" :options="dropzoneOptions" @vdropzone-success="onSuccess"></vue-dropzone>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -38,15 +43,32 @@
 
 <script>
     import Form from 'form-backend-validation';
+    import vue2Dropzone from 'vue2-dropzone'
+    import 'vue2-dropzone/dist/vue2Dropzone.min.css'
 
     export default {
+
+        components: {
+            vueDropzone: vue2Dropzone
+        },
 
         data: () => ({
             loading: false,
             editingId: false,
 
-            form: new Form({
+            dropzoneOptions: {
+                url: '/api/users/documentation/',
+                paramName: 'file',
+                maxFilesize: 30, // MB
+                maxFiles: 1,
+                thumbnailWidth: 150, // px
+                thumbnailHeight: 150,
+                addRemoveLinks: true,
+                headers: {"My-Awesome-Header": "header value"}
+            },
 
+            form: new Form({
+                file_name: null,
             })
         }),
 
@@ -77,12 +99,24 @@
             },
 
             cancelForm() {
-                this.$router.push('/documentation/documentation');
+                this.$router.push('/project/documentation');
             },
 
             reloadForm() {
-                this.$router.go('/documentation/documentation');
+                this.$router.go('/project/documentation');
             },
+
+            addFile(file) {
+                this.$refs.dropzone.addFile(file);
+            },
+
+            removeAllFiles() {
+                this.$refs.dropzone.removeAllFiles();
+            },
+
+            onSuccess(file, response) {
+                this.$emit('success', file, response);
+            }
         }
     }
 </script>
