@@ -11,7 +11,7 @@
 
         <hr>
 
-        <router-link :to="{ name:'documentation.documentation-form' }">
+        <router-link :to="{ name:'project.documentation-form' }">
             <button type="button" class="btn btn-success btn-sm float-right" data-tooltip="true" title="Documentation Form"><i class="fas fa-plus"></i></button>
         </router-link>
 
@@ -50,7 +50,7 @@
                         size: 'mini',
                     },
                     handler: (row) => {
-                        self.$router.push({name: 'documentation.documentation-edit', params: {id: row.id}})
+                        self.$router.push({name: 'project.documentation-edit', params: {id: row.id}})
                     }
                 }, {
                     props: {
@@ -59,7 +59,7 @@
                         size: 'mini',
                     },
                     handler: (row) => {
-                        self.$router.push({name: 'documentation.documentation-delete', params: {id: row.id}})
+                        self.$router.push({name: 'project.documentation-delete', params: {id: row.id}})
                     }
                 }]
             }
@@ -71,9 +71,6 @@
         },
 
         methods: {
-            leavesForm() {
-                this.$router.push('/documentation/documentation-form');
-            },
 
             fetch() {
                 this.error = this.items = null;
