@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\FileFormat;
 use App\Http\Requests\DocumentationFormRequest;
 use App\Http\Resources\DocumentationResource;
 use App\Models\Documentation;
 use Exception;
+use File;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
@@ -32,15 +34,29 @@ class DocumentationController extends Controller
     }
 
     /**
-     * @param DocumentationFormRequest $request
+     * @param Documentation $request
      *
      * @return DocumentationResource
      */
-    public function store(DocumentationFormRequest $request)
+    public function store(Documentation $request)
     {
-        $data = Documentation::create($request->all());
+//        $data = Documentation::create($request->all());
+//
+//        return new DocumentationResource($data);
 
-        return new DocumentationResource($data);
+        $media = $request
+            ->addMediaFromRequest('file')
+            ->toMediaCollection('documentations');
+
+        $extension = File::extension($media->file_name);
+
+        return response()->json([
+            'id'     => $media->id,
+            'name'   => $media->file_name,
+            'format' => FileFormat::label(FileFormat::getFormat($extension)),
+            'size'   => file_size($media->size),
+            'result' => true,
+        ]);
     }
 
     /**
@@ -76,7 +92,7 @@ class DocumentationController extends Controller
     public function getTitles()
     {
         $data = ['file_name' => 'File Name',
-            'file_type' => 'File Type', ];
+            'file_type'      => 'File Type', ];
 
         $data = collect($data)->map(function($item, $key) {
             return ['prop' => $key, 'label' => $item];
