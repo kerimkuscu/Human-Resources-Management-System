@@ -82,6 +82,9 @@ Route::group(['middleware' => ['auth:api', 'json']], function() {
     Route::delete('users/documentation/{id}', 'DocumentationController@destroy');
     Route::get('users/documentation-title', 'DocumentationController@getTitles');
 
+    //Upload
+    Route::post('users/{id}/upload', 'UploadController@store');
+
     //Users
     Route::get('users/', 'UserController@index');
     Route::get('users/{id}', 'UserController@show');
