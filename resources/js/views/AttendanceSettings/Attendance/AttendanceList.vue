@@ -71,9 +71,6 @@
         },
 
         methods: {
-            leavesForm() {
-                this.$router.push('/attendance/attendance-form');
-            },
 
             fetch() {
                 this.error = this.items = null;
