@@ -71,9 +71,6 @@
         },
 
         methods: {
-            leavesForm() {
-                this.$router.push('/project/project-form');
-            },
 
             fetch() {
                 this.error = this.items = null;
