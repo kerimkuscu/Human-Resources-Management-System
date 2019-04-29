@@ -5,7 +5,9 @@ namespace App\Models;
 use Barryvdh\LaravelIdeHelper\Eloquent;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
 /**
  * App\Models\Project
@@ -31,6 +33,9 @@ use Illuminate\Support\Carbon;
  */
 class Project extends Model
 {
+
+    use HasMediaTrait;
+
     /**
      * @var array
      */
@@ -39,10 +44,10 @@ class Project extends Model
         'status', ];
 
     /**
-     * @return mixed
+     * @return HasMany
      */
     public function documentation()
     {
-        return $this->belongsTo(Documentation::class, 'project_id');
+        return $this->hasMany(Documentation::class);
     }
 }
