@@ -12,6 +12,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
+        "spatie/laravel-medialibrary": "^7.0.0",
         "tymon/jwt-auth": "dev-develop"
     },
     "require-dev": {
