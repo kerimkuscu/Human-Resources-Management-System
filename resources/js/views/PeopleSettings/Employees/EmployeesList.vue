@@ -80,9 +80,6 @@
         },
 
         methods: {
-            leavesForm() {
-                this.$router.push('/peoples/employees-form');
-            },
 
             fetch() {
                 this.error = this.items = null;
