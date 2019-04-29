@@ -13,11 +13,11 @@ class CreateDocumentationTable extends Migration
     {
         Schema::create('documentations', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('file_name');
-            $table->string('file_type');
+            $table->unsignedInteger('project_id')->nullable();
+            $table->string('name');
+            $table->string('original_name');
             $table->unsignedInteger('size')->default(0);
             $table->unsignedTinyInteger('format')->default(0);
-            $table->unsignedInteger('project_id')->nullable();
             $table->timestamps();
 
             $table->foreign('project_id')->references('id')->on('projects');
