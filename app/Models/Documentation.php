@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Carbon;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 
 /**
  * App\Models\Documentation
@@ -18,6 +19,7 @@ use Illuminate\Support\Carbon;
  * @property int         $format
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ *
  * @method static Builder|Documentation newModelQuery()
  * @method static Builder|Documentation newQuery()
  * @method static Builder|Documentation query()
@@ -33,13 +35,15 @@ use Illuminate\Support\Carbon;
  */
 class Documentation extends Model
 {
+    use HasMediaTrait;
+
     /**
-     * Get the project
-     *
-     * @return HasOne
+     * @var array
      */
-    public function profile()
-    {
-        return $this->hasOne(Project::class);
-    }
+    protected $fillable = [
+        'project_id',
+        'file_name',
+        'original_name',
+        'size',
+        'format', ];
 }
