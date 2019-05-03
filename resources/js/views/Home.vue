@@ -25,10 +25,6 @@
             <div class="col-3">
                 <user-roles-card></user-roles-card>
             </div>
-
-            <div class="col-3">
-                <project-card></project-card>
-            </div>
         </div>
     </div>
 </template>
@@ -39,7 +35,6 @@
     import LeavesCard from './Dashboard/Cards/LeavesCard';
     import AttendanceCard from './Dashboard/Cards/AttendanceCard';
     import UserRolesCard from './Dashboard/Cards/UserRolesCard';
-    import ProjectCard from './Dashboard/Cards/ProjectCard';
 
     export default {
         components: {
@@ -48,8 +43,6 @@
             LeavesCard,
             AttendanceCard,
             UserRolesCard,
-            ProjectCard
-
         }
     }
 </script>
