@@ -65,16 +65,12 @@
                         ]
                     },
                     {
-                        title: 'Project',
-                        icon : 'fas fa-project-diagram',
+                        title: 'Applicants',
+                        icon : 'fas fa-user-tie',
                         child: [
                             {
-                                href: '/project/project',
-                                title: 'Project'
-                            },
-                            {
-                                href: '/project/documentation',
-                                title: 'Documentation'
+                                href: '/applicants/candidates',
+                                title: 'Candidates'
                             }
                         ]
                     }
