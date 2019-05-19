@@ -25,6 +25,10 @@
             <div class="col-3">
                 <user-roles-card></user-roles-card>
             </div>
+
+            <div class="col-3">
+                <applicants-card></applicants-card>
+            </div>
         </div>
     </div>
 </template>
@@ -35,6 +39,7 @@
     import LeavesCard from './Dashboard/Cards/LeavesCard';
     import AttendanceCard from './Dashboard/Cards/AttendanceCard';
     import UserRolesCard from './Dashboard/Cards/UserRolesCard';
+    import ApplicantsCard from './Dashboard/Cards/ApplicantsCard';
 
     export default {
         components: {
@@ -43,6 +48,7 @@
             LeavesCard,
             AttendanceCard,
             UserRolesCard,
+            ApplicantsCard
         }
     }
 </script>
