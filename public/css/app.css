@@ -10716,13 +10716,72 @@ a.text-dark:focus {
 .v-sidebar-menu {
   top: 54px !important;
   height: 94.2vh !important;
-  z-index: 1 !important;
+  z-index: 2 !important;
 }
 
 label.required:after {
   color: #c00;
   content: " *";
   display: inline;
+}
+
+.v-select .dropdown-toggle {
+  padding: 0 !important;
+}
+
+.v-select .vs__actions {
+  padding: 0 14px 3px 0 !important;
+}
+
+.dropdown-toggle::after {
+  content: none !important;
+}
+
+.v-select input[type=search],
+.v-select input[type=search]:focus {
+  margin: 0 0 0 !important;
+}
+
+.bg-image {
+  background-image: url("https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?cs=srgb&dl=backlit-clouds-friends-853168.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bg-image .container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.login {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.login label {
+  color: #fff;
+}
+
+.login hr {
+  border-top: 2px solid #928d8d !important;
+}
+
+.login .card-header {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0) !important;
+  padding: 50px;
+  border-bottom: 0 !important;
+}
+
+.title-color {
+  color: #848484 !important;
+}
+
+.card-border {
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .navbar-laravel {
