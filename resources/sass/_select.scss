@@ -1,0 +1,15 @@
+.v-select .dropdown-toggle {
+  padding: 0 !important;
+}
+
+.v-select .vs__actions {
+  padding: 0 14px 3px 0 !important;
+}
+
+.dropdown-toggle::after {
+  content: none !important;
+}
+
+.v-select input[type=search], .v-select input[type=search]:focus {
+  margin: 0 0 0 !important;
+}
