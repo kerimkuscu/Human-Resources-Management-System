@@ -16,12 +16,12 @@
 }
 
 .card {
-  background-color: #292e41 !important;
+  background-color: #292e41;
 }
 
 .card-header {
   color: #fff;
-  background-color: #292e41 !important;
+  background-color: #292e41;
   border-bottom: 0;
 }
 
@@ -110,6 +110,10 @@ hr {
   background-color: #58626e !important;
 }
 
+.el-table--enable-row-hover .el-table__body tr:hover>td {
+  background-color: #58626e !important;
+}
+
 .el-table th > .cell {
   color: #fff;
 }
@@ -127,5 +131,5 @@ hr {
 }
 
 .title-color {
-  color: #dededed6 !important;
+  color: #848484 !important;
 }
