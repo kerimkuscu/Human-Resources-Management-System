@@ -31,7 +31,11 @@ import AttendanceSettings from '../views/AttendanceSettings/AttendanceSettings'
 import AttendanceList from '../views/AttendanceSettings/Attendance/AttendanceList'
 import AttendanceForm from '../views/AttendanceSettings/Attendance/AttendanceForm'
 import AttendanceDeleteForm from '../views/AttendanceSettings/Attendance/AttendanceDeleteForm'
-
+//Applicants
+import ApplicantsSettings from '../views/ApplicantsSettings/ApplicantsSettings'
+import CandidatesList from '../views/ApplicantsSettings/Candidates/CandidatesList'
+import CandidatesForm from '../views/ApplicantsSettings/Candidates/CandidatesForm'
+import CandidatesDeleteForm from '../views/ApplicantsSettings/Candidates/CandidatesDeleteForm'
 
 export default [
     {
@@ -205,6 +209,39 @@ export default [
                         path: ':id/delete',
                         name: 'attendance.attendance-delete',
                         component: AttendanceDeleteForm,
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        path: '/applicants/',
+        name: 'applicants',
+        component: ApplicantsSettings,
+        meta: {
+            auth: true
+        },
+        children: [
+            {
+                path: 'candidates/',
+                name: 'applicants.candidates-list',
+                component: CandidatesList,
+                children: [
+                    {
+                        path: 'create',
+                        name: 'applicants.candidates-form',
+                        component: CandidatesForm,
+
+                    },
+                    {
+                        path: ':id/edit',
+                        name: 'applicants.candidates-edit',
+                        component: CandidatesForm,
+                    },
+                    {
+                        path: ':id/delete',
+                        name: 'applicants.candidates-delete',
+                        component: CandidatesDeleteForm,
                     }
                 ]
             },
