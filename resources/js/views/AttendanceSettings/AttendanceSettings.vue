@@ -4,7 +4,7 @@
 
         <hr>
 
-        <div id="leaveSettingsTab">
+        <div id="attendanceSettingsTab">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <router-link :to="{ name:'attendance.attendance-list'}" class="nav-link">Attendance List</router-link>
@@ -12,7 +12,7 @@
             </ul>
         </div>
 
-        <div id="leaveSettingsTabContent" class="tab-content clearfix">
+        <div id="attendanceSettingsTabContent" class="tab-content clearfix">
             <router-view></router-view>
         </div>
     </div>

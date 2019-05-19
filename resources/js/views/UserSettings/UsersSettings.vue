@@ -4,7 +4,7 @@
 
         <hr>
 
-        <div id="leaveSettingsTab">
+        <div id="userSettingsTab">
             <ul class="nav nav-tabs">
                 <li class="nav-item">
                     <router-link :to="{ name:'user.list'}" class="nav-link">User List</router-link>
@@ -15,7 +15,7 @@
             </ul>
         </div>
 
-        <div id="leaveSettingsTabContent" class="tab-content clearfix">
+        <div id="userSettingsTabContent" class="tab-content clearfix">
             <router-view></router-view>
         </div>
     </div>
