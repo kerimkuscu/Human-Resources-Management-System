@@ -3,7 +3,7 @@
         <div class="card text-center card-border">
             <div class="card-body">
                 <h5 class="card-title title-color"><i class="fas fa-calendar-alt"></i> Leaves</h5>
-                <h4 class="card-text">{{ items.length }} Upcoming</h4>
+                <h3 class="card-text">{{ items.length }} Upcoming</h3>
             </div>
         </div>
         <div class="card-footer text-center card-border" style="border-top:0">

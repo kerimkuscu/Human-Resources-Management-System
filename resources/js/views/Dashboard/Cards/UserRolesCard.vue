@@ -3,7 +3,7 @@
         <div class="card text-center card-border">
             <div class="card-body">
                 <h5 class="card-title title-color"><i class="fas fa-lock"></i> User Roles</h5>
-                <h4 class="card-text">{{ items.length }} Roles</h4>
+                <h3 class="card-text">{{ items.length }} Roles</h3>
             </div>
         </div>
         <div class="card-footer text-center card-border" style="border-top:0">

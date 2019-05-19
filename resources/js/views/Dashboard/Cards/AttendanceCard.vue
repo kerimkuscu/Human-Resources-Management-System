@@ -3,7 +3,7 @@
         <div class="card text-center card-border">
             <div class="card-body">
                 <h5 class="card-title title-color"><i class="far fa-clock"></i> Attendance</h5>
-                <h4 class="card-text">{{ items.length }} Entries Last Week</h4>
+                <h3 class="card-text">{{ items.length }} Entries Last Week</h3>
             </div>
         </div>
         <div class="card-footer text-center card-border" style="border-top:0">
