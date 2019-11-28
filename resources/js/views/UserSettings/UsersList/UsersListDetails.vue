@@ -1,49 +1,49 @@
 <template>
+  <div class="modal fade show docked docked-right" tabindex="-1" role="dialog" style="display: block">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            User Details
+          </h5>
 
-    <div class="modal fade show docked docked-right" tabindex="-1" role="dialog" style="display: block">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">User Details</h5>
-
-                    <button @click="goBack" type="button" class="close" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-                    <div>
-
-                        <div class="loading" v-if="loading">
-                            Loading...
-                        </div>
-
-                        <table v-if="user" class="table">
-                            <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                            </tr>
-                            </thead>
-
-                            <tbody>
-                            <tr>
-                                <td>{{ user.name }}</td>
-                                <td>{{ user.email }}</td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-                </div>
-
-                <div class="modal-footer">
-                    <button class="btn btn-outline-secondary" type="button" @click="goBack"><i class="fas fa-times"></i> Close</button>
-                </div>
-            </div>
+          <button type="button" class="close" aria-label="Close" @click="goBack">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
 
+        <div class="modal-body">
+          <div>
+            <div v-if="loading" class="loading">
+              Loading...
+            </div>
+
+            <table v-if="user" class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.email }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" type="button" @click="goBack">
+            <i class="fas fa-times" /> Close
+          </button>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>

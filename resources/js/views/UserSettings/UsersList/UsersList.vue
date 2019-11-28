@@ -1,28 +1,29 @@
 <template>
-    <div class="users">
-        <div class="loading" v-if="loading">
-            Loading...
-        </div>
-
-        <div v-if="error" class="error">
-            {{ error }}
-        </div>
-
-        <hr>
-
-        <h4 class="card-title">User List</h4>
-
-        <hr>
-
-        <div>
-            <data-tables-server :data="users" :total="total" :pagination-props="{ background: true, pageSizes: [5, 10, 20] }" :action-col="actionCol">
-                <el-table-column v-for="title in titles" :prop="title.prop" :label="title.label" :key="title.label"></el-table-column>
-            </data-tables-server>
-        </div>
-
-        <router-view></router-view>
-
+  <div class="users">
+    <div v-if="loading" class="loading">
+      Loading...
     </div>
+
+    <div v-if="error" class="error">
+      {{ error }}
+    </div>
+
+    <hr>
+
+    <h4 class="card-title">
+      User List
+    </h4>
+
+    <hr>
+
+    <div>
+      <data-tables-server :data="users" :total="total" :pagination-props="{ background: true, pageSizes: [5, 10, 20] }" :action-col="actionCol">
+        <el-table-column v-for="title in titles" :key="title.label" :prop="title.prop" :label="title.label" />
+      </data-tables-server>
+    </div>
+
+    <router-view />
+  </div>
 </template>
 
 <script>

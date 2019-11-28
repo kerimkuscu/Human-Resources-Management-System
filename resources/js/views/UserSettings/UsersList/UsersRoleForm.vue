@@ -1,64 +1,68 @@
 <template>
+  <div class="modal fade show docked docked-right" tabindex="-1" role="dialog" style="display: block">
+    <div class="modal-dialog" role="document">
+      <form autocomplete="off" @submit.prevent="submit">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              User Details
+            </h5>
 
-    <div class="modal fade show docked docked-right" tabindex="-1" role="dialog" style="display: block">
-        <div class="modal-dialog" role="document">
-            <form @submit.prevent="submit" autocomplete="off">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">User Details</h5>
+            <button type="button" class="close" aria-label="Close" @click="cancelForm">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
 
-                        <button @click="cancelForm" type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+          <div class="modal-body">
+            <div>
+              <div v-if="loading" class="loading">
+                Loading...
+              </div>
 
-                    <div class="modal-body">
-                        <div>
-
-                            <div class="loading" v-if="loading">
-                                Loading...
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-3 col-form-label" for="users-name">Name</label>
-                                <div class="col-9">
-                                    <input class="form-control" type="text" id="users-name" v-model="name" disabled>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-3 col-form-label" for="users-email">Email</label>
-                                <div class="col-9">
-                                    <input class="form-control" type="text" id="users-email" v-model="email" disabled>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-3 col-form-label required" for="type">Role</label>
-                                <div class="col-9">
-                                    <select class="form-control" :class="{'is-invalid' : form.errors.has('role_id')}" id="type" v-model="form.role_id">
-                                        <option value="null">(Choose)</option>
-                                        <option v-for="option in roles" v-bind:value="option.id">
-                                            {{ option.users_role }}
-                                        </option>
-                                    </select>
-
-                                    <span class="invalid-feedback">{{ form.errors.first('role_id')}}</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button class="btn btn-outline-secondary" type="button" @click="cancelForm"><i class="fas fa-times"></i> Close</button>
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
-                    </div>
+              <div class="form-group row">
+                <label class="col-3 col-form-label" for="users-name">Name</label>
+                <div class="col-9">
+                  <input id="users-name" v-model="name" class="form-control" type="text" disabled>
                 </div>
-            </form>
-        </div>
+              </div>
 
+              <div class="form-group row">
+                <label class="col-3 col-form-label" for="users-email">Email</label>
+                <div class="col-9">
+                  <input id="users-email" v-model="email" class="form-control" type="text" disabled>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label class="col-3 col-form-label required" for="type">Role</label>
+                <div class="col-9">
+                  <select id="type" v-model="form.role_id" class="form-control" :class="{'is-invalid' : form.errors.has('role_id')}">
+                    <option value="null">
+                      (Choose)
+                    </option>
+                    <option v-for="option in roles" :key="option.text" :value="option.id">
+                      {{ option.users_role }}
+                    </option>
+                  </select>
+
+                  <span class="invalid-feedback">{{ form.errors.first('role_id') }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary" type="button" @click="cancelForm">
+              <i class="fas fa-times" /> Close
+            </button>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-save" /> Save
+            </button>
+          </div>
+        </div>
+      </form>
     </div>
+  </div>
 </template>
 
 <script>
@@ -66,11 +70,6 @@
     import Form from 'form-backend-validation';
 
     export default {
-
-        components: {
-            Form
-        },
-
         data() {
             return {
                 loading: false,
@@ -88,6 +87,10 @@
 
         mounted() {
             this.roleForm();
+        },
+
+        created() {
+            this.getData();
         },
 
         methods: {
@@ -139,10 +142,6 @@
                     this.loading = false;
                 });
             },
-        },
-
-        created() {
-            this.getData();
         },
     }
 </script>

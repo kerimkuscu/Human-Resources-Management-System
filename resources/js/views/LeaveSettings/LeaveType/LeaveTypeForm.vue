@@ -1,52 +1,56 @@
 <template>
-    <div class="modal fade show docked docked-right" tabindex="-1" role="dialog" style="display: block">
-        <div class="modal-dialog" role="document">
-            <form @submit.prevent="submit" autocomplete="off">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Leave Type Form</h5>
+  <div class="modal fade show docked docked-right" tabindex="-1" role="dialog" style="display: block">
+    <div class="modal-dialog" role="document">
+      <form autocomplete="off" @submit.prevent="submit">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              Leave Type Form
+            </h5>
 
-                        <button @click="cancelForm" type="button" class="close" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
+            <button type="button" class="close" aria-label="Close" @click="cancelForm">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
 
-                    <div class="modal-body">
-                        <div>
+          <div class="modal-body">
+            <div>
+              <div v-if="loading" class="loading">
+                Loading...
+              </div>
 
-                            <div class="loading" v-if="loading">
-                                Loading...
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-5 col-form-label required" for="leave-type">Leave Type</label>
-                                <div class="col-7">
-                                    <input class="form-control" :class="{'is-invalid': form.errors.has('leave_type')}" type="text" id="leave-type" v-model="form.leave_type" placeholder="Leave Type">
-                                    <span class="invalid-feedback">{{ form.errors.first('leave_type') }}</span>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-5 col-form-label required" for="leaves-per-day">Leaves Per Day <i class="fas fa-question-circle" data-tooltip="true" title="This is the number of leave days that can be applied by an employee per year (or the current leave period). If the leave period is less than a Year this is the number of leaves for the leave period."></i></label>
-                                <div class="col-7">
-                                    <input class="form-control" :class="{'is-invalid': form.errors.has('leaves_per_day')}" type="number" min="0" id="leaves-per-day" v-model="form.leaves_per_day">
-                                    <span class="invalid-feedback">{{ form.errors.first('leaves_per_day') }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer">
-                        <div class="float-right">
-                            <button type="submit" class="btn btn-outline-secondary" @click="cancelForm"><i class="fas fa-times"></i> Cancel</button>
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
-                        </div>
-                    </div>
+              <div class="form-group row">
+                <label class="col-5 col-form-label required" for="leave-type">Leave Type</label>
+                <div class="col-7">
+                  <input id="leave-type" v-model="form.leave_type" class="form-control" :class="{'is-invalid': form.errors.has('leave_type')}" type="text" placeholder="Leave Type">
+                  <span class="invalid-feedback">{{ form.errors.first('leave_type') }}</span>
                 </div>
-            </form>
-        </div>
+              </div>
 
+              <div class="form-group row">
+                <label class="col-5 col-form-label required" for="leaves-per-day">Leaves Per Day <i class="fas fa-question-circle" data-tooltip="true" title="This is the number of leave days that can be applied by an employee per year (or the current leave period). If the leave period is less than a Year this is the number of leaves for the leave period." /></label>
+                <div class="col-7">
+                  <input id="leaves-per-day" v-model="form.leaves_per_day" class="form-control" :class="{'is-invalid': form.errors.has('leaves_per_day')}" type="number" min="0">
+                  <span class="invalid-feedback">{{ form.errors.first('leaves_per_day') }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <div class="float-right">
+              <button type="submit" class="btn btn-outline-secondary" @click="cancelForm">
+                <i class="fas fa-times" /> Cancel
+              </button>
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save" /> Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
+  </div>
 </template>
 
 <script>
@@ -82,7 +86,7 @@
 
             async submit() {
 
-                const response = this.editingId
+                this.editingId
                     ? await this.form.put('/api/users/leave-type/' + this.editingId)
                     : await this.form.post('/api/users/leave-type');
 

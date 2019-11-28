@@ -1,5 +1,5 @@
 <template>
-    <sidebar-menu :menu="menu" :collapsed="true" v-if="$auth.check()"/>
+  <sidebar-menu v-if="$auth.check()" :menu="menu" :collapsed="true" />
 </template>
 
 <script>
