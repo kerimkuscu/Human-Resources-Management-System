@@ -1,36 +1,38 @@
 <template>
-    <div>
-        <h4 class="card-title">Home</h4>
-        <hr>
+  <div>
+    <h4 class="card-title">
+      Home
+    </h4>
+    <hr>
 
-        <div class="row" style="margin-bottom: 15px">
-            <div class="col-3">
-                <peoples-card></peoples-card>
-            </div>
+    <div class="row" style="margin-bottom: 15px">
+      <div class="col-3">
+        <peoples-card />
+      </div>
 
-            <div class="col-3">
-                <users-card></users-card>
-            </div>
+      <div class="col-3">
+        <users-card />
+      </div>
 
-            <div class="col-3">
-                <leaves-card></leaves-card>
-            </div>
+      <div class="col-3">
+        <leaves-card />
+      </div>
 
-            <div class="col-3">
-                <attendance-card></attendance-card>
-            </div>
-        </div>
-
-        <div class="row" style="margin-bottom: 15px">
-            <div class="col-3">
-                <user-roles-card></user-roles-card>
-            </div>
-
-            <div class="col-3">
-                <applicants-card></applicants-card>
-            </div>
-        </div>
+      <div class="col-3">
+        <attendance-card />
+      </div>
     </div>
+
+    <div class="row" style="margin-bottom: 15px">
+      <div class="col-3">
+        <user-roles-card />
+      </div>
+
+      <div class="col-3">
+        <applicants-card />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>

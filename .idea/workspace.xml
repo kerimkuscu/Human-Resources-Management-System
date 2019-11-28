@@ -2,69 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e29c2270-10c4-46d4-b95a-5f82a87b53f1" name="Default Changelist" comment="refactor: update assets">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/EmployeeFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/EmployeeTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/datagrid/datagrid.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/datagrid/grid-actions.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/datagrid/pagination.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_datagrid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_tables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.php_cs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.php_cs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserLeaveResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserLeaveResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Candidates.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Candidates.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserLeave.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserLeave.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserLeaveType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserLeaveType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserProfile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserRole.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/NotFound.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/NotFound.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/AuthLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/AuthLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/ApplicantsSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/ApplicantsSettings.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesDeleteForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceDeleteForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/AttendanceSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/AttendanceSettings.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/ApplicantsCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/ApplicantsCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/AttendanceCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/AttendanceCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/LeavesCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/LeavesCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/PeoplesCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/PeoplesCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UserRolesCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UserRolesCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UsersCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UsersCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeDeleteForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeavesSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeavesSettings.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesDeleteForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesListDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesListDetails.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/PeoplesSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/PeoplesSettings.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersListDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersListDetails.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersRoleForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersRoleForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesDeleteForm.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersSettings.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
@@ -351,49 +290,7 @@
       <workItem from="1558300909941" duration="1509000" />
       <workItem from="1574924295922" duration="1691000" />
       <workItem from="1574931358405" duration="585000" />
-      <workItem from="1574967636995" duration="6096000" />
-    </task>
-    <task id="LOCAL-00100" summary="refactor: add icon for close button">
-      <created>1555957254438</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957254438</updated>
-    </task>
-    <task id="LOCAL-00101" summary="refactor: add new style and new card">
-      <created>1555957268656</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957268656</updated>
-    </task>
-    <task id="LOCAL-00102" summary="refactor: add new class and icon">
-      <created>1555957289294</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957289294</updated>
-    </task>
-    <task id="LOCAL-00103" summary="refactor: add icon">
-      <created>1555957305245</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957305245</updated>
-    </task>
-    <task id="LOCAL-00104" summary="refactor: add icon">
-      <created>1555957314224</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957314224</updated>
-    </task>
-    <task id="LOCAL-00105" summary="refactor: add new class and icon">
-      <created>1555957328019</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957328019</updated>
+      <workItem from="1574967636995" duration="6347000" />
     </task>
     <task id="LOCAL-00106" summary="refactor: add project model">
       <created>1555957339151</created>
@@ -696,7 +593,49 @@
       <option name="project" value="LOCAL" />
       <updated>1574973761537</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="refactor: update assets">
+      <created>1574973925495</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1574973925495</updated>
+    </task>
+    <task id="LOCAL-00150" summary="refactor: add new param">
+      <created>1574973952910</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1574973952910</updated>
+    </task>
+    <task id="LOCAL-00151" summary="refactor: update assets">
+      <created>1574973981994</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1574973981994</updated>
+    </task>
+    <task id="LOCAL-00152" summary="refactor: add employee factory">
+      <created>1574973998662</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1574973998662</updated>
+    </task>
+    <task id="LOCAL-00153" summary="style: fix the styles">
+      <created>1574974093670</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1574974093670</updated>
+    </task>
+    <task id="LOCAL-00154" summary="refactor: add new datagrid">
+      <created>1574974119295</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1574974119295</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -730,9 +669,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: add new routes for project settings" />
-    <MESSAGE value="refactor: add new link for project settings" />
-    <MESSAGE value="refactor: delete leave accrue enabled and leave carried forward validation" />
     <MESSAGE value="refactor: using clear code automation" />
     <MESSAGE value="refactor: add user roles card" />
     <MESSAGE value="refactor: add user role seeder" />
@@ -752,9 +688,12 @@
     <MESSAGE value="refactor: add media system" />
     <MESSAGE value="refactor: delete leavesForm method" />
     <MESSAGE value="refactor: add documentation relation and using media trait" />
-    <MESSAGE value="refactor: update assets" />
     <MESSAGE value="refactor: change index method for datagrid" />
+    <MESSAGE value="refactor: add new param" />
+    <MESSAGE value="refactor: update assets" />
+    <MESSAGE value="refactor: add employee factory" />
     <MESSAGE value="style: fix the styles" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: fix the styles" />
+    <MESSAGE value="refactor: add new datagrid" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: add new datagrid" />
   </component>
 </project>
