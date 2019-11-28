@@ -5,40 +5,22 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserLeaveFormRequest;
 use App\Http\Resources\UserLeaveResource;
 use App\Models\UserLeave;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Http\Response;
 
 class UserLeaveController extends Controller
 {
     /**
-     * @return AnonymousResourceCollection
+     * Display a listing of the resource.
+     *
+     * @return AnonymousResourceCollection|Response
      */
     public function index()
     {
-        //        return UserLeaveResource::collection($this->getUser()->leaves);
+        $data = UserLeave::query()->paginate(request('per_page', 25));
 
-        return UserLeaveResource::collection(UserLeave::all());
-    }
-
-    /**
-     * @return JsonResponse
-     */
-    public function getTitles()
-    {
-        $data = ['user.name' => 'Name',
-             'description'   => 'Description',
-             'started_at'    => 'Start Date',
-             'ended_at'      => 'End Date',
-             'approved_by'   => 'Approved By',
-             'approved_at'   => 'Approved At',
-            ];
-
-        $data = collect($data)->map(function($item, $key) {
-            return ['prop' => $key, 'label' => $item];
-        })->values();
-
-
-        return response()->json($data);
+        return JsonResource::collection($data);
     }
 
     /**
