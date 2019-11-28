@@ -74,7 +74,7 @@ class EmployeeController extends Controller
      */
     public function getTitles()
     {
-        $data = ['name'              => 'Name',
+        $data = ['name'         => 'Name',
             'birthday'          => 'Birthday',
             'gender'            => 'Gender',
             'employment_status' => 'Employment Status',

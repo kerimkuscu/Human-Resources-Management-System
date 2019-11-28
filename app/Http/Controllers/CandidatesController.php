@@ -75,7 +75,7 @@ class CandidatesController extends Controller
      */
     public function getTitles()
     {
-        $data = ['name'  => 'Name',
+        $data = ['name'       => 'Name',
                  'phone'      => 'Phone Number',
                  'email'      => 'Email',
                  'job_title'  => 'Job Title',

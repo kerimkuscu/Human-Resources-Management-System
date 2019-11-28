@@ -75,9 +75,9 @@ class AttendanceController extends Controller
      */
     public function getTitles()
     {
-        $data = ['employee_id'        => 'Employee',
-            'time_in_date'  => 'Time In',
-            'time_out_date' => 'Time_out', ];
+        $data = ['employee_id' => 'Employee',
+            'time_in_date'     => 'Time In',
+            'time_out_date'    => 'Time_out', ];
 
         $data = collect($data)->map(function($item, $key) {
             return ['prop' => $key, 'label' => $item];
