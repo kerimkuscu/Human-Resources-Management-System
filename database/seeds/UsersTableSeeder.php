@@ -11,18 +11,10 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $model = User::create([
-            'name'      => 'Kerim Kuşcu',
-            'email'     => 'kerimkuscu95@gmail.com',
+            'name'      => 'Admin',
+            'email'     => 'admin@admin.com',
             'password'  => Hash::make('123456'),
             'api_token' => str_random(60),
-        ]);
-
-        $model->profile()->create([
-            'employee_no' => 1,
-            'id_no'       => '37574065692',
-            'phone'       => '12345678910',
-            'email'       => 'kerimkuscu95@gmail.com',
-            'started_at'  => '2013-03-05',
         ]);
     }
 }
