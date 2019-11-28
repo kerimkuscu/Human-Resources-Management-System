@@ -12,6 +12,8 @@
 |
 */
 
+use App\Http\Controllers\UserLeaveController;
+use App\Http\Controllers\UserLeaveTypeController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
@@ -30,18 +32,17 @@ Route::group(['middleware' => ['auth:api', 'json']], function() {
     Route::get('me', 'UserController@me');
 
     //Leaves Form
-    Route::get('users/leaves', 'UserLeaveController@index');
-    Route::get('users/leaves/{id}', 'UserLeaveController@show');
-    Route::post('users/leaves', 'UserLeaveController@store');
-    Route::put('users/leaves/{id}', 'UserLeaveController@update');
-    Route::get('users/leaves-title', 'UserLeaveController@getTitles');
+    Route::get('users/leaves', [UserLeaveController::class, 'index']);
+    Route::get('users/leaves/{id}', [UserLeaveController::class, 'show']);
+    Route::post('users/leaves', [UserLeaveController::class, 'store']);
+    Route::put('users/leaves/{id}', [UserLeaveController::class, 'update']);
 
     //Leaves Type
-    Route::get('users/leave-type', 'UserLeaveTypeController@index');
-    Route::get('users/leave-type/{id}', 'UserLeaveTypeController@show');
-    Route::post('users/leave-type', 'UserLeaveTypeController@store');
-    Route::put('users/leave-type/{id}', 'UserLeaveTypeController@update');
-    Route::delete('users/leave-type/{id}', 'UserLeaveTypeController@destroy');
+    Route::get('users/leave-type', [UserLeaveTypeController::class, 'index']);
+    Route::get('users/leave-type/{id}', [UserLeaveTypeController::class, 'show']);
+    Route::post('users/leave-type', [UserLeaveTypeController::class, 'store']);
+    Route::put('users/leave-type/{id}', [UserLeaveTypeController::class, 'update']);
+    Route::delete('users/leave-type/{id}', [UserLeaveTypeController::class, 'destroy']);
     Route::get('users/leave-type-title', 'UserLeaveTypeController@getTitles');
 
     //Users Role
