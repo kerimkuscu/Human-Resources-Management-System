@@ -1,98 +1,56 @@
 <template>
-    <div>
+  <div style="margin-top: 10px">
+    <div class="card-title d-inline">
+      <router-link :to="{ name:'leaves.form' }">
+        <button type="button" class="btn btn-success btn-sm float-right" data-tooltip="true" title="Leaves Form">
+          <i class="fas fa-plus" />
+        </button>
+      </router-link>
 
-        <div class="loading" v-if="loading">
-            Loading...
-        </div>
-
-        <div v-if="errors" class="error">
-            {{ errors }}
-        </div>
-
-        <hr>
-
-        <router-link :to="{ name:'leaves.form' }">
-            <button type="button" class="btn btn-success btn-sm float-right" data-tooltip="true" title="Leaves Form"><i class="fas fa-plus"></i></button>
-        </router-link>
-
-        <h4 class="card-title">Employee Leave List</h4>
-
-        <hr>
-
-        <div>
-            <data-tables-server :data="items" :total="total" :pagination-props="{ background: true, pageSizes: [5, 10, 20] }" :action-col="actionCol">
-                <el-table-column v-for="title in titles" :prop="title.prop" :label="title.label" :key="title.label"></el-table-column>
-            </data-tables-server>
-        </div>
-
-        <router-view></router-view>
+      <h4>
+        Employee Leave List
+      </h4>
     </div>
+
+    <hr>
+
+    <data-grid ref="dataGrid" url="/api/users/leaves" element-id="employees" :headers="headers">
+      <template #item.actions="{ item }">
+        <div class="dropdown dropleft">
+          <a href="#" role="button" data-toggle="dropdown" aria-expanded="true" class="btn btn-secondary btn-sm dropdown-toggle">
+            <i class="fas fa-ellipsis-v fa-fw" />
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right">
+            <a :href="'leaves/edit/' + item.id" class="dropdown-item">
+              <i class="fas fa-pen fa-fw" /> Edit
+            </a>
+          </div>
+        </div>
+      </template>
+    </data-grid>
+
+    <router-view />
+  </div>
 </template>
 
 <script>
+    import DataGrid from '../../../datagrid/datagrid';
+
     export default {
-        data: (self = this) => ({
-            loading: false,
-            items: null,
-            errors: null,
-            total: null,
+        components: {
+            DataGrid
+        },
 
-            titles: [],
-            actionCol: {
-                label: 'Actions',
-                props: {
-                    align: 'center',
-                },
-                buttons: [{
-                    props: {
-                        type: 'primary',
-                        icon: 'fas fa-edit',
-                        size: 'mini',
-                    },
-                    handler: (row) => {
-                        self.$router.push({name: 'leaves.edit', params: {id: row.id}})
-                    }
-                }]
-            }
+        data: () => ({
+            headers: [
+                {text: 'Leave Type', value: 'leave_type_name', width: '200px', sortable: false},
+                {text: 'Start Time', value: 'started_at', width: '200px', sortable: false},
+                {text: 'End Time', value: 'ended_at', width: '200px', sortable: false},
+                {text: 'Description', value: 'description', sortable: false},
+                {text: '', value: 'actions', width: '40px', sortable: false},
+            ]
+
         }),
-
-        mounted() {
-            this.fetch();
-            this.getTitles();
-        },
-
-        methods: {
-
-            fetch() {
-                this.error = this.items = null;
-
-                this.loading = true;
-
-                this.$http.get('/api/users/leaves')
-                    .then(response => {
-                        this.items = response.data.data;
-                        this.total = this.items.length;
-                    }).catch(error => {
-                    this.error = error.response.data.message || error.message;
-                }).finally(() => {
-                    this.loading = false;
-                })
-            },
-
-            getTitles() {
-                this.error = this.items = null;
-
-                this.loading = true;
-
-                this.$http.get('/api/users/leaves-title')
-                    .then(response => {
-                        this.titles = response.data;
-                    }).catch(error => {
-                    this.error = error.response.data.message || error.message;
-                }).finally(() => {
-                    this.loading = false;
-                });
-            }
-        },
     }
 </script>
