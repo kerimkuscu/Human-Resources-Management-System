@@ -11474,6 +11474,324 @@ label.required:after {
   border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
+.v-data-table {
+  position: relative;
+  min-height: 115px;
+}
+
+.v-data-table .loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 10;
+  padding: 0;
+  border: none;
+  padding-top: 70px;
+  font-size: 16px;
+  /** /
+  .loader-text {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  /**/
+}
+
+.v-data-table .v-data-table-wrapper {
+  position: relative;
+}
+
+.v-data-table .v-data-table-wrapper table thead .sortable {
+  cursor: pointer;
+  position: relative;
+  /* IPera Style Sort Icons */
+  /*span.sortIcon {
+    position: absolute;
+    height: calc(100% - 30px);
+    right: 15px;
+    top: 18px;
+
+    .fas {
+      display: none;
+      position: absolute;
+      right: 0;
+    }
+
+    .fa-sort {
+      display: inline-block;
+      color: #c5c5c5;
+    }
+
+    &.asc .fas.fa-caret-up {
+      display: inline-block;
+      top: -4px;
+    }
+
+    &.desc .fas.fa-caret-down {
+      display: inline-block;
+      bottom: 4px;
+    }
+  }*/
+  /* Datatables-like Sort Icons */
+}
+
+.v-data-table .v-data-table-wrapper table thead .sortable span.sortIcon {
+  position: absolute;
+  height: calc(100% - 30px);
+  right: 15px;
+  top: 18px;
+}
+
+.v-data-table .v-data-table-wrapper table thead .sortable span.sortIcon .fas {
+  display: none;
+}
+
+.v-data-table .v-data-table-wrapper table thead .sortable span.sortIcon::before,
+.v-data-table .v-data-table-wrapper table thead .sortable span.sortIcon::after {
+  position: absolute;
+  bottom: 5px;
+  display: block;
+  opacity: 0.3;
+}
+
+.v-data-table .v-data-table-wrapper table thead .sortable span.sortIcon::before {
+  right: 6px;
+  content: "\2191";
+}
+
+.v-data-table .v-data-table-wrapper table thead .sortable span.sortIcon::after {
+  right: 0;
+  content: "\2193";
+}
+
+.v-data-table .v-data-table-wrapper table thead .sortable span.sortIcon.asc::before {
+  opacity: 1;
+}
+
+.v-data-table .v-data-table-wrapper table thead .sortable span.sortIcon.desc::after {
+  opacity: 1;
+}
+
+.v-data-table .v-data-table-wrapper table tbody {
+  position: relative;
+}
+
+.v-data-table .v-data-table-wrapper table tbody .loader {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  overflow-x: hidden;
+  z-index: 100;
+  padding: 0;
+}
+
+.v-data-table .v-data-table-wrapper table tbody .loader .line {
+  position: absolute;
+  opacity: 0.4;
+  background: #4a8df8;
+  width: 150%;
+  height: 100%;
+}
+
+.v-data-table .v-data-table-wrapper table tbody .loader .subline {
+  position: absolute;
+  background: #4a8df8;
+  height: 100%;
+}
+
+.v-data-table .v-data-table-wrapper table tbody .loader .subline.inc {
+  -webkit-animation: increase 2s infinite;
+          animation: increase 2s infinite;
+}
+
+.v-data-table .v-data-table-wrapper table tbody .loader .subline.dec {
+  -webkit-animation: decrease 2s 0.5s infinite;
+          animation: decrease 2s 0.5s infinite;
+}
+
+.v-data-table .v-data-table-footer {
+  padding: 10px;
+}
+
+.v-data-table .v-data-table-footer .v-data-table-pagination {
+  line-height: 40px;
+}
+
+.v-data-table .v-data-table-footer .v-data-table-pagination .rows-per-page select.form-control {
+  width: auto;
+  display: inline-block;
+}
+
+.v-data-table .v-data-table-footer .v-data-table-pagination .pagination.prev-page,
+.v-data-table .v-data-table-footer .v-data-table-pagination .pagination.next-page {
+  float: left;
+  line-height: 20px;
+}
+
+.v-data-table .v-data-table-footer .v-data-table-pagination .pagination.prev-page a,
+.v-data-table .v-data-table-footer .v-data-table-pagination .pagination.next-page a {
+  padding: 10px;
+}
+
+.v-data-table .alert {
+  margin: 0;
+}
+
+@-webkit-keyframes increase {
+  from {
+    left: -5%;
+    width: 5%;
+  }
+
+  to {
+    left: 130%;
+    width: 100%;
+  }
+}
+
+@keyframes increase {
+  from {
+    left: -5%;
+    width: 5%;
+  }
+
+  to {
+    left: 130%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes decrease {
+  from {
+    left: -80%;
+    width: 80%;
+  }
+
+  to {
+    left: 110%;
+    width: 10%;
+  }
+}
+
+@keyframes decrease {
+  from {
+    left: -80%;
+    width: 80%;
+  }
+
+  to {
+    left: 110%;
+    width: 10%;
+  }
+}
+
+.table {
+  border-color: #eaeaea;
+}
+
+.table > thead > tr > th {
+  border-bottom: 1px solid #ddd;
+  vertical-align: bottom;
+}
+
+.table .btn {
+  border: 0;
+}
+
+.table .btn.dropdown-toggle {
+  background: none;
+  color: #92918e !important;
+}
+
+.table .dropdown-menu {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.table .dropdown-item {
+  color: #616374;
+  padding: 0.45rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.table .dropdown-item i {
+  margin-right: 5px;
+}
+
+.table .dropleft .dropdown-toggle::before {
+  content: unset;
+}
+
+.profile-table {
+  border-bottom: 0 !important;
+  border-top: 0 !important;
+}
+
+.profile-table th {
+  border-top: 0 !important;
+}
+
+.profile-table td {
+  border-top: 0 !important;
+}
+
+.clean-table {
+  color: #4a4a4a;
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+}
+
+.clean-table thead {
+  background: #f7f7f7;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.clean-table thead tr > th {
+  border-bottom: 0;
+}
+
+.clean-table td,
+.clean-table th {
+  padding: 15px !important;
+  border-color: #e6e6e6 !important;
+  vertical-align: middle;
+  box-sizing: unset;
+}
+
+.clean-table tbody tr.row-deleted {
+  background-color: #fbe3e3;
+}
+
+.clean-table tbody tr.row-deleted td:first-child {
+  border-left: 3px solid #e3342f !important;
+}
+
+.clean-table tbody tr.row-deleted td:first-child input[type=checkbox] {
+  margin-left: -3px;
+}
+
+.clean-table tbody tr:hover {
+  background-color: #f5f8fc !important;
+}
+
+.clean-table .btn-link {
+  color: #666;
+}
+
+.scroll-table {
+  display: block;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.profile-table th,
+.profile-table td {
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

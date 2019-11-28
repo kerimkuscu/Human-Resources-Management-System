@@ -7,13 +7,17 @@
         "watch-poll": "npm run watch -- --watch-poll",
         "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "lint": "node_modules/.bin/eslint resources/js/ --ext .vue",
+        "lint:fix": "node_modules/.bin/eslint resources/js/ --ext .vue --fix"
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.11.2",
         "axios": "^0.18.1",
         "bootstrap": "^4.4.0",
         "cross-env": "^5.2.1",
+        "eslint": "^6.7.1",
+        "eslint-plugin-vue": "^6.0.1",
         "form-backend-validation": "^2.3.9",
         "jquery": "^3.4.1",
         "laravel-mix": "^4.1.4",

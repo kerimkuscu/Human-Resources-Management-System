@@ -2,39 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e29c2270-10c4-46d4-b95a-5f82a87b53f1" name="Default Changelist" comment="refactor: update assets">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidatesController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CandidatesFormRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/CandidatesResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Candidates.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2013_03_01_115755_create_candidates_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/ApplicantsSettings.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesDeleteForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesList.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/ApplicantsCard.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_background_image.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_login.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sass/_select.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/EmployeeFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/EmployeeTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/datagrid/datagrid.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/datagrid/grid-actions.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/datagrid/pagination.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/_datagrid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sass/_tables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.php_cs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.php_cs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserLeaveResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserLeaveResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Candidates.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Candidates.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserLeave.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserLeave.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserLeaveType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserLeaveType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserProfile.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserProfile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/UserRole.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserRole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/NotFound.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/NotFound.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/AuthLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/AuthLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/ApplicantsSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/ApplicantsSettings.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesDeleteForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceDeleteForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/AttendanceSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/AttendanceSettings.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/ApplicantsCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/ApplicantsCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/AttendanceCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/AttendanceCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/LeavesCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/LeavesCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/PeoplesCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/PeoplesCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UserRolesCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UserRolesCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UsersCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UsersCard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeDeleteForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeavesSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeavesSettings.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesDeleteForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesListDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesListDetails.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/PeoplesSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/PeoplesSettings.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersListDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersListDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersRoleForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersRoleForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesDeleteForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersSettings.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_sidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,14 +79,6 @@
     <execution>
       <executable />
     </execution>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Bur</find>
-    </findStrings>
-    <dirStrings>
-      <dir>C:\xampp\htdocs\human-resources-management-system\app\Http\Controllers</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -225,19 +248,26 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/sass" />
+      <recent name="$PROJECT_DIR$/resources/js" />
+      <recent name="$PROJECT_DIR$/database/seeds" />
       <recent name="$PROJECT_DIR$/resources/js/views/Dashboard/Cards" />
-      <recent name="$PROJECT_DIR$/resources/js/views" />
-      <recent name="$PROJECT_DIR$/database/migrations" />
-      <recent name="$PROJECT_DIR$/app/Models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -267,6 +297,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="watch" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -281,6 +321,7 @@
       <list>
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.watch" />
+        <item itemvalue="npm.lint:fix" />
       </list>
     </recent_temporary>
   </component>
@@ -309,27 +350,8 @@
       <workItem from="1556864526575" duration="1213000" />
       <workItem from="1558300909941" duration="1509000" />
       <workItem from="1574924295922" duration="1691000" />
-    </task>
-    <task id="LOCAL-00097" summary="refactor: add employee leave form">
-      <created>1555957149089</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957149089</updated>
-    </task>
-    <task id="LOCAL-00098" summary="refactor: add employees delete form">
-      <created>1555957172927</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957172927</updated>
-    </task>
-    <task id="LOCAL-00099" summary="refactor: add employees form">
-      <created>1555957225807</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957225807</updated>
+      <workItem from="1574931358405" duration="585000" />
+      <workItem from="1574967636995" duration="6096000" />
     </task>
     <task id="LOCAL-00100" summary="refactor: add icon for close button">
       <created>1555957254438</created>
@@ -653,7 +675,28 @@
       <option name="project" value="LOCAL" />
       <updated>1556562896932</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="refactor: update assets">
+      <created>1574931412312</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1574931412313</updated>
+    </task>
+    <task id="LOCAL-00147" summary="refactor: change index method for datagrid">
+      <created>1574973630619</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1574973630620</updated>
+    </task>
+    <task id="LOCAL-00148" summary="style: fix the styles">
+      <created>1574973761537</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1574973761537</updated>
+    </task>
+    <option name="localTasksCounter" value="149" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -687,8 +730,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: add project resource" />
-    <MESSAGE value="refactor: add project settings" />
     <MESSAGE value="refactor: add new routes for project settings" />
     <MESSAGE value="refactor: add new link for project settings" />
     <MESSAGE value="refactor: delete leave accrue enabled and leave carried forward validation" />
@@ -712,6 +753,8 @@
     <MESSAGE value="refactor: delete leavesForm method" />
     <MESSAGE value="refactor: add documentation relation and using media trait" />
     <MESSAGE value="refactor: update assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: update assets" />
+    <MESSAGE value="refactor: change index method for datagrid" />
+    <MESSAGE value="style: fix the styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: fix the styles" />
   </component>
 </project>
