@@ -23,6 +23,8 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null    $created_at
  * @property Carbon|null    $updated_at
  * @property-read User      $user
+ * @property-read UserLeaveType $user_leave_type
+ *
  * @method static Builder|UserLeave newModelQuery()
  * @method static Builder|UserLeave newQuery()
  * @method static Builder|UserLeave query()
@@ -38,6 +40,7 @@ use Illuminate\Support\Carbon;
  * @method static Builder|UserLeave whereUserId($value)
  * @method belongsTo(string $class, string $string)
  * @mixins \Eloquent
+ *
  * @property-read User|null $approver
  * @mixin Eloquent
  */

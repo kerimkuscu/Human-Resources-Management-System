@@ -17,12 +17,15 @@ use Illuminate\Support\Carbon;
  * @property int         $leaves_per_day
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
+ *
  * @method static UserLeaveType newModelQuery()
  * @method static UserLeaveType newQuery()
  * @method static UserLeaveType query()
  * @mixins \Eloquent
+ *
  * @property string|null $deleted_at
  * @property-read User   $user
+ *
  * @method static bool|null forceDelete()
  * @method static Builder|UserLeaveType onlyTrashed()
  * @method static bool|null restore()

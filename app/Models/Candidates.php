@@ -27,6 +27,19 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Candidates newQuery()
  * @method static Builder|Candidates query()
  * @mixin Eloquent
+ *
+ * @method static Builder|Candidates whereCity($value)
+ * @method static Builder|Candidates whereCountry($value)
+ * @method static Builder|Candidates whereCreatedAt($value)
+ * @method static Builder|Candidates whereDepartment($value)
+ * @method static Builder|Candidates whereDescription($value)
+ * @method static Builder|Candidates whereEmail($value)
+ * @method static Builder|Candidates whereGender($value)
+ * @method static Builder|Candidates whereId($value)
+ * @method static Builder|Candidates whereJobTitle($value)
+ * @method static Builder|Candidates whereName($value)
+ * @method static Builder|Candidates wherePhone($value)
+ * @method static Builder|Candidates whereUpdatedAt($value)
  */
 class Candidates extends Model
 {

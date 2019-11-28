@@ -23,6 +23,7 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property-read User   $user
+ *
  * @method static Builder|UserProfile newModelQuery()
  * @method static Builder|UserProfile newQuery()
  * @method static Builder|UserProfile query()

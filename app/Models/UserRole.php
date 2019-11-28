@@ -16,6 +16,7 @@ use Illuminate\Support\Carbon;
  * @property string         $users_role
  * @property Carbon|null    $created_at
  * @property Carbon|null    $updated_at
+ *
  * @method static bool|null forceDelete()
  * @method static Builder|UserRole newModelQuery()
  * @method static Builder|UserRole newQuery()
@@ -25,7 +26,9 @@ use Illuminate\Support\Carbon;
  * @method static \Illuminate\Database\Query\Builder|UserRole withTrashed()
  * @method static UserRole withoutTrashed()
  * @mixins \Eloquent
+ *
  * @property string|null    $deleted_at
+ *
  * @method static Builder|UserRole whereCreatedAt($value)
  * @method static Builder|UserRole whereDeletedAt($value)
  * @method static Builder|UserRole whereId($value)
@@ -33,6 +36,7 @@ use Illuminate\Support\Carbon;
  * @method static Builder|UserRole whereUsersRole($value)
  * @method belongsTo(string $class, string $string)
  * @mixin Eloquent
+ *
  * @property-read User|null $roles
  * @property-read User      $user
  */

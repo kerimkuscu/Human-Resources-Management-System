@@ -18,16 +18,17 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 /**
  * App\Models\User
  *
- * @property int                                                        $id
- * @property string                                                     $name
- * @property string                                                     $email
- * @property string|null                                                $email_verified_at
- * @property string                                                     $password
- * @property string|null                                                $api_token
- * @property string|null                                                $remember_token
- * @property Carbon|null                                                $created_at
- * @property Carbon|null                                                $updated_at
+ * @property int         $id
+ * @property string      $name
+ * @property string      $email
+ * @property string|null $email_verified_at
+ * @property string      $password
+ * @property string|null $api_token
+ * @property string|null $remember_token
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
  * @property-read DatabaseNotificationCollection|DatabaseNotification[] $notifications
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|User query()
@@ -41,21 +42,30 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  * @mixins \Eloquent
- * @property string|null                                                $deleted_at
- * @property-read UserProfile                                           $profile
+ *
+ * @property string|null $deleted_at
+ * @property-read UserProfile $profile
+ *
  * @method static bool|null forceDelete()
  * @method static Builder|User onlyTrashed()
  * @method static bool|null restore()
  * @method static \Illuminate\Database\Eloquent\Builder|User whereDeletedAt($value)
  * @method static Builder|User withTrashed()
  * @method static Builder|User withoutTrashed()
- * @property-read Collection|UserLeave[]                                $leaves
+ *
+ * @property-read Collection|UserLeave[] $leaves
  * @mixin Eloquent
- * @property int|null                                                   $role_id
- * @property-read Collection|UserRole[]                                 $roles
+ *
+ * @property int|null $role_id
+ * @property-read Collection|UserRole[] $roles
+ *
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRoleId($value)
  * @method hasOne(string $class)
  * @method hasMany(string $class)
+ *
+ * @property-read int|null $leaves_count
+ * @property-read int|null $notifications_count
+ * @property-read int|null $roles_count
  */
 class User extends Authenticatable implements JWTSubject
 {
