@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::group([
     'middleware' => 'api',
-    'namespace'  => 'Auth',
-    'prefix'     => 'auth',
-], function() {
+    'namespace' => 'Auth',
+    'prefix' => 'auth',
+], function () {
     Route::post('login', 'AuthController@login');
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
@@ -28,7 +28,7 @@ Route::group([
     Route::post('register', 'RegisterController@register');
 });
 
-Route::group(['middleware' => ['auth:api', 'json']], function() {
+Route::group(['middleware' => ['auth:api', 'json']], function () {
     Route::get('me', 'UserController@me');
 
     //Leaves Form
