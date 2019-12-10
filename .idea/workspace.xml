@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e29c2270-10c4-46d4-b95a-5f82a87b53f1" name="Default Changelist" comment="refactor: update assets">
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersSettings.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+    <list default="true" id="e29c2270-10c4-46d4-b95a-5f82a87b53f1" name="Default Changelist" comment="refactor: change api format">
+      <change beforePath="$PROJECT_DIR$/.idea/human-resources-management-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/human-resources-management-system.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CandidatesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidatesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserLeaveTypeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserLeaveTypeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserRoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserRoleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/EmployeeFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/EmployeeFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_03_13_145230_create_employee_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_03_13_145230_create_employee_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,6 +199,11 @@
   </component>
   <component name="ProjectId" id="1UEYvRxJJqcgbgNAZAJ8Vl1DZL3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -208,18 +228,6 @@
       <recent name="$PROJECT_DIR$/database/seeds" />
       <recent name="$PROJECT_DIR$/resources/js/views/Dashboard/Cards" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="npm.watch">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -264,6 +272,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -290,28 +310,9 @@
       <workItem from="1558300909941" duration="1509000" />
       <workItem from="1574924295922" duration="1691000" />
       <workItem from="1574931358405" duration="585000" />
-      <workItem from="1574967636995" duration="6347000" />
-    </task>
-    <task id="LOCAL-00106" summary="refactor: add project model">
-      <created>1555957339151</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957339151</updated>
-    </task>
-    <task id="LOCAL-00107" summary="refactor: add project card">
-      <created>1555957349393</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957349393</updated>
-    </task>
-    <task id="LOCAL-00108" summary="refactor: add project controller">
-      <created>1555957361993</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957361993</updated>
+      <workItem from="1574967636995" duration="6478000" />
+      <workItem from="1575525278058" duration="276000" />
+      <workItem from="1576005397088" duration="6214000" />
     </task>
     <task id="LOCAL-00109" summary="refactor: add project delete form">
       <created>1555957373871</created>
@@ -635,11 +636,42 @@
       <option name="project" value="LOCAL" />
       <updated>1574974119295</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="refactor: update assets">
+      <created>1574974142701</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1574974142702</updated>
+    </task>
+    <task id="LOCAL-00156" summary="refactor: change script">
+      <created>1574974159885</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1574974159885</updated>
+    </task>
+    <task id="LOCAL-00157" summary="refactor: change api format">
+      <created>1574974169385</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1574974169385</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -669,8 +701,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: using clear code automation" />
-    <MESSAGE value="refactor: add user roles card" />
     <MESSAGE value="refactor: add user role seeder" />
     <MESSAGE value="refactor: add new class and icon" />
     <MESSAGE value="refactor: add close button icon" />
@@ -690,10 +720,55 @@
     <MESSAGE value="refactor: add documentation relation and using media trait" />
     <MESSAGE value="refactor: change index method for datagrid" />
     <MESSAGE value="refactor: add new param" />
-    <MESSAGE value="refactor: update assets" />
     <MESSAGE value="refactor: add employee factory" />
     <MESSAGE value="style: fix the styles" />
     <MESSAGE value="refactor: add new datagrid" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: add new datagrid" />
+    <MESSAGE value="refactor: update assets" />
+    <MESSAGE value="refactor: change script" />
+    <MESSAGE value="refactor: change api format" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: change api format" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="240" y="65" key="#ESLint" timestamp="1576013697538">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="240" y="65" key="#ESLint/0.0.1280.800@0.0.1280.800" timestamp="1576013697538" />
+    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1576010541434">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1576010541434" />
+    <state x="234" y="2" key="CommitChangelistDialog2" timestamp="1576013891626">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="234" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1576013891626" />
+    <state width="1238" height="203" key="GridCell.Tab.0.bottom" timestamp="1576013862977">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="203" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1576013862977" />
+    <state width="1238" height="203" key="GridCell.Tab.0.center" timestamp="1576013862976">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="203" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1576013862976" />
+    <state width="1238" height="203" key="GridCell.Tab.0.left" timestamp="1576013862974">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="203" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1576013862974" />
+    <state width="1238" height="203" key="GridCell.Tab.0.right" timestamp="1576013862977">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="203" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1576013862977" />
+    <state x="100" y="100" width="1080" height="600" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576013752177">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="100" y="100" width="1080" height="600" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.800@0.0.1280.800" timestamp="1576013752177" />
+    <state x="100" y="100" width="1080" height="600" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1280.777@0.23.1280.777" timestamp="1576006658738" />
+    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576013714139">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1576013714139" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1576012255913">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1576012255913" />
   </component>
 </project>
