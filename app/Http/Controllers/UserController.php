@@ -6,6 +6,7 @@ use App\Http\Requests\UserFormRequest;
 use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Resources\Json\JsonResource;
 use Tymon\JWTAuth\Contracts\Providers\Auth;
 
 class UserController extends Controller
@@ -15,7 +16,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return UserResource::collection(User::all());
+        $data = User::query()->paginate(request('per_page', 25));
+
+        return JsonResource::collection($data);
     }
 
     /**
@@ -63,18 +66,5 @@ class UserController extends Controller
         $model->update($request->all());
 
         return new UserResource($model);
-    }
-
-    public function getTitles()
-    {
-        $data = ['name' => 'Name',
-            'email'     => 'Email',
-            'role_id'   => 'Role', ];
-
-        $data = collect($data)->map(function($users, $key) {
-            return ['prop' => $key, 'label' => $users];
-        })->values();
-
-        return response()->json($data);
     }
 }
