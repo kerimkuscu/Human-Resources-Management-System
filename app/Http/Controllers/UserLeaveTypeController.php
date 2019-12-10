@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UserLeaveTypeFormRequest;
 use App\Http\Resources\UserLeaveTypeResource;
 use App\Models\UserLeaveType;
+use Exception;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserLeaveTypeController extends Controller
 {
@@ -14,27 +16,9 @@ class UserLeaveTypeController extends Controller
      */
     public function index()
     {
-        return UserLeaveTypeResource::collection(UserLeaveType::all());
-    }
+        $data = UserLeaveType::query()->paginate(request('per_page', 25));
 
-    /**
-     * Return data grid title
-     *
-     * @return array
-     */
-    public function getTitles()
-    {
-        $data = [
-            'leave_type'     => 'Leave Type',
-            'leaves_per_day' => 'Leave Per Day',
-        ];
-
-        $data = collect($data)->map(function($item, $key) {
-            return ['prop' => $key, 'label' => $item];
-        })->values();
-
-
-        return response()->json($data);
+        return JsonResource::collection($data);
     }
 
     /**
@@ -63,7 +47,7 @@ class UserLeaveTypeController extends Controller
 
     /**
      * @param UserLeaveTypeFormRequest $request
-     * @param int                      $id
+     * @param int $id
      *
      * @return UserLeaveTypeResource
      */
@@ -79,7 +63,7 @@ class UserLeaveTypeController extends Controller
     /**
      * @param int $id
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function destroy($id)
     {
