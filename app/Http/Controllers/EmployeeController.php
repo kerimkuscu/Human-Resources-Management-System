@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\EmployeeFormRequest;
 use App\Http\Resources\EmployeeResource;
 use App\Models\Employee;
-use Illuminate\Http\JsonResponse;
+use Exception;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 class EmployeeController extends Controller
 {
@@ -15,7 +16,9 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        return EmployeeResource::collection(Employee::all());
+        $data = Employee::query()->paginate(request('per_page', 25));
+
+        return JsonResource::collection($data);
     }
 
     /**
@@ -44,7 +47,7 @@ class EmployeeController extends Controller
 
     /**
      * @param EmployeeFormRequest $request
-     * @param int                 $id
+     * @param int $id
      *
      * @return EmployeeResource
      */
@@ -60,32 +63,12 @@ class EmployeeController extends Controller
     /**
      * @param int $id
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function destroy($id)
     {
         $model = Employee::findOrFail($id);
 
         $model->delete();
-    }
-
-    /**
-     * @return JsonResponse
-     */
-    public function getTitles()
-    {
-        $data = ['name'         => 'Name',
-            'birthday'          => 'Birthday',
-            'gender'            => 'Gender',
-            'employment_status' => 'Employment Status',
-            'job_title'         => 'Job Title',
-            'joined_date'       => 'Joined Date',
-            'department'        => 'Department', ];
-
-        $data = collect($data)->map(function($item, $key) {
-            return ['prop' => $key, 'label' => $item];
-        })->values();
-
-        return response()->json($data);
     }
 }
