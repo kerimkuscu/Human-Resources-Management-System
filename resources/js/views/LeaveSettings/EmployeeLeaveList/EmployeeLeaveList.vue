@@ -22,9 +22,9 @@
           </a>
 
           <div class="dropdown-menu dropdown-menu-right">
-            <a :href="'leaves/edit/' + item.id" class="dropdown-item">
+            <router-link :to="{name:'leaves.edit', params: {id: item.id} }" class="dropdown-item">
               <i class="fas fa-pen fa-fw" /> Edit
-            </a>
+            </router-link>
           </div>
         </div>
       </template>
