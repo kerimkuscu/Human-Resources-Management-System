@@ -1,13 +1,5 @@
 <template>
   <div>
-    <div v-if="loading" class="loading">
-      Loading...
-    </div>
-
-    <div v-if="errors" class="error">
-      {{ errors }}
-    </div>
-
     <hr>
 
     <router-link :to="{ name:'peoples.employees-form' }">
@@ -22,98 +14,49 @@
 
     <hr>
 
-    <div>
-      <data-tables-server :data="items" :total="total" :pagination-props="{ background: true, pageSizes: [5, 10, 20] }" :action-col="actionCol">
-        <el-table-column v-for="title in titles" :key="title.label" :prop="title.prop" :label="title.label" />
-      </data-tables-server>
-    </div>
+    <data-grid ref="dataGrid" url="/api/users/employees" element-id="employees" :headers="headers">
+      <template #item.actions="{ item }">
+        <div class="dropdown dropleft">
+          <a href="#" role="button" data-toggle="dropdown" aria-expanded="true" class="btn btn-secondary btn-sm dropdown-toggle">
+            <i class="fas fa-ellipsis-v fa-fw" />
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right">
+            <router-link :to="{name:'peoples.employees-edit', params: {id: item.id} }" class="dropdown-item">
+              <i class="fas fa-pen fa-fw" /> Edit
+            </router-link>
+
+            <router-link :to="{name:'peoples.employees-show', params: {id: item.id} }" class="dropdown-item">
+              <i class="fas fa-list fa-fw" /> Info
+            </router-link>
+
+            <router-link :to="{name:'peoples.employees-delete', params: {id: item.id} }" class="dropdown-item text-danger btn-delete">
+              <i class="fas fa-trash fa-fw" /> Delete
+            </router-link>
+          </div>
+        </div>
+      </template>
+    </data-grid>
 
     <router-view />
   </div>
 </template>
 
 <script>
+    import DataGrid from '../../../datagrid/datagrid';
+
     export default {
-        data: (self = this) => ({
-            loading: false,
-            items: null,
-            errors: null,
-            total: null,
+        components: {
+            DataGrid
+        },
 
-            titles: [],
-            actionCol: {
-                label: 'Actions',
-                props: {
-                    align: 'center',
-                },
-                buttons: [{
-                    props: {
-                        type: 'primary',
-                        icon: 'fas fa-edit',
-                        size: 'mini',
-                    },
-                    handler: (row) => {
-                        self.$router.push({name: 'peoples.employees-edit', params: {id: row.id}})
-                    }
-                }, {
-                    props: {
-                        type: 'info',
-                        icon: 'fas fa-list',
-                        size: 'mini',
-                    },
-                    handler: (row) => {
-                        self.$router.push({name: 'peoples.employees-show', params: {id: row.id}})
-                    }
-                }, {
-                    props: {
-                        type: 'danger',
-                        icon: 'fas fa-trash',
-                        size: 'mini',
-                    },
-                    handler: (row) => {
-                        self.$router.push({name: 'peoples.employees-delete', params: {id: row.id}})
-                    }
-                }]
-            }
+        data: () => ({
+            headers: [
+                {text: 'Name', value: 'name', width: '200px', sortable: false},
+                {text: 'Job Title', value: 'job_title', width: '200px', sortable: false},
+                {text: 'Work Email', value: 'work_email', width: '200px', sortable: false},
+                {text: '', value: 'actions', width: '40px', sortable: false},
+            ]
         }),
-
-        mounted() {
-            this.fetch();
-            this.getTitles();
-        },
-
-        methods: {
-
-            fetch() {
-                this.error = this.items = null;
-
-                this.loading = true;
-
-                this.$http.get('/api/users/employees')
-                    .then(response => {
-                        this.items = response.data.data;
-                        this.total = this.items.length;
-                    }).catch(error => {
-                    this.error = error.response.data.message || error.message;
-                }).finally(() => {
-                    this.loading = false;
-                })
-            },
-
-            getTitles() {
-                this.error = this.items = null;
-
-                this.loading = true;
-
-                this.$http.get('/api/users/employees-title')
-                    .then(response => {
-                        this.titles = response.data;
-                    }).catch(error => {
-                    this.error = error.response.data.message || error.message;
-                }).finally(() => {
-                    this.loading = false;
-                });
-            }
-        },
     }
 </script>
