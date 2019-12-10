@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e29c2270-10c4-46d4-b95a-5f82a87b53f1" name="Default Changelist" comment="refactor: change api format">
-      <change beforePath="$PROJECT_DIR$/.idea/human-resources-management-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/human-resources-management-system.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AttendanceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CandidatesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CandidatesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserLeaveTypeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserLeaveTypeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserRoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserRoleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/EmployeeFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/EmployeeFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_03_13_145230_create_employee_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_03_13_145230_create_employee_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" afterDir="false" />
@@ -312,35 +306,7 @@
       <workItem from="1574931358405" duration="585000" />
       <workItem from="1574967636995" duration="6478000" />
       <workItem from="1575525278058" duration="276000" />
-      <workItem from="1576005397088" duration="6214000" />
-    </task>
-    <task id="LOCAL-00109" summary="refactor: add project delete form">
-      <created>1555957373871</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957373871</updated>
-    </task>
-    <task id="LOCAL-00110" summary="refactor: add project form">
-      <created>1555957383158</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957383158</updated>
-    </task>
-    <task id="LOCAL-00111" summary="refactor: add project form request for project form validation">
-      <created>1555957403130</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957403130</updated>
-    </task>
-    <task id="LOCAL-00112" summary="refactor: add project list">
-      <created>1555957412599</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1555957412599</updated>
+      <workItem from="1576005397088" duration="6450000" />
     </task>
     <task id="LOCAL-00113" summary="refactor: add project resource">
       <created>1555957421987</created>
@@ -657,7 +623,35 @@
       <option name="project" value="LOCAL" />
       <updated>1574974169385</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="refactor: change index method">
+      <created>1576013892771</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1576013892773</updated>
+    </task>
+    <task id="LOCAL-00159" summary="refactor: update assets">
+      <created>1576013952297</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1576013952297</updated>
+    </task>
+    <task id="LOCAL-00160" summary="refactor: change index method">
+      <created>1576013963862</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1576013963862</updated>
+    </task>
+    <task id="LOCAL-00161" summary="refactor: change index method">
+      <created>1576014014581</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1576014014581</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -701,7 +695,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor: add user role seeder" />
     <MESSAGE value="refactor: add new class and icon" />
     <MESSAGE value="refactor: add close button icon" />
     <MESSAGE value="refactor: change data type" />
@@ -723,10 +716,11 @@
     <MESSAGE value="refactor: add employee factory" />
     <MESSAGE value="style: fix the styles" />
     <MESSAGE value="refactor: add new datagrid" />
-    <MESSAGE value="refactor: update assets" />
     <MESSAGE value="refactor: change script" />
     <MESSAGE value="refactor: change api format" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: change api format" />
+    <MESSAGE value="refactor: update assets" />
+    <MESSAGE value="refactor: change index method" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: change index method" />
   </component>
   <component name="WindowStateProjectService">
     <state x="240" y="65" key="#ESLint" timestamp="1576013697538">
@@ -737,10 +731,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1576010541434" />
-    <state x="234" y="2" key="CommitChangelistDialog2" timestamp="1576013891626">
+    <state x="234" y="2" key="CommitChangelistDialog2" timestamp="1576014183565">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="234" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1576013891626" />
+    <state x="234" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1576014183565" />
     <state width="1238" height="203" key="GridCell.Tab.0.bottom" timestamp="1576013862977">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
