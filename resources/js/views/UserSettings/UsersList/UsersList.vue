@@ -1,13 +1,5 @@
 <template>
   <div class="users">
-    <div v-if="loading" class="loading">
-      Loading...
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
     <hr>
 
     <h4 class="card-title">
@@ -16,80 +8,41 @@
 
     <hr>
 
-    <div>
-      <data-tables-server :data="users" :total="total" :pagination-props="{ background: true, pageSizes: [5, 10, 20] }" :action-col="actionCol">
-        <el-table-column v-for="title in titles" :key="title.label" :prop="title.prop" :label="title.label" />
-      </data-tables-server>
-    </div>
+    <data-grid ref="dataGrid" url="/api/users" element-id="users" :headers="headers">
+      <template #item.actions="{ item }">
+        <div class="dropdown dropleft">
+          <a href="#" role="button" data-toggle="dropdown" aria-expanded="true" class="btn btn-secondary btn-sm dropdown-toggle">
+            <i class="fas fa-ellipsis-v fa-fw" />
+          </a>
+
+          <div class="dropdown-menu dropdown-menu-right">
+            <router-link :to="{name:'user.user-role-form', params: {id: item.id} }" class="dropdown-item">
+              <i class="fas fa-user-lock" /> Details
+            </router-link>
+          </div>
+        </div>
+      </template>
+    </data-grid>
 
     <router-view />
   </div>
 </template>
 
 <script>
+    import DataGrid from '../../../datagrid/datagrid';
+
     export default {
-        data(self=this) {
-            return {
-                loading: false,
-                users: null,
-                error: null,
-                total: null,
-
-                titles: [],
-
-                actionCol: {
-                    label: 'Actions',
-                    props: {
-                        align: 'center',
-                    },
-                    buttons: [{
-                        props: {
-                            type: 'primary',
-                            icon: 'fas fa-user-lock',
-                            size: 'mini',
-                        },
-                        handler: (row) => {
-                            self.$router.push({name: 'user.user-role-form', params: {id: row.id}})
-                        }
-                    }]
-                }
-            };
+        components: {
+            DataGrid
         },
-        created() {
-            this.getAll();
-            this.getTitles();
-        },
-        methods: {
-            getAll() {
-                this.error = this.users = null;
 
-                this.loading = true;
-                this.$http
-                    .get('/api/users')
-                    .then(response => {
-                        this.users = response.data.data;
-                        this.total = this.users.length;
-                    }).catch(error => {
-                    this.error = error.response.data.message || error.message;
-                }).finally(() => {
-                    this.loading = false;
-                })
-            },
-
-            getTitles() {
-                this.error = this.items = null;
-
-                this.loading = true;
-
-                this.$http.get('/api/users-title/')
-                    .then(response => {
-                        this.titles = response.data;
-                    }).catch(error => {
-                    this.error = error.response.data.message || error.message;
-                }).finally(() => {
-                    this.loading = false;
-                });
-            }
-        }
+        data: () => ({
+            headers: [
+                {text: 'Name', value: 'name', sortable: false},
+                {text: 'Email', value: 'email', width: '200px', sortable: false},
+                {text: 'Role', value: 'role_id', width: '200px', sortable: false},
+                {text: '', value: 'actions', width: '40px', sortable: false},
+            ]
+        }),
     }
 </script>
