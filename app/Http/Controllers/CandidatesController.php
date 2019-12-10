@@ -6,8 +6,8 @@ use App\Http\Requests\CandidatesFormRequest;
 use App\Http\Resources\CandidatesResource;
 use App\Models\Candidates;
 use Exception;
-use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 class CandidatesController extends Controller
 {
@@ -16,7 +16,9 @@ class CandidatesController extends Controller
      */
     public function index()
     {
-        return CandidatesResource::collection(Candidates::all());
+        $data = Candidates::query()->paginate(request('per_page', 25));
+
+        return JsonResource::collection($data);
     }
 
     /**
@@ -45,7 +47,7 @@ class CandidatesController extends Controller
 
     /**
      * @param CandidatesFormRequest $request
-     * @param int                   $id
+     * @param int $id
      *
      * @return CandidatesResource
      */
@@ -68,23 +70,5 @@ class CandidatesController extends Controller
         $model = Candidates::findOrFail($id);
 
         $model->delete();
-    }
-
-    /**
-     * @return JsonResponse
-     */
-    public function getTitles()
-    {
-        $data = ['name'       => 'Name',
-                 'phone'      => 'Phone Number',
-                 'email'      => 'Email',
-                 'job_title'  => 'Job Title',
-                 'department' => 'Department', ];
-
-        $data = collect($data)->map(function($item, $key) {
-            return ['prop' => $key, 'label' => $item];
-        })->values();
-
-        return response()->json($data);
     }
 }
