@@ -14,7 +14,7 @@ class CreateEmployeeTable extends Migration
         Schema::create('employees', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->char('nationality', 2)->nullable();
+            $table->char('nationality')->nullable();
             $table->date('birthday');
             $table->string('gender')->nullable();
             $table->string('marital_status')->nullable();
@@ -23,7 +23,7 @@ class CreateEmployeeTable extends Migration
             $table->string('job_title');
             $table->text('address')->nullable();
             $table->text('city')->nullable();
-            $table->char('country', 2)->nullable();
+            $table->char('country')->nullable();
             $table->text('province')->nullable();
             $table->text('postal_code')->nullable();
             $table->string('home_phone')->nullable();

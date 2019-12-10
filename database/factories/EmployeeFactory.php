@@ -10,7 +10,7 @@ $factory->define(Employee::class, function(Faker $faker) {
         'birthday'          => $faker->date('Y-m-d'),
         'gender'            => rand(0, 1),
         'marital_status'    => rand(0, 4),
-        'driver_license'    => rand([0, 1]),
+        'driver_license'    => rand(0, 1),
         'employment_status' => rand(0, 4),
         'job_title'         => $faker->jobTitle,
         'address'           => $faker->address,
