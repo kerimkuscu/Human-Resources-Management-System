@@ -6,8 +6,8 @@ use App\Http\Requests\AttendanceFormRequest;
 use App\Http\Resources\AttendanceResource;
 use App\Models\Attendance;
 use Exception;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 class AttendanceController extends Controller
 {
@@ -16,7 +16,9 @@ class AttendanceController extends Controller
      */
     public function index()
     {
-        return AttendanceResource::collection(Attendance::all());
+        $data = Attendance::query()->paginate(request('per_page', 25));
+
+        return JsonResource::collection($data);
     }
 
     /**
@@ -45,7 +47,7 @@ class AttendanceController extends Controller
 
     /**
      * @param AttendanceFormRequest $request
-     * @param int                   $id
+     * @param int $id
      *
      * @return AttendanceResource
      */
@@ -68,21 +70,5 @@ class AttendanceController extends Controller
         $model = Attendance::findOrFail($id);
 
         $model->delete();
-    }
-
-    /**
-     * @return JsonResponse
-     */
-    public function getTitles()
-    {
-        $data = ['employee_id' => 'Employee',
-            'time_in_date'     => 'Time In',
-            'time_out_date'    => 'Time_out', ];
-
-        $data = collect($data)->map(function($item, $key) {
-            return ['prop' => $key, 'label' => $item];
-        })->values();
-
-        return response()->json($data);
     }
 }
