@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\UsersRoleResource;
 use App\Models\UserRole;
-use Illuminate\Http\JsonResponse;
+use Exception;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserRoleController extends Controller
 {
@@ -14,27 +14,15 @@ class UserRoleController extends Controller
      */
     public function index()
     {
-        return UsersRoleResource::collection(UserRole::all());
-    }
+        $data = UserRole::query()->paginate(request('per_page', 25));
 
-    /**
-     * @return JsonResponse
-     */
-    public function getTitles()
-    {
-        $data = ['users_role' => 'Role Name', ];
-
-        $data = collect($data)->map(function($item, $key) {
-            return ['prop' => $key, 'label' => $item];
-        })->values();
-
-        return response()->json($data);
+        return JsonResource::collection($data);
     }
 
     /**
      * @param int $id
      *
-     * @throws \Exception
+     * @throws Exception
      */
     public function destroy($id)
     {
