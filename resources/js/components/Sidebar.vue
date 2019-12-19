@@ -4,73 +4,73 @@
 
 <script>
     export default {
-        data() {
+        data(self = this) {
             return {
                 menu: [
                     {
                         header: true,
-                        title: 'Main Navigation'
+                        title: self.$i18n.t('sidebar.main_navigation')
                     },
                     {
                         href: '/',
-                        title: 'Home',
+                        title: self.$i18n.t('sidebar.home'),
                         icon: 'fas fa-home'
                     },
                     {
-                        title: 'Users',
+                        title: self.$i18n.t('sidebar.users'),
                         icon: 'fas fa-user-plus',
                         child: [
                             {
                                 href:'/users/list',
-                                title: 'Users List'
+                                title: self.$i18n.t('sidebar.users_list'),
                             },
                             {
                                 href: '/users/role',
-                                title: 'Users Role'
+                                title: self.$i18n.t('sidebar.users_role'),
                             }
                         ]
                     },
                     {
-                        title: 'Leaves',
+                        title: self.$i18n.t('sidebar.leaves'),
                         icon: 'fas fa-calendar',
                         child: [
                             {
                                 href: '/leaves/types',
-                                title: 'Leave Type'
+                                title: self.$i18n.t('sidebar.leave_type'),
                             },
                             {
                                 href: '/leaves/employee-list',
-                                title: 'Employee Leave List'
+                                title: self.$i18n.t('sidebar.employee_leave_list'),
                             }
                         ]
                     },
                     {
-                        title: 'People',
+                        title: self.$i18n.t('sidebar.people'),
                         icon: 'fas fa-users',
                         child: [
                             {
                                 href: '/peoples/employees',
-                                title: 'Employees'
+                                title: self.$i18n.t('sidebar.employees'),
                             }
                         ]
                     },
                     {
-                        title: 'Attendance',
+                        title: self.$i18n.t('sidebar.attendance'),
                         icon : 'fas fa-clock',
                         child: [
                             {
                                 href: '/attendance/attendance',
-                                title: 'Monitor Attendance'
+                                title: self.$i18n.t('sidebar.monitor_attendance'),
                             }
                         ]
                     },
                     {
-                        title: 'Applicants',
+                        title: self.$i18n.t('sidebar.applicants'),
                         icon : 'fas fa-user-tie',
                         child: [
                             {
                                 href: '/applicants/candidates',
-                                title: 'Candidates'
+                                title: self.$i18n.t('sidebar.candidates'),
                             }
                         ]
                     }

@@ -4,7 +4,7 @@
       <div class="card login">
         <div class="card-header">
           <h1 class="text-center">
-            HRMS
+              {{ $t('general.page_title') }}
           </h1>
         </div>
 
@@ -43,7 +43,7 @@
 
             <div class="text-center" style="padding: 15px">
               <button type="submit" class="btn btn-primary" style="padding-right: 100px; padding-left: 100px">
-                Login
+                  {{ $t('general.login') }}
               </button>
             </div>
           </form>

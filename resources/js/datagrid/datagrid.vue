@@ -3,7 +3,7 @@
     <slot v-if="slowRequest" name="loader.text">
       <div class="alert loader text-center">
         <div class="loader-text">
-          Slow Request
+          {{ $t('datagrid.slow_request') }}
         </div>
       </div>
     </slot>
@@ -54,7 +54,7 @@
             <tr>
               <td :colspan="headers.length">
                 <div class="alert text-center">
-                  No Data
+                  {{ $t('datagrid.no_data') }}
                 </div>
               </td>
             </tr>

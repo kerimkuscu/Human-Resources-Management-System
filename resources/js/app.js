@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -12,20 +11,29 @@ import router from './router'
 import App from './components/App'
 import VueSidebarMenu from 'vue-sidebar-menu'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
+import VueI18n from 'vue-i18n'
 
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
-Vue.use(ElementUI);
+Vue.use(VueI18n);
 
-// set language to EN
-import lang from 'element-ui/lib/locale/lang/en'
-import locale from 'element-ui/lib/locale'
+const tr = require('./lang/tr');
+const en = require('./lang/en');
 
-locale.use(lang);
+const translationMessages = {
+    en,
+    tr,
+};
 
-// import DataTables and DataTablesServer together
-import VueDataTables from 'vue-data-tables'
-Vue.use(VueDataTables);
+let userLang = navigator.language || navigator.userLanguage;
+
+if (userLang !== 'en' && userLang !== 'tr') userLang = null;
+
+let locale = 'en';
+
+const i18n = new VueI18n({
+    locale,
+    messages: translationMessages,
+});
+
 
 import VueAuth from '@websanova/vue-auth';
 
@@ -44,5 +52,6 @@ Vue.prototype.$http = window.axios;
 
 new Vue({
     router,
+    i18n,
     ...App
 });

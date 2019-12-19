@@ -39,15 +39,15 @@
 
             showDeleteModal(item) {
                 bootbox.confirm({
-                    message: 'Are you sure you wan to delete?',
+                    message: this.$i18n.t('general.are_you_sure_you_want_to_delete'),
                     className: 'modal-danger',
                     buttons: {
                         confirm: {
-                            label: 'Delete',
+                            label: this.$i18n.t('general.delete'),
                             className: 'btn-danger'
                         },
                         cancel: {
-                            label: 'Don\'t delete',
+                            label: this.$i18n.t('general.dont_delete'),
                             className: 'btn-secondary-outline'
                         }
                     },
