@@ -26,8 +26,8 @@
         "resolve-url-loader": "^2.3.2",
         "sass": "^1.23.7",
         "sass-loader": "^7.3.1",
-        "vue": "^2.6.10",
-        "vue-template-compiler": "^2.6.10"
+        "vue": "^2.6.11",
+        "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
         "@websanova/vue-auth": "^2.21.14-beta",
