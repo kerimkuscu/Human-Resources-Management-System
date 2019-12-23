@@ -4450,149 +4450,140 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var form_backend_validation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(form_backend_validation__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mixins_country__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../mixins/country */ "./resources/js/mixins/country.js");
 /* harmony import */ var _mixins_country__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_mixins_country__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _mixins_options__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../mixins/options */ "./resources/js/mixins/options.js");
+/* harmony import */ var _mixins_options__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_mixins_options__WEBPACK_IMPORTED_MODULE_3__);
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-var _this = undefined;
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mixins: [_mixins_country__WEBPACK_IMPORTED_MODULE_2___default.a],
+  mixins: [_mixins_country__WEBPACK_IMPORTED_MODULE_2___default.a, _mixins_options__WEBPACK_IMPORTED_MODULE_3___default.a],
   data: function data() {
-    var self = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this;
     return {
       loading: false,
       editingId: false,
       candidates: [],
-      genderOptions: [{
-        value: null,
-        text: self.$i18n.t('gender_options.selected')
-      }, {
-        value: 'Male',
-        text: self.$i18n.t('gender_options.male')
-      }, {
-        value: 'Female',
-        text: self.$i18n.t('gender_options.female')
-      }],
       form: new form_backend_validation__WEBPACK_IMPORTED_MODULE_1___default.a({
         name: null,
         gender: null,
@@ -4674,17 +4665,17 @@ var _this = undefined;
       this.$router.go('/applicants/candidates');
     },
     employeeForm: function employeeForm() {
-      var _this2 = this;
+      var _this = this;
 
       this.error = this.items = null;
       this.loading = true;
       this.$http.get('/api/users/candidates').then(function (response) {
-        _this2.candidates = response.data.data;
-        console.log(_this2.candidates);
+        _this.candidates = response.data.data;
+        console.log(_this.candidates);
       })["catch"](function (error) {
-        _this2.error = error.response.data.message || error.message;
+        _this.error = error.response.data.message || error.message;
       })["finally"](function () {
-        _this2.loading = false;
+        _this.loading = false;
       });
     }
   }
@@ -5771,6 +5762,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../datagrid/datagrid */ "./resources/js/datagrid/datagrid.vue");
+var _this = undefined;
+
 //
 //
 //
@@ -5813,24 +5806,25 @@ __webpack_require__.r(__webpack_exports__);
     DataGrid: _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
+    var self = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this;
     return {
       headers: [{
-        text: 'Leave Type',
+        text: self.$i18n.t('form.type'),
         value: 'leave_type_name',
         width: '200px',
         sortable: false
       }, {
-        text: 'Start Time',
+        text: self.$i18n.t('form.start_date'),
         value: 'started_at',
         width: '200px',
         sortable: false
       }, {
-        text: 'End Time',
+        text: self.$i18n.t('form.end_date'),
         value: 'ended_at',
         width: '200px',
         sortable: false
       }, {
-        text: 'Description',
+        text: self.$i18n.t('form.description'),
         value: 'description',
         sortable: false
       }, {
@@ -6076,6 +6070,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../datagrid/datagrid */ "./resources/js/datagrid/datagrid.vue");
+var _this = undefined;
+
 //
 //
 //
@@ -6122,13 +6118,14 @@ __webpack_require__.r(__webpack_exports__);
     DataGrid: _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
+    var self = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this;
     return {
       headers: [{
-        text: 'Leave Type',
+        text: self.$i18n.t('form.type'),
         value: 'leave_type',
         sortable: false
       }, {
-        text: 'Leave Per Day',
+        text: self.$i18n.t('form.leaves_per_day'),
         value: 'leaves_per_day',
         width: '200px',
         sortable: false
@@ -6231,6 +6228,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mixins_nationality__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_mixins_nationality__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _mixins_country__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../mixins/country */ "./resources/js/mixins/country.js");
 /* harmony import */ var _mixins_country__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_mixins_country__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _mixins_options__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../mixins/options */ "./resources/js/mixins/options.js");
+/* harmony import */ var _mixins_options__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_mixins_options__WEBPACK_IMPORTED_MODULE_4__);
 
 //
 //
@@ -6461,76 +6460,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mixins: [_mixins_nationality__WEBPACK_IMPORTED_MODULE_2___default.a, _mixins_country__WEBPACK_IMPORTED_MODULE_3___default.a],
+  mixins: [_mixins_nationality__WEBPACK_IMPORTED_MODULE_2___default.a, _mixins_country__WEBPACK_IMPORTED_MODULE_3___default.a, _mixins_options__WEBPACK_IMPORTED_MODULE_4___default.a],
   data: function data() {
     return {
       loading: false,
       editingId: false,
-      genderOptions: [{
-        value: null,
-        text: '(Selected Gender)'
-      }, {
-        value: 'Male',
-        text: 'Male'
-      }, {
-        value: 'Female',
-        text: 'Female'
-      }],
-      maritalStatusOptions: [{
-        value: null,
-        text: '(Selected Marital Status)'
-      }, {
-        value: 'Married',
-        text: 'Married'
-      }, {
-        value: 'Single',
-        text: 'Single'
-      }, {
-        value: 'Divorced',
-        text: 'Divorced'
-      }, {
-        value: 'Widowed',
-        text: 'Widowed'
-      }, {
-        value: 'Other',
-        text: 'Other'
-      }],
-      driverLicenseOptions: [{
-        value: null,
-        text: '(Selected Driver License)'
-      }, {
-        value: 'Yes',
-        text: 'Yes'
-      }, {
-        value: 'No',
-        text: 'No'
-      }],
-      employmentStatusOptions: [{
-        value: null,
-        text: '(Selected Employment Status)'
-      }, {
-        value: 'Full Time Contract',
-        text: 'Full Time Contract'
-      }, {
-        value: 'Full Time Internship',
-        text: 'Full Time Internship'
-      }, {
-        value: 'Full Time Permanent',
-        text: 'Full Time Permanent'
-      }, {
-        value: 'Part Time Contract',
-        text: 'Part Time Contract'
-      }, {
-        value: 'Part Time Internship',
-        text: 'Part Time Internship'
-      }, {
-        value: 'Part Time Permanent',
-        text: 'Part Time Permanent'
-      }],
       form: new form_backend_validation__WEBPACK_IMPORTED_MODULE_1___default.a({
         name: null,
         nationality: null,
@@ -6636,6 +6575,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../datagrid/datagrid */ "./resources/js/datagrid/datagrid.vue");
+var _this = undefined;
+
 //
 //
 //
@@ -6686,19 +6627,20 @@ __webpack_require__.r(__webpack_exports__);
     DataGrid: _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
+    var self = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this;
     return {
       headers: [{
-        text: 'Name',
+        text: self.$i18n.t('form.name'),
         value: 'name',
         width: '200px',
         sortable: false
       }, {
-        text: 'Job Title',
+        text: self.$i18n.t('form.job_title'),
         value: 'job_title',
         width: '200px',
         sortable: false
       }, {
-        text: 'Work Email',
+        text: self.$i18n.t('form.work_email'),
         value: 'work_email',
         width: '200px',
         sortable: false
@@ -6887,6 +6829,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../datagrid/datagrid */ "./resources/js/datagrid/datagrid.vue");
+var _this = undefined;
+
 //
 //
 //
@@ -6923,18 +6867,19 @@ __webpack_require__.r(__webpack_exports__);
     DataGrid: _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
+    var self = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this;
     return {
       headers: [{
-        text: 'Name',
+        text: self.$i18n.t('form.name'),
         value: 'name',
         sortable: false
       }, {
-        text: 'Email',
+        text: self.$i18n.t('form.email'),
         value: 'email',
         width: '200px',
         sortable: false
       }, {
-        text: 'Role',
+        text: self.$i18n.t('form.role'),
         value: 'role_id',
         width: '200px',
         sortable: false
@@ -7279,6 +7224,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../datagrid/datagrid */ "./resources/js/datagrid/datagrid.vue");
+var _this = undefined;
+
 //
 //
 //
@@ -7317,9 +7264,10 @@ __webpack_require__.r(__webpack_exports__);
     DataGrid: _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
+    var self = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this;
     return {
       headers: [{
-        text: 'Role Name',
+        text: self.$i18n.t('form.role_name'),
         value: 'users_role',
         sortable: false
       }, {
@@ -48993,7 +48941,7 @@ var render = function() {
       _c("div", { staticClass: "card-body" }, [
         _c("h5", { staticClass: "card-title title-color" }, [
           _c("i", { staticClass: "fas fa-calendar-alt" }),
-          _vm._v(" " + _vm._s(_vm.$t("card.leavel")) + "\n      ")
+          _vm._v(" " + _vm._s(_vm.$t("card.leaves")) + "\n      ")
         ]),
         _vm._v(" "),
         _c("h3", { staticClass: "card-text" }, [
@@ -49221,7 +49169,9 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h4", { staticClass: "card-title" }, [_vm._v("\n    Home\n  ")]),
+    _c("h4", { staticClass: "card-title" }, [
+      _vm._v("\n    " + _vm._s(_vm.$t("genaral.home")) + "\n  ")
+    ]),
     _vm._v(" "),
     _c("hr"),
     _vm._v(" "),
@@ -49296,7 +49246,11 @@ var render = function() {
             _c("div", { staticClass: "modal-content" }, [
               _c("div", { staticClass: "modal-header" }, [
                 _c("h5", { staticClass: "modal-title" }, [
-                  _vm._v("\n            Employee Leave Form\n          ")
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(_vm.$t("employee_leave.employee_leave_form")) +
+                      "\n          "
+                  )
                 ]),
                 _vm._v(" "),
                 _c(
@@ -49333,7 +49287,7 @@ var render = function() {
                         staticClass: "col-3 col-form-label required",
                         attrs: { for: "type" }
                       },
-                      [_vm._v("Type")]
+                      [_vm._v(_vm._s(_vm.$t("form.type")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-9" }, [
@@ -49413,7 +49367,7 @@ var render = function() {
                         staticClass: "col-3 col-form-label required",
                         attrs: { for: "start-date" }
                       },
-                      [_vm._v("Start Date")]
+                      [_vm._v(_vm._s(_vm.$t("form.start_date")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-9" }, [
@@ -49459,7 +49413,7 @@ var render = function() {
                         staticClass: "col-3 col-form-label required",
                         attrs: { for: "end-date" }
                       },
-                      [_vm._v("End Date")]
+                      [_vm._v(_vm._s(_vm.$t("form.end_date")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-9" }, [
@@ -49501,7 +49455,7 @@ var render = function() {
                         staticClass: "col-3 col-form-label required",
                         attrs: { for: "description" }
                       },
-                      [_vm._v("Description")]
+                      [_vm._v(_vm._s(_vm.$t("form.description")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-9" }, [
@@ -49632,7 +49586,13 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("h4", [_vm._v("\n      Employee Leave List\n    ")])
+          _c("h4", [
+            _vm._v(
+              "\n      " +
+                _vm._s(_vm.$t("employee_leave.employee_leave_list")) +
+                "\n    "
+            )
+          ])
         ],
         1
       ),
@@ -49851,7 +49811,11 @@ var render = function() {
             _c("div", { staticClass: "modal-content" }, [
               _c("div", { staticClass: "modal-header" }, [
                 _c("h5", { staticClass: "modal-title" }, [
-                  _vm._v("\n            Leave Type Form\n          ")
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(_vm.$t("leave_type.leave_type_form")) +
+                      "\n          "
+                  )
                 ]),
                 _vm._v(" "),
                 _c(
@@ -49888,7 +49852,7 @@ var render = function() {
                         staticClass: "col-5 col-form-label required",
                         attrs: { for: "leave-type" }
                       },
-                      [_vm._v("Leave Type")]
+                      [_vm._v(_vm._s(_vm.$t("form.type")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-7" }, [
@@ -49932,7 +49896,24 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "form-group row" }, [
-                    _vm._m(0),
+                    _c(
+                      "label",
+                      {
+                        staticClass: "col-5 col-form-label required",
+                        attrs: { for: "leaves-per-day" }
+                      },
+                      [
+                        _vm._v(_vm._s(_vm.$t("form.leaves_per_day")) + " "),
+                        _c("i", {
+                          staticClass: "fas fa-question-circle",
+                          attrs: {
+                            "data-tooltip": "true",
+                            title:
+                              "This is the number of leave days that can be applied by an employee per year (or the current leave period). If the leave period is less than a Year this is the number of leaves for the leave period."
+                          }
+                        })
+                      ]
+                    ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-7" }, [
                       _c("input", {
@@ -50017,31 +49998,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "label",
-      {
-        staticClass: "col-5 col-form-label required",
-        attrs: { for: "leaves-per-day" }
-      },
-      [
-        _vm._v("Leaves Per Day "),
-        _c("i", {
-          staticClass: "fas fa-question-circle",
-          attrs: {
-            "data-tooltip": "true",
-            title:
-              "This is the number of leave days that can be applied by an employee per year (or the current leave period). If the leave period is less than a Year this is the number of leaves for the leave period."
-          }
-        })
-      ]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -50083,7 +50040,9 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("h4", { staticClass: "card-title" }, [_vm._v("\n    Leave Type\n  ")]),
+      _c("h4", { staticClass: "card-title" }, [
+        _vm._v("\n    " + _vm._s(_vm.$t("leave_type.leave_type")) + "\n  ")
+      ]),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
@@ -50199,7 +50158,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("h4", { staticClass: "card-title" }, [
-      _vm._v("\n    Leaves Settings\n  ")
+      _vm._v("\n    " + _vm._s(_vm.$t("leave_type.page_title")) + "\n  ")
     ]),
     _vm._v(" "),
     _c("hr"),
@@ -50216,7 +50175,13 @@ var render = function() {
                 staticClass: "nav-link",
                 attrs: { to: { name: "leaves.leave-type" } }
               },
-              [_vm._v("\n          Leave Type\n        ")]
+              [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(_vm.$t("leave_type.leave_type")) +
+                    "\n        "
+                )
+              ]
             )
           ],
           1
@@ -50232,7 +50197,13 @@ var render = function() {
                 staticClass: "nav-link",
                 attrs: { to: { name: "leaves.employee-list" } }
               },
-              [_vm._v("\n          Employee Leave List\n        ")]
+              [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(_vm.$t("employee_leave.employee_leave_list")) +
+                    "\n        "
+                )
+              ]
             )
           ],
           1
@@ -50402,7 +50373,11 @@ var render = function() {
               _c("div", { staticClass: "modal-content" }, [
                 _c("div", { staticClass: "modal-header" }, [
                   _c("h5", { staticClass: "modal-title" }, [
-                    _vm._v("\n            Employees Form\n          ")
+                    _vm._v(
+                      "\n            " +
+                        _vm._s(_vm.$t("employees.employees_form")) +
+                        "\n          "
+                    )
                   ]),
                   _vm._v(" "),
                   _c(
@@ -50445,7 +50420,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label required",
                             attrs: { for: "name" }
                           },
-                          [_vm._v("Name Surname")]
+                          [_vm._v(_vm._s(_vm.$t("form.name_surname")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -50491,7 +50466,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "nationality" }
                           },
-                          [_vm._v("Nationality")]
+                          [_vm._v(_vm._s(_vm.$t("form.nationality")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -50564,7 +50539,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label required",
                             attrs: { for: "birthday" }
                           },
-                          [_vm._v("Date Of Birth")]
+                          [_vm._v(_vm._s(_vm.$t("form.date_of_birth")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -50610,7 +50585,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "gender" }
                           },
-                          [_vm._v("Gender")]
+                          [_vm._v(_vm._s(_vm.$t("form.gender")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -50683,7 +50658,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "marital-status" }
                           },
-                          [_vm._v("Marital Status")]
+                          [_vm._v(_vm._s(_vm.$t("form.marital_status")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -50760,7 +50735,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "driver-license" }
                           },
-                          [_vm._v("Driver License")]
+                          [_vm._v(_vm._s(_vm.$t("form.driver_license")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -50837,7 +50812,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "employment-status" }
                           },
-                          [_vm._v("Employment Status")]
+                          [_vm._v(_vm._s(_vm.$t("form.employment_status")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -50916,7 +50891,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label required",
                             attrs: { for: "job-title" }
                           },
-                          [_vm._v("Job Title")]
+                          [_vm._v(_vm._s(_vm.$t("form.job_title")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -50966,7 +50941,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "city" }
                           },
-                          [_vm._v("City")]
+                          [_vm._v(_vm._s(_vm.$t("form.city")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51012,7 +50987,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "address" }
                           },
-                          [_vm._v("Address")]
+                          [_vm._v(_vm._s(_vm.$t("form.address")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51062,7 +51037,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "country" }
                           },
-                          [_vm._v("Country")]
+                          [_vm._v(_vm._s(_vm.$t("form.country")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51135,7 +51110,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "province" }
                           },
-                          [_vm._v("Province")]
+                          [_vm._v(_vm._s(_vm.$t("form.province")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51185,7 +51160,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "postal-code" }
                           },
-                          [_vm._v("Postal Code")]
+                          [_vm._v(_vm._s(_vm.$t("form.postal_code")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51235,7 +51210,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "home-phone" }
                           },
-                          [_vm._v("Home Phone")]
+                          [_vm._v(_vm._s(_vm.$t("form.home_phone")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51285,7 +51260,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "mobile-phone" }
                           },
-                          [_vm._v("Mobile Phone")]
+                          [_vm._v(_vm._s(_vm.$t("form.mobile_phone")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51337,7 +51312,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "work-phone" }
                           },
-                          [_vm._v("Work Phone")]
+                          [_vm._v(_vm._s(_vm.$t("form.work_phone")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51387,7 +51362,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label required",
                             attrs: { for: "emergency-contact" }
                           },
-                          [_vm._v("Emergency Contact")]
+                          [_vm._v(_vm._s(_vm.$t("form.emergency_contact")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51441,7 +51416,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "work-email" }
                           },
-                          [_vm._v("Work Email")]
+                          [_vm._v(_vm._s(_vm.$t("form.work_email")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51491,7 +51466,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label",
                             attrs: { for: "private-email" }
                           },
-                          [_vm._v("Private Email")]
+                          [_vm._v(_vm._s(_vm.$t("form.private_email")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51543,7 +51518,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label required",
                             attrs: { for: "joined-date" }
                           },
-                          [_vm._v("Joined Date")]
+                          [_vm._v(_vm._s(_vm.$t("form.joined_date")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51589,7 +51564,7 @@ var render = function() {
                             staticClass: "col-5 col-form-label required",
                             attrs: { for: "department" }
                           },
-                          [_vm._v("Department")]
+                          [_vm._v(_vm._s(_vm.$t("form.department")))]
                         ),
                         _vm._v(" "),
                         _c("div", { staticClass: "col-7" }, [
@@ -51722,7 +51697,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("h4", { staticClass: "card-title" }, [
-        _vm._v("\n    Employees List\n  ")
+        _vm._v("\n    " + _vm._s(_vm.$t("employees.employees_list")) + "\n  ")
       ]),
       _vm._v(" "),
       _c("hr"),
@@ -51866,7 +51841,11 @@ var render = function() {
         _c("div", { staticClass: "modal-content" }, [
           _c("div", { staticClass: "modal-header" }, [
             _c("h5", { staticClass: "modal-title" }, [
-              _vm._v("\n          User Details\n        ")
+              _vm._v(
+                "\n          " +
+                  _vm._s(_vm.$t("employees.user_details")) +
+                  "\n        "
+              )
             ]),
             _vm._v(" "),
             _c(
@@ -51899,31 +51878,37 @@ var render = function() {
                   ? _c("table", { staticClass: "table clean-table" }, [
                       _c("tbody", [
                         _c("tr", [
-                          _c("th", [_vm._v("Name")]),
+                          _c("th", [_vm._v(_vm._s(_vm.$t("form.name")))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.name))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Nationality")]),
+                          _c("th", [
+                            _vm._v(_vm._s(_vm.$t("form.nationality")))
+                          ]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.nationality))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Birthday")]),
+                          _c("th", [
+                            _vm._v(_vm._s(_vm.$t("form.date_of_birth")))
+                          ]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.birthday))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Gender")]),
+                          _c("th", [_vm._v(_vm._s(_vm.$t("form.gender")))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.gender))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Marital Status")]),
+                          _c("th", [
+                            _vm._v(_vm._s(_vm.$t("form.marital_status")))
+                          ]),
                           _vm._v(" "),
                           _c("td", [
                             _vm._v(_vm._s(_vm.employee.marital_status))
@@ -51931,7 +51916,9 @@ var render = function() {
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Driver Licence")]),
+                          _c("th", [
+                            _vm._v(_vm._s(_vm.$t("form.driver_license")))
+                          ]),
                           _vm._v(" "),
                           _c("td", [
                             _vm._v(_vm._s(_vm.employee.driver_license))
@@ -51939,7 +51926,9 @@ var render = function() {
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Employment Status")]),
+                          _c("th", [
+                            _vm._v(_vm._s(_vm.$t("form.employment_status")))
+                          ]),
                           _vm._v(" "),
                           _c("td", [
                             _vm._v(_vm._s(_vm.employee.employment_status))
@@ -51947,61 +51936,67 @@ var render = function() {
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Job Title")]),
+                          _c("th", [_vm._v(_vm._s(_vm.$t("form.job_title")))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.job_title))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Address")]),
+                          _c("th", [_vm._v(_vm._s(_vm.$t("form.address")))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.address))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("City")]),
+                          _c("th", [_vm._v(_vm._s(_vm.$t("form.city")))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.city))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Country")]),
+                          _c("th", [_vm._v(_vm._s(_vm.$t("form.country")))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.country))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Province")]),
+                          _c("th", [_vm._v(_vm._s(_vm.$t("form.province")))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.province))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Postal Code")]),
+                          _c("th", [
+                            _vm._v(_vm._s(_vm.$t("form.postal_code")))
+                          ]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.postal_code))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Home Phone")]),
+                          _c("th", [_vm._v(_vm._s(_vm.$t("form.home_phone")))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.home_phone))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Mobile Phone")]),
+                          _c("th", [
+                            _vm._v(_vm._s(_vm.$t("form.mobile_phone")))
+                          ]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.mobile_phone))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Work Phone")]),
+                          _c("th", [_vm._v(_vm._s(_vm.$t("form.work_phone")))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.work_phone))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Emergency Contact")]),
+                          _c("th", [
+                            _vm._v(_vm._s(_vm.$t("form.emergency_contact")))
+                          ]),
                           _vm._v(" "),
                           _c("td", [
                             _vm._v(_vm._s(_vm.employee.emergency_contact))
@@ -52009,25 +52004,29 @@ var render = function() {
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Work Email")]),
+                          _c("th", [_vm._v(_vm._s(_vm.$t("form.work_email")))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.work_email))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Private Email")]),
+                          _c("th", [
+                            _vm._v(_vm._s(_vm.$t("form.private_email")))
+                          ]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.private_email))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Joined Date")]),
+                          _c("th", [
+                            _vm._v(_vm._s(_vm.$t("form.joined_date")))
+                          ]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.joined_date))])
                         ]),
                         _vm._v(" "),
                         _c("tr", [
-                          _c("th", [_vm._v("Department")]),
+                          _c("th", [_vm._v(_vm._s(_vm.$t("form.department")))]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(_vm.employee.department))])
                         ])
@@ -52048,7 +52047,7 @@ var render = function() {
               },
               [
                 _c("i", { staticClass: "fas fa-times" }),
-                _vm._v(" Close\n        ")
+                _vm._v(" " + _vm._s(_vm.$t("general.close")) + "\n        ")
               ]
             )
           ])
@@ -52081,7 +52080,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("h4", { staticClass: "card-title" }, [
-      _vm._v("\n    Peoples Settings\n  ")
+      _vm._v("\n    " + _vm._s(_vm.$t("employees.page_title")) + "\n  ")
     ]),
     _vm._v(" "),
     _c("hr"),
@@ -52098,7 +52097,13 @@ var render = function() {
                 staticClass: "nav-link",
                 attrs: { to: { name: "peoples.employees" } }
               },
-              [_vm._v("\n          Employees\n        ")]
+              [
+                _vm._v(
+                  "\n          " +
+                    _vm._s(_vm.$t("employees.employees")) +
+                    "\n        "
+                )
+              ]
             )
           ],
           1
@@ -52145,7 +52150,9 @@ var render = function() {
     [
       _c("hr"),
       _vm._v(" "),
-      _c("h4", { staticClass: "card-title" }, [_vm._v("\n    User List\n  ")]),
+      _c("h4", { staticClass: "card-title" }, [
+        _vm._v("\n    " + _vm._s(_vm.$t("user_list.user_list")) + "\n  ")
+      ]),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
@@ -52194,7 +52201,11 @@ var render = function() {
                         },
                         [
                           _c("i", { staticClass: "fas fa-user-lock" }),
-                          _vm._v(" Details\n          ")
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.$t("user_list.details")) +
+                              "\n          "
+                          )
                         ]
                       )
                     ],
@@ -52246,7 +52257,11 @@ var render = function() {
         _c("div", { staticClass: "modal-content" }, [
           _c("div", { staticClass: "modal-header" }, [
             _c("h5", { staticClass: "modal-title" }, [
-              _vm._v("\n          User Details\n        ")
+              _vm._v(
+                "\n          " +
+                  _vm._s(_vm.$t("user_list.user_details")) +
+                  "\n        "
+              )
             ]),
             _vm._v(" "),
             _c(
@@ -52274,7 +52289,13 @@ var render = function() {
               _vm._v(" "),
               _vm.user
                 ? _c("table", { staticClass: "table" }, [
-                    _vm._m(0),
+                    _c("thead", [
+                      _c("tr", [
+                        _c("th", [_vm._v(_vm._s(_vm.$t("form.name")))]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v(_vm._s(_vm.$t("form.email")))])
+                      ])
+                    ]),
                     _vm._v(" "),
                     _c("tbody", [
                       _c("tr", [
@@ -52298,7 +52319,7 @@ var render = function() {
               },
               [
                 _c("i", { staticClass: "fas fa-times" }),
-                _vm._v(" Close\n        ")
+                _vm._v(" " + _vm._s(_vm.$t("general.close")) + "\n        ")
               ]
             )
           ])
@@ -52307,20 +52328,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [_vm._v("Name")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Email")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -52366,7 +52374,11 @@ var render = function() {
             _c("div", { staticClass: "modal-content" }, [
               _c("div", { staticClass: "modal-header" }, [
                 _c("h5", { staticClass: "modal-title" }, [
-                  _vm._v("\n            User Details\n          ")
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(_vm.$t("user_list.user_details")) +
+                      "\n          "
+                  )
                 ]),
                 _vm._v(" "),
                 _c(
@@ -52403,7 +52415,7 @@ var render = function() {
                         staticClass: "col-3 col-form-label",
                         attrs: { for: "users-name" }
                       },
-                      [_vm._v("Name")]
+                      [_vm._v(_vm._s(_vm.$t("form.name")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-9" }, [
@@ -52438,7 +52450,7 @@ var render = function() {
                         staticClass: "col-3 col-form-label",
                         attrs: { for: "users-email" }
                       },
-                      [_vm._v("Email")]
+                      [_vm._v(_vm._s(_vm.$t("form.email")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-9" }, [
@@ -52477,7 +52489,7 @@ var render = function() {
                         staticClass: "col-3 col-form-label required",
                         attrs: { for: "type" }
                       },
-                      [_vm._v("Role")]
+                      [_vm._v(_vm._s(_vm.$t("form.role")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-9" }, [
@@ -52562,7 +52574,9 @@ var render = function() {
                   },
                   [
                     _c("i", { staticClass: "fas fa-times" }),
-                    _vm._v(" Close\n          ")
+                    _vm._v(
+                      " " + _vm._s(_vm.$t("general.close")) + "\n          "
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -52716,7 +52730,7 @@ var render = function() {
         _c("hr"),
         _vm._v(" "),
         _c("h4", { staticClass: "card-title" }, [
-          _vm._v("\n      User Roles\n    ")
+          _vm._v("\n      " + _vm._s(_vm.$t("user_list.user_roles")) + "\n    ")
         ]),
         _vm._v(" "),
         _c("hr"),
@@ -52813,7 +52827,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("h4", { staticClass: "card-title" }, [
-      _vm._v("\n    Users Settings\n  ")
+      _vm._v("\n    " + _vm._s(_vm.$t("user_list.page_title")) + "\n  ")
     ]),
     _vm._v(" "),
     _c("hr"),
@@ -52827,7 +52841,13 @@ var render = function() {
             _c(
               "router-link",
               { staticClass: "nav-link", attrs: { to: { name: "user.list" } } },
-              [_vm._v("\n          User List\n        ")]
+              [
+                _vm._v(
+                  "\n          " +
+                    _vm._s(_vm.$t("user_list.user_list")) +
+                    "\n        "
+                )
+              ]
             )
           ],
           1
@@ -52840,7 +52860,13 @@ var render = function() {
             _c(
               "router-link",
               { staticClass: "nav-link", attrs: { to: { name: "user.role" } } },
-              [_vm._v("\n          User Role\n        ")]
+              [
+                _vm._v(
+                  "\n          " +
+                    _vm._s(_vm.$t("user_list.user_role")) +
+                    "\n        "
+                )
+              ]
             )
           ],
           1
@@ -67977,7 +68003,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_sidebar_menu__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_sidebar_menu__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var vue_sidebar_menu_dist_vue_sidebar_menu_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-sidebar-menu/dist/vue-sidebar-menu.css */ "./node_modules/vue-sidebar-menu/dist/vue-sidebar-menu.css");
 /* harmony import */ var vue_sidebar_menu_dist_vue_sidebar_menu_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_sidebar_menu_dist_vue_sidebar_menu_css__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var vue_i18n__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-i18n */ "./node_modules/vue-i18n/dist/vue-i18n.esm.js");
+/* harmony import */ var vue_i18n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-i18n */ "./node_modules/vue-i18n/dist/vue-i18n.esm.js");
 /* harmony import */ var _websanova_vue_auth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @websanova/vue-auth */ "./node_modules/@websanova/vue-auth/src/index.js");
 /* harmony import */ var _websanova_vue_auth__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_websanova_vue_auth__WEBPACK_IMPORTED_MODULE_6__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -67999,7 +68025,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_i18n__WEBPACK_IMPORTED_MODULE_7__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_i18n__WEBPACK_IMPORTED_MODULE_5__["default"]);
 
 var tr = __webpack_require__(/*! ./lang/tr */ "./resources/js/lang/tr.js");
 
@@ -68012,7 +68038,7 @@ var translationMessages = {
 var userLang = navigator.language || navigator.userLanguage;
 if (userLang !== 'en' && userLang !== 'tr') userLang = null;
 var locale = 'en';
-var i18n = new vue_i18n__WEBPACK_IMPORTED_MODULE_7__["default"]({
+var i18n = new vue_i18n__WEBPACK_IMPORTED_MODULE_5__["default"]({
   locale: locale,
   messages: translationMessages
 });
@@ -68497,6 +68523,7 @@ __webpack_require__.r(__webpack_exports__);
 module.exports = {
   general: {
     page_title: 'HRMS',
+    home: 'Home',
     tr: 'Türkçe',
     en: 'English',
     page_not_found: 'Page Not Found',
@@ -68504,6 +68531,7 @@ module.exports = {
     logout: 'Logout',
     save: 'Save',
     cancel: 'Cancel',
+    close: 'Close',
     edit: 'Edit',
     are_you_sure_you_want_to_delete: 'Are you sure you want to delete?',
     are_you_sure_you_want_to_delete_this_item: 'Are you sure you want to delete this item?',
@@ -68538,14 +68566,36 @@ module.exports = {
     job_title: 'Job Title',
     department: 'Department',
     description: 'Description',
-    employee: 'Çalışan',
+    employee: 'Employee',
     time_in_date: 'Time In Date',
     time_in_time: 'Time In Time',
     time_out_date: 'Time Out Date',
     time_out_time: 'Time Out Time',
     note: 'Note',
     time_in: 'Time In',
-    time_out: 'Time Out'
+    time_out: 'Time Out',
+    type: 'Leave Type',
+    start_date: 'Start Date',
+    end_date: 'End Date',
+    leaves_per_day: 'Leaves Per Day',
+    name_surname: 'Name Surname',
+    nationality: 'Nationality',
+    date_of_birth: 'Date Of Birth',
+    marital_status: 'Marital Status',
+    driver_license: 'Driver License',
+    employment_status: 'Employment Status',
+    address: 'Address',
+    province: 'Province',
+    postal_code: 'Postal Code',
+    home_phone: 'Home Phone',
+    mobile_phone: 'Mobile Phone',
+    work_phone: 'Work Phone',
+    emergency_contact: 'Emergency Contact',
+    work_email: 'Work Email',
+    private_email: 'Private Email',
+    joined_date: 'Joined Date',
+    role: 'Role',
+    role_name: 'Role Name'
   },
   datagrid: {
     slow_request: 'Slow Request',
@@ -68575,6 +68625,28 @@ module.exports = {
     male: 'Male',
     female: 'Female'
   },
+  marital_status_options: {
+    selected: '(Selected Marital Status)',
+    married: 'Married',
+    single: 'Single',
+    divorced: 'Divorced',
+    widowed: 'Widowed',
+    other: 'Other'
+  },
+  driver_license_options: {
+    selected: '(Selected Driver License)',
+    yes: 'Yes',
+    no: 'No'
+  },
+  employment_status_options: {
+    selected: '(Selected Employment Status)',
+    full_time_contract: 'Full Time Contract',
+    full_time_internship: 'Full Time Internship',
+    full_time_permanent: 'Full Time Permanent',
+    part_time_contract: 'Part Time Contract',
+    part_time_internship: 'Part Time Internship',
+    part_time_permanent: 'Part Time Permanent'
+  },
   applicants: {
     page_title: 'Applicants Settings'
   },
@@ -68586,6 +68658,29 @@ module.exports = {
     page_title: 'Attendance Settings',
     attendance_form: 'Attendance Form',
     attendance_list: 'Attendance List'
+  },
+  employee_leave: {
+    employee_leave_form: 'Employee Leave Form',
+    employee_leave_list: 'Employee Leave List'
+  },
+  leave_type: {
+    page_title: 'Leaves Settings',
+    leave_type: 'Leave Type',
+    leave_type_form: 'Leave Type Form'
+  },
+  employees: {
+    employees: 'Employees',
+    employees_form: 'Employees Form',
+    employees_list: 'Employees List',
+    user_details: 'User Details',
+    page_title: 'Peoples Settings'
+  },
+  user_list: {
+    user_list: 'User List',
+    details: 'Details',
+    user_details: 'User Details',
+    user_roles: 'User Roles',
+    page_title: 'User Settings'
   }
 };
 
@@ -68601,11 +68696,13 @@ module.exports = {
 module.exports = {
   general: {
     page_title: 'HRMS',
+    home: 'Anasayfa',
     tr: 'Türkçe',
     en: 'English',
     page_not_found: 'Sayfa Bulunamadı',
     login: 'Giriş',
     logout: 'Çıkış',
+    close: 'Kapat',
     save: 'Kaydet',
     cancel: 'İptal',
     edit: 'Düzenle',
@@ -68649,7 +68746,29 @@ module.exports = {
     time_out_time: 'Zaman Aşım Zamanı',
     note: 'Not',
     time_in: 'Giriş Zamanı',
-    time_out: 'Çıkış Zamanı'
+    time_out: 'Çıkış Zamanı',
+    type: 'İzin Tipi',
+    start_date: 'Başlangıç Tarihi',
+    end_date: 'Bitiş Tarihi',
+    leaves_per_day: 'Günlük İzin',
+    name_surname: 'İsim Soyisim',
+    nationality: 'Milliyet',
+    date_of_birth: 'Doğum Tarihi',
+    marital_status: 'Medeni Durum',
+    driver_license: 'Ehliyet',
+    employment_status: 'Çalışma Durumu',
+    address: 'Adres',
+    province: 'Bölge',
+    postal_code: 'Posta Kodu',
+    home_phone: 'Ev Numarası',
+    mobile_phone: 'Mobil Numara',
+    work_phone: 'İş Numarası',
+    emergency_contact: 'Acil İletişim',
+    work_email: 'İş Email',
+    private_email: 'Özel Email',
+    joined_date: 'Katılım Tarihi',
+    role: 'Rol',
+    role_name: 'Rol Adı'
   },
   datagrid: {
     slow_request: 'Yavaş İstek',
@@ -68660,7 +68779,7 @@ module.exports = {
     candidates: 'Adaylar',
     manage_candidates: 'Adayları Yönet',
     attendance: 'Katılım',
-    entries_last_week: 'Geçen Hafta Girişler',
+    entries_last_week: 'Geçmiş Girişler',
     monitor_attendance: 'Katılımı İzleyin',
     leaves: 'İzinli',
     upcoming: 'Yaklaşan',
@@ -68675,9 +68794,31 @@ module.exports = {
     manage_users: 'Kullanıcıları Yönet'
   },
   gender_options: {
-    selected: '(Cinsiyet Seçiniz)',
+    selected: '(Cinsiyetinizi Seçiniz)',
     male: 'Erkek',
     female: 'Kadın'
+  },
+  marital_status_options: {
+    selected: '(Medeni Durumunuzu Seçiniz)',
+    married: 'Evli',
+    single: 'Bekar',
+    divorced: 'Boşanmış',
+    widowed: 'Dul',
+    other: 'Diğer'
+  },
+  driver_license_options: {
+    selected: '(Sürücü Belgenizi Seçiniz)',
+    yes: 'Var',
+    no: 'Yok'
+  },
+  employment_status_options: {
+    selected: '(Çalışma Şeklinizi Seçiniz)',
+    full_time_contract: 'Tam Zamanlı Sözleşme',
+    full_time_internship: 'Tam Zamanlı Staj',
+    full_time_permanent: 'Tam Zamanlı Kalıcı',
+    part_time_contract: 'Yarı Zamanlı Sözleşme',
+    part_time_internship: 'Yarı Zamanlı Staj',
+    part_time_permanent: 'Yarı Zamanlı Kalıcı'
   },
   applicants: {
     page_title: 'Başvuru Adayları'
@@ -68690,6 +68831,29 @@ module.exports = {
     page_title: 'Katılım Ayarları',
     attendance_form: 'Katılım Formu',
     attendance_list: 'Katılım Listesi'
+  },
+  employee_leave: {
+    employee_leave_form: 'Çalışan İzin Formu',
+    employee_leave_list: 'Çalışan İzin Listesi'
+  },
+  leave_type: {
+    page_title: 'İzin Ayarları',
+    leave_type: 'İzin Tipi',
+    leave_type_form: 'İzin Tipi Formu'
+  },
+  employees: {
+    employees: 'Çalışanlar',
+    employees_form: 'Çalışan Formu',
+    employees_list: 'Çalışan Listesi',
+    user_details: 'Kullanıcı Detayları',
+    page_title: 'Kullanıcı Ayarları'
+  },
+  user_list: {
+    user_list: 'Kullanıcı Listesi',
+    details: 'Detaylar',
+    user_details: 'Kullanıcı Detayları',
+    user_roles: 'Kullanıcı Rolleri',
+    page_title: 'Kullanıcı Ayarları'
   }
 };
 
@@ -70207,6 +70371,86 @@ module.exports = {
       }, {
         value: 'ZW',
         text: 'Zimbabwean'
+      }]
+    };
+  }
+};
+
+/***/ }),
+
+/***/ "./resources/js/mixins/options.js":
+/*!****************************************!*\
+  !*** ./resources/js/mixins/options.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var _this = this;
+
+module.exports = {
+  data: function data() {
+    var self = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this;
+    return {
+      genderOptions: [{
+        value: null,
+        text: self.$i18n.t('gender_options.selected')
+      }, {
+        value: 'Male',
+        text: self.$i18n.t('gender_options.male')
+      }, {
+        value: 'Female',
+        text: self.$i18n.t('gender_options.female')
+      }],
+      maritalStatusOptions: [{
+        value: null,
+        text: self.$i18n.t('marital_status_options.selected')
+      }, {
+        value: 'Married',
+        text: self.$i18n.t('marital_status_options.married')
+      }, {
+        value: 'Single',
+        text: self.$i18n.t('marital_status_options.single')
+      }, {
+        value: 'Divorced',
+        text: self.$i18n.t('marital_status_options.divorced')
+      }, {
+        value: 'Widowed',
+        text: self.$i18n.t('marital_status_options.widowed')
+      }, {
+        value: 'Other',
+        text: self.$i18n.t('marital_status_options.other')
+      }],
+      driverLicenseOptions: [{
+        value: null,
+        text: self.$i18n.t('driver_license_options.selected')
+      }, {
+        value: 'Yes',
+        text: self.$i18n.t('driver_license_options.yes')
+      }, {
+        value: 'No',
+        text: self.$i18n.t('driver_license_options.no')
+      }],
+      employmentStatusOptions: [{
+        value: null,
+        text: self.$i18n.t('employment_status_options.selected')
+      }, {
+        value: 'Full Time Contract',
+        text: self.$i18n.t('employment_status_options.full_time_contract')
+      }, {
+        value: 'Full Time Internship',
+        text: self.$i18n.t('employment_status_options.full_time_internship')
+      }, {
+        value: 'Full Time Permanent',
+        text: self.$i18n.t('employment_status_options.full_time_permanent')
+      }, {
+        value: 'Part Time Contract',
+        text: self.$i18n.t('employment_status_options.part_time_contract')
+      }, {
+        value: 'Part Time Internship',
+        text: self.$i18n.t('employment_status_options.part_time_internship')
+      }, {
+        value: 'Part Time Permanent',
+        text: self.$i18n.t('employment_status_options.part_time_permanent')
       }]
     };
   }
