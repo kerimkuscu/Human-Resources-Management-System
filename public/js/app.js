@@ -4451,6 +4451,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mixins_country__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../mixins/country */ "./resources/js/mixins/country.js");
 /* harmony import */ var _mixins_country__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_mixins_country__WEBPACK_IMPORTED_MODULE_2__);
 
+
+var _this = undefined;
+
 //
 //
 //
@@ -4575,19 +4578,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   mixins: [_mixins_country__WEBPACK_IMPORTED_MODULE_2___default.a],
   data: function data() {
+    var self = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this;
     return {
       loading: false,
       editingId: false,
       candidates: [],
       genderOptions: [{
         value: null,
-        text: '(Selected Gender)'
+        text: self.$i18n.t('gender_options.selected')
       }, {
         value: 'Male',
-        text: 'Male'
+        text: self.$i18n.t('gender_options.male')
       }, {
         value: 'Female',
-        text: 'Female'
+        text: self.$i18n.t('gender_options.female')
       }],
       form: new form_backend_validation__WEBPACK_IMPORTED_MODULE_1___default.a({
         name: null,
@@ -4670,17 +4674,17 @@ __webpack_require__.r(__webpack_exports__);
       this.$router.go('/applicants/candidates');
     },
     employeeForm: function employeeForm() {
-      var _this = this;
+      var _this2 = this;
 
       this.error = this.items = null;
       this.loading = true;
       this.$http.get('/api/users/candidates').then(function (response) {
-        _this.candidates = response.data.data;
-        console.log(_this.candidates);
+        _this2.candidates = response.data.data;
+        console.log(_this2.candidates);
       })["catch"](function (error) {
-        _this.error = error.response.data.message || error.message;
+        _this2.error = error.response.data.message || error.message;
       })["finally"](function () {
-        _this.loading = false;
+        _this2.loading = false;
       });
     }
   }
@@ -4698,6 +4702,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../datagrid/datagrid */ "./resources/js/datagrid/datagrid.vue");
+var _this = undefined;
+
 //
 //
 //
@@ -4744,29 +4750,30 @@ __webpack_require__.r(__webpack_exports__);
     DataGrid: _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
+    var self = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this;
     return {
       headers: [{
-        text: 'Name',
+        text: self.$i18n.t('form.name'),
         value: 'name',
         width: '200px',
         sortable: false
       }, {
-        text: 'Phone Number',
+        text: self.$i18n.t('form.phone'),
         value: 'phone',
         width: '200px',
         sortable: false
       }, {
-        text: 'Email',
+        text: self.$i18n.t('form.email'),
         value: 'email',
         width: '200px',
         sortable: false
       }, {
-        text: 'Job Title',
+        text: self.$i18n.t('form.job_title'),
         value: 'job_title',
         width: '200px',
         sortable: false
       }, {
-        text: 'Department',
+        text: self.$i18n.t('form.department'),
         value: 'department',
         width: '200px',
         sortable: false
@@ -5083,6 +5090,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../datagrid/datagrid */ "./resources/js/datagrid/datagrid.vue");
+var _this = undefined;
+
 //
 //
 //
@@ -5129,19 +5138,20 @@ __webpack_require__.r(__webpack_exports__);
     DataGrid: _datagrid_datagrid__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
+    var self = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _this;
     return {
       headers: [{
-        text: 'Employee',
+        text: self.$i18n.t('form.employee'),
         value: 'employee_id',
         width: '200px',
         sortable: false
       }, {
-        text: 'Time In',
+        text: self.$i18n.t('form.time_in'),
         value: 'time_in_date',
         width: '200px',
         sortable: false
       }, {
-        text: 'Time Out',
+        text: self.$i18n.t('form.time_out'),
         value: 'time_out_date',
         width: '200px',
         sortable: false
@@ -47109,7 +47119,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("h4", { staticClass: "card-title" }, [
-      _vm._v("\n    Applicants Settings\n  ")
+      _vm._v("\n    " + _vm._s(_vm.$t("applicants.page_title")) + "\n  ")
     ]),
     _vm._v(" "),
     _c("hr"),
@@ -47126,7 +47136,13 @@ var render = function() {
                 staticClass: "nav-link",
                 attrs: { to: { name: "applicants.candidates-list" } }
               },
-              [_vm._v("\n          Candidates List\n        ")]
+              [
+                _vm._v(
+                  "\n          " +
+                    _vm._s(_vm.$t("candidates.candidate_list")) +
+                    "\n        "
+                )
+              ]
             )
           ],
           1
@@ -47179,7 +47195,11 @@ var render = function() {
         _c("div", { staticClass: "modal-content" }, [
           _c("div", { staticClass: "modal-header" }, [
             _c("h5", { staticClass: "modal-title" }, [
-              _vm._v("\n          Confirm Deleting\n        ")
+              _vm._v(
+                "\n          " +
+                  _vm._s(_vm.$t("general.confirm_deleting")) +
+                  "\n        "
+              )
             ]),
             _vm._v(" "),
             _c(
@@ -47193,7 +47213,17 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(0),
+          _c("div", { staticClass: "modal-body" }, [
+            _c("div", [
+              _c("p", [
+                _vm._v(
+                  _vm._s(
+                    _vm.$t("general.are_you_sure_you_want_to_delete_this_item")
+                  )
+                )
+              ])
+            ])
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "modal-footer" }, [
             _c("div", { staticClass: "float-right" }, [
@@ -47206,7 +47236,9 @@ var render = function() {
                 },
                 [
                   _c("i", { staticClass: "fas fa-times" }),
-                  _vm._v(" Cancel\n          ")
+                  _vm._v(
+                    " " + _vm._s(_vm.$t("general.cancel")) + "\n          "
+                  )
                 ]
               ),
               _vm._v(" "),
@@ -47219,7 +47251,9 @@ var render = function() {
                 },
                 [
                   _c("i", { staticClass: "fas fa-trash" }),
-                  _vm._v(" Delete\n          ")
+                  _vm._v(
+                    " " + _vm._s(_vm.$t("general.delete")) + "\n          "
+                  )
                 ]
               )
             ])
@@ -47229,18 +47263,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-body" }, [
-      _c("div", [
-        _c("p", [_vm._v("Are you sure you want to delete this item ?")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -47286,7 +47309,11 @@ var render = function() {
             _c("div", { staticClass: "modal-content" }, [
               _c("div", { staticClass: "modal-header" }, [
                 _c("h5", { staticClass: "modal-title" }, [
-                  _vm._v("\n            Candidate Form\n          ")
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(_vm.$t("candidates.candidate_form")) +
+                      "\n          "
+                  )
                 ]),
                 _vm._v(" "),
                 _c(
@@ -47308,7 +47335,11 @@ var render = function() {
                 _c("div", [
                   _vm.loading
                     ? _c("div", { staticClass: "loading" }, [
-                        _vm._v("\n              Loading...\n            ")
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.$t("genaral.loading")) +
+                            "\n            "
+                        )
                       ])
                     : _vm._e(),
                   _vm._v(" "),
@@ -47319,7 +47350,7 @@ var render = function() {
                         staticClass: "col-4 col-form-label required",
                         attrs: { for: "name" }
                       },
-                      [_vm._v("Name")]
+                      [_vm._v(_vm._s(_vm.$t("form.name")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-8" }, [
@@ -47359,7 +47390,7 @@ var render = function() {
                         staticClass: "col-4 col-form-label",
                         attrs: { for: "gender" }
                       },
-                      [_vm._v("Gender")]
+                      [_vm._v(_vm._s(_vm.$t("form.gender")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-8" }, [
@@ -47431,7 +47462,7 @@ var render = function() {
                         staticClass: "col-4 col-form-label",
                         attrs: { for: "city" }
                       },
-                      [_vm._v("City")]
+                      [_vm._v(_vm._s(_vm.$t("form.city")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-8" }, [
@@ -47475,7 +47506,7 @@ var render = function() {
                         staticClass: "col-4 col-form-label",
                         attrs: { for: "country" }
                       },
-                      [_vm._v("Country")]
+                      [_vm._v(_vm._s(_vm.$t("form.country")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-8" }, [
@@ -47547,7 +47578,7 @@ var render = function() {
                         staticClass: "col-4 col-form-label required",
                         attrs: { for: "phone" }
                       },
-                      [_vm._v("Phone")]
+                      [_vm._v(_vm._s(_vm.$t("form.phone")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-8" }, [
@@ -47591,7 +47622,7 @@ var render = function() {
                         staticClass: "col-4 col-form-label",
                         attrs: { for: "email" }
                       },
-                      [_vm._v("Email")]
+                      [_vm._v(_vm._s(_vm.$t("form.email")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-8" }, [
@@ -47635,7 +47666,7 @@ var render = function() {
                         staticClass: "col-4 col-form-label required",
                         attrs: { for: "job-title" }
                       },
-                      [_vm._v("Job Title")]
+                      [_vm._v(_vm._s(_vm.$t("form.job_title")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-8" }, [
@@ -47681,7 +47712,7 @@ var render = function() {
                         staticClass: "col-4 col-form-label required",
                         attrs: { for: "department" }
                       },
-                      [_vm._v("Department")]
+                      [_vm._v(_vm._s(_vm.$t("form.department")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-8" }, [
@@ -47731,7 +47762,7 @@ var render = function() {
                         staticClass: "col-4 col-form-label",
                         attrs: { for: "description" }
                       },
-                      [_vm._v("Description")]
+                      [_vm._v(_vm._s(_vm.$t("form.description")))]
                     ),
                     _vm._v(" "),
                     _c("div", { staticClass: "col-8" }, [
@@ -47787,11 +47818,27 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fas fa-times" }),
-                      _vm._v(" Cancel\n            ")
+                      _vm._v(
+                        " " +
+                          _vm._s(_vm.$t("general.cancel")) +
+                          "\n            "
+                      )
                     ]
                   ),
                   _vm._v(" "),
-                  _vm._m(0)
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: { type: "submit" }
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-save" }),
+                      _vm._v(
+                        " " + _vm._s(_vm.$t("general.save")) + "\n            "
+                      )
+                    ]
+                  )
                 ])
               ])
             ])
@@ -47801,18 +47848,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-      [_c("i", { staticClass: "fas fa-save" }), _vm._v(" Save\n            ")]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -47859,7 +47895,7 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("h4", { staticClass: "card-title" }, [
-        _vm._v("\n    Candidates List\n  ")
+        _vm._v("\n    " + _vm._s(_vm.$t("candidates.candidate_list")) + "\n  ")
       ]),
       _vm._v(" "),
       _c("hr"),
@@ -47909,7 +47945,11 @@ var render = function() {
                         },
                         [
                           _c("i", { staticClass: "fas fa-pen fa-fw" }),
-                          _vm._v(" Edit\n          ")
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.$t("general.edit")) +
+                              "\n          "
+                          )
                         ]
                       ),
                       _vm._v(" "),
@@ -47926,7 +47966,11 @@ var render = function() {
                         },
                         [
                           _c("i", { staticClass: "fas fa-trash fa-fw" }),
-                          _vm._v(" Delete\n          ")
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.$t("general.delete")) +
+                              "\n          "
+                          )
                         ]
                       )
                     ],
@@ -47978,7 +48022,11 @@ var render = function() {
         _c("div", { staticClass: "modal-content" }, [
           _c("div", { staticClass: "modal-header" }, [
             _c("h5", { staticClass: "modal-title" }, [
-              _vm._v("\n          Confirm Deleting\n        ")
+              _vm._v(
+                "\n          " +
+                  _vm._s(_vm.$t("general.confirm_deleting")) +
+                  "\n        "
+              )
             ]),
             _vm._v(" "),
             _c(
@@ -47992,7 +48040,17 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(0),
+          _c("div", { staticClass: "modal-body" }, [
+            _c("div", [
+              _c("p", [
+                _vm._v(
+                  _vm._s(
+                    _vm.$t("general.are_you_sure_you_want_to_delete_this_item")
+                  )
+                )
+              ])
+            ])
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "modal-footer" }, [
             _c("div", { staticClass: "float-right" }, [
@@ -48005,7 +48063,9 @@ var render = function() {
                 },
                 [
                   _c("i", { staticClass: "fas fa-times" }),
-                  _vm._v(" Cancel\n          ")
+                  _vm._v(
+                    " " + _vm._s(_vm.$t("general.cancel")) + "\n          "
+                  )
                 ]
               ),
               _vm._v(" "),
@@ -48018,7 +48078,9 @@ var render = function() {
                 },
                 [
                   _c("i", { staticClass: "fas fa-trash" }),
-                  _vm._v(" Delete\n          ")
+                  _vm._v(
+                    " " + _vm._s(_vm.$t("general.delete")) + "\n          "
+                  )
                 ]
               )
             ])
@@ -48028,18 +48090,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-body" }, [
-      _c("div", [
-        _c("p", [_vm._v("Are you sure you want to delete this item ?")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -48085,7 +48136,11 @@ var render = function() {
             _c("div", { staticClass: "modal-content" }, [
               _c("div", { staticClass: "modal-header" }, [
                 _c("h5", { staticClass: "modal-title" }, [
-                  _vm._v("\n            Attendance Form\n          ")
+                  _vm._v(
+                    "\n            " +
+                      _vm._s(_vm.$t("attendance.attendance_form")) +
+                      "\n          "
+                  )
                 ]),
                 _vm._v(" "),
                 _c(
@@ -48113,7 +48168,11 @@ var render = function() {
                   _c("div", [
                     _vm.loading
                       ? _c("div", { staticClass: "loading" }, [
-                          _vm._v("\n              Loading...\n            ")
+                          _vm._v(
+                            "\n              " +
+                              _vm._s(_vm.$t("genaral.loading")) +
+                              "\n            "
+                          )
                         ])
                       : _vm._e(),
                     _vm._v(" "),
@@ -48124,7 +48183,7 @@ var render = function() {
                           staticClass: "col-4 col-form-label required",
                           attrs: { for: "employee" }
                         },
-                        [_vm._v("Employee")]
+                        [_vm._v(_vm._s(_vm.$t("form.employee")))]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-8" }, [
@@ -48204,7 +48263,7 @@ var render = function() {
                           staticClass: "col-4 col-form-label required",
                           attrs: { for: "time-in-date" }
                         },
-                        [_vm._v("Time In Date")]
+                        [_vm._v(_vm._s(_vm.$t("form.time_im_date")))]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-8" }, [
@@ -48250,7 +48309,7 @@ var render = function() {
                           staticClass: "col-4 col-form-label required",
                           attrs: { for: "time-in-time-hour" }
                         },
-                        [_vm._v("Time In Time")]
+                        [_vm._v(_vm._s(_vm.$t("form.time_in_time")))]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-4" }, [
@@ -48350,7 +48409,7 @@ var render = function() {
                           staticClass: "col-4 col-form-label required",
                           attrs: { for: "time-out-date" }
                         },
-                        [_vm._v("Time Out Date")]
+                        [_vm._v(_vm._s(_vm.$t("form.time_out_date")))]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-8" }, [
@@ -48396,7 +48455,7 @@ var render = function() {
                           staticClass: "col-4 col-form-label required",
                           attrs: { for: "time-out-time-hour" }
                         },
-                        [_vm._v("Time Out Time")]
+                        [_vm._v(_vm._s(_vm.$t("form.time_out_time")))]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-4" }, [
@@ -48498,7 +48557,7 @@ var render = function() {
                           staticClass: "col-4 col-form-label",
                           attrs: { for: "note" }
                         },
-                        [_vm._v("Note")]
+                        [_vm._v(_vm._s(_vm.$t("form.note")))]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "col-8" }, [
@@ -48545,11 +48604,27 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fas fa-times" }),
-                      _vm._v(" Cancel\n            ")
+                      _vm._v(
+                        " " +
+                          _vm._s(_vm.$t("general.cancel")) +
+                          "\n            "
+                      )
                     ]
                   ),
                   _vm._v(" "),
-                  _vm._m(0)
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: { type: "submit" }
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-save" }),
+                      _vm._v(
+                        " " + _vm._s(_vm.$t("general.save")) + "\n            "
+                      )
+                    ]
+                  )
                 ])
               ])
             ])
@@ -48559,18 +48634,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-      [_c("i", { staticClass: "fas fa-save" }), _vm._v(" Save\n            ")]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -48617,7 +48681,9 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("h4", { staticClass: "card-title" }, [
-        _vm._v("\n    Attendance List\n  ")
+        _vm._v(
+          "\n    " + _vm._s(_vm.$t("attendance_list.attendance_list")) + "\n  "
+        )
       ]),
       _vm._v(" "),
       _c("hr"),
@@ -48667,7 +48733,11 @@ var render = function() {
                         },
                         [
                           _c("i", { staticClass: "fas fa-pen fa-fw" }),
-                          _vm._v(" Edit\n          ")
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.$t("general.edit")) +
+                              "\n          "
+                          )
                         ]
                       ),
                       _vm._v(" "),
@@ -48684,7 +48754,11 @@ var render = function() {
                         },
                         [
                           _c("i", { staticClass: "fas fa-trash fa-fw" }),
-                          _vm._v(" Delete\n          ")
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.$t("general.delete")) +
+                              "\n          "
+                          )
                         ]
                       )
                     ],
@@ -48726,7 +48800,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("h4", { staticClass: "card-title" }, [
-      _vm._v("\n    Attendance Settings\n  ")
+      _vm._v("\n    " + _vm._s(_vm.$t("attendance.page_title")) + "\n  ")
     ]),
     _vm._v(" "),
     _c("hr"),
@@ -48743,7 +48817,13 @@ var render = function() {
                 staticClass: "nav-link",
                 attrs: { to: { name: "attendance.attendance-list" } }
               },
-              [_vm._v("\n          Attendance List\n        ")]
+              [
+                _vm._v(
+                  "\n          " +
+                    _vm._s(_vm.$t("attendance.attendance_list")) +
+                    "\n        "
+                )
+              ]
             )
           ],
           1
@@ -48787,11 +48867,18 @@ var render = function() {
   return _c("div", [
     _c("div", { staticClass: "card text-center card-border" }, [
       _c("div", { staticClass: "card-body" }, [
-        _vm._m(0),
+        _c("h5", { staticClass: "card-title title-color" }, [
+          _c("i", { staticClass: "fas fa-user-tie" }),
+          _vm._v(" " + _vm._s(_vm.$t("card.applicants")) + "\n      ")
+        ]),
         _vm._v(" "),
         _c("h3", { staticClass: "card-text" }, [
           _vm._v(
-            "\n        " + _vm._s(_vm.items.length) + " Candidates\n      "
+            "\n        " +
+              _vm._s(_vm.items.length) +
+              " " +
+              _vm._s(_vm.$t("card.candidates")) +
+              "\n      "
           )
         ])
       ])
@@ -48808,7 +48895,9 @@ var render = function() {
           "router-link",
           { attrs: { to: { name: "applicants.candidates-list" } } },
           [
-            _vm._v("\n      Manage Candidates "),
+            _vm._v(
+              "\n        " + _vm._s(_vm.$t("card.manage_candidates")) + " "
+            ),
             _c("i", { staticClass: "fas fa-arrow-circle-right" })
           ]
         )
@@ -48817,17 +48906,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "card-title title-color" }, [
-      _c("i", { staticClass: "fas fa-user-tie" }),
-      _vm._v(" Applicants\n      ")
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -48852,13 +48931,18 @@ var render = function() {
   return _c("div", [
     _c("div", { staticClass: "card text-center card-border" }, [
       _c("div", { staticClass: "card-body" }, [
-        _vm._m(0),
+        _c("h5", { staticClass: "card-title title-color" }, [
+          _c("i", { staticClass: "far fa-clock" }),
+          _vm._v(" " + _vm._s(_vm.$t("card.attendance")) + "\n      ")
+        ]),
         _vm._v(" "),
         _c("h3", { staticClass: "card-text" }, [
           _vm._v(
             "\n        " +
               _vm._s(_vm.items.length) +
-              " Entries Last Week\n      "
+              " " +
+              _vm._s(_vm.$t("card.entries_last_week")) +
+              "\n      "
           )
         ])
       ])
@@ -48872,7 +48956,9 @@ var render = function() {
       },
       [
         _c("router-link", { attrs: { to: { name: "leaves.leave-type" } } }, [
-          _vm._v("\n      Monitor Attendance "),
+          _vm._v(
+            "\n        " + _vm._s(_vm.$t("card.monitor_attendance")) + " "
+          ),
           _c("i", { staticClass: "fas fa-arrow-circle-right" })
         ])
       ],
@@ -48880,17 +48966,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "card-title title-color" }, [
-      _c("i", { staticClass: "far fa-clock" }),
-      _vm._v(" Attendance\n      ")
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -48915,10 +48991,19 @@ var render = function() {
   return _c("div", [
     _c("div", { staticClass: "card text-center card-border" }, [
       _c("div", { staticClass: "card-body" }, [
-        _vm._m(0),
+        _c("h5", { staticClass: "card-title title-color" }, [
+          _c("i", { staticClass: "fas fa-calendar-alt" }),
+          _vm._v(" " + _vm._s(_vm.$t("card.leavel")) + "\n      ")
+        ]),
         _vm._v(" "),
         _c("h3", { staticClass: "card-text" }, [
-          _vm._v("\n        " + _vm._s(_vm.items.length) + " Upcoming\n      ")
+          _vm._v(
+            "\n        " +
+              _vm._s(_vm.items.length) +
+              " " +
+              _vm._s(_vm.$t("card.upcoming")) +
+              "\n      "
+          )
         ])
       ])
     ]),
@@ -48931,7 +49016,7 @@ var render = function() {
       },
       [
         _c("router-link", { attrs: { to: { name: "leaves.leave-type" } } }, [
-          _vm._v("\n      Leave Management "),
+          _vm._v("\n        " + _vm._s(_vm.$t("card.leave_management")) + " "),
           _c("i", { staticClass: "fas fa-arrow-circle-right" })
         ])
       ],
@@ -48939,17 +49024,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "card-title title-color" }, [
-      _c("i", { staticClass: "fas fa-calendar-alt" }),
-      _vm._v(" Leaves\n      ")
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -48974,10 +49049,19 @@ var render = function() {
   return _c("div", [
     _c("div", { staticClass: "card text-center card-border" }, [
       _c("div", { staticClass: "card-body" }, [
-        _vm._m(0),
+        _c("h5", { staticClass: "card-title title-color" }, [
+          _c("i", { staticClass: "fas fa-users" }),
+          _vm._v(" " + _vm._s(_vm.$t("card.people")) + "\n      ")
+        ]),
         _vm._v(" "),
         _c("h3", { staticClass: "card-text" }, [
-          _vm._v("\n        " + _vm._s(_vm.items.length) + " Employees\n      ")
+          _vm._v(
+            "\n        " +
+              _vm._s(_vm.items.length) +
+              " " +
+              _vm._s(_vm.$t("card.employees")) +
+              "\n      "
+          )
         ])
       ])
     ]),
@@ -48990,7 +49074,7 @@ var render = function() {
       },
       [
         _c("router-link", { attrs: { to: { name: "peoples.employees" } } }, [
-          _vm._v("\n      Manage Employees "),
+          _vm._v("\n        " + _vm._s(_vm.$t("card.manage_employees")) + " "),
           _c("i", { staticClass: "fas fa-arrow-circle-right" })
         ])
       ],
@@ -48998,17 +49082,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "card-title title-color" }, [
-      _c("i", { staticClass: "fas fa-users" }),
-      _vm._v(" People\n      ")
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -49033,10 +49107,19 @@ var render = function() {
   return _c("div", [
     _c("div", { staticClass: "card text-center card-border" }, [
       _c("div", { staticClass: "card-body" }, [
-        _vm._m(0),
+        _c("h5", { staticClass: "card-title title-color" }, [
+          _c("i", { staticClass: "fas fa-lock" }),
+          _vm._v(" " + _vm._s(_vm.$t("card.user_roles")) + "\n      ")
+        ]),
         _vm._v(" "),
         _c("h3", { staticClass: "card-text" }, [
-          _vm._v("\n        " + _vm._s(_vm.items.length) + " Roles\n      ")
+          _vm._v(
+            "\n        " +
+              _vm._s(_vm.items.length) +
+              " " +
+              _vm._s(_vm.$t("card.roles")) +
+              "\n      "
+          )
         ])
       ])
     ]),
@@ -49049,7 +49132,7 @@ var render = function() {
       },
       [
         _c("router-link", { attrs: { to: { name: "user.role" } } }, [
-          _vm._v("\n      Manage Roles "),
+          _vm._v("\n        " + _vm._s(_vm.$t("card.manage_roles")) + " "),
           _c("i", { staticClass: "fas fa-arrow-circle-right" })
         ])
       ],
@@ -49057,17 +49140,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "card-title title-color" }, [
-      _c("i", { staticClass: "fas fa-lock" }),
-      _vm._v(" User Roles\n      ")
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -49092,10 +49165,19 @@ var render = function() {
   return _c("div", [
     _c("div", { staticClass: "card text-center card-border" }, [
       _c("div", { staticClass: "card-body" }, [
-        _vm._m(0),
+        _c("h5", { staticClass: "card-title title-color" }, [
+          _c("i", { staticClass: "fas fa-user-plus" }),
+          _vm._v(" " + _vm._s(_vm.$t("card.users")) + "\n      ")
+        ]),
         _vm._v(" "),
         _c("h3", { staticClass: "card-text" }, [
-          _vm._v("\n        " + _vm._s(_vm.items.length) + " Users\n      ")
+          _vm._v(
+            "\n        " +
+              _vm._s(_vm.items.length) +
+              " " +
+              _vm._s(_vm.$t("card.users")) +
+              "\n      "
+          )
         ])
       ])
     ]),
@@ -49108,7 +49190,7 @@ var render = function() {
       },
       [
         _c("router-link", { attrs: { to: { name: "user.list" } } }, [
-          _vm._v("\n      Manage Users "),
+          _vm._v("\n        " + _vm._s(_vm.$t("card.manage_users")) + " "),
           _c("i", { staticClass: "fas fa-arrow-circle-right" })
         ])
       ],
@@ -49116,17 +49198,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h5", { staticClass: "card-title title-color" }, [
-      _c("i", { staticClass: "fas fa-user-plus" }),
-      _vm._v(" Users\n      ")
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -49246,7 +49318,11 @@ var render = function() {
                 _c("div", [
                   _vm.loading
                     ? _c("div", { staticClass: "loading" }, [
-                        _vm._v("\n              Loading...\n            ")
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.$t("genaral.loading")) +
+                            "\n            "
+                        )
                       ])
                     : _vm._e(),
                   _vm._v(" "),
@@ -49481,11 +49557,27 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fas fa-times" }),
-                      _vm._v(" Cancel\n            ")
+                      _vm._v(
+                        " " +
+                          _vm._s(_vm.$t("general.cancel")) +
+                          "\n            "
+                      )
                     ]
                   ),
                   _vm._v(" "),
-                  _vm._m(0)
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: { type: "submit" }
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-save" }),
+                      _vm._v(
+                        " " + _vm._s(_vm.$t("general.save")) + "\n            "
+                      )
+                    ]
+                  )
                 ])
               ])
             ])
@@ -49495,18 +49587,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-      [_c("i", { staticClass: "fas fa-save" }), _vm._v(" Save\n            ")]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -49600,7 +49681,11 @@ var render = function() {
                         },
                         [
                           _c("i", { staticClass: "fas fa-pen fa-fw" }),
-                          _vm._v(" Edit\n          ")
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.$t("general.edit")) +
+                              "\n          "
+                          )
                         ]
                       )
                     ],
@@ -49652,7 +49737,11 @@ var render = function() {
         _c("div", { staticClass: "modal-content" }, [
           _c("div", { staticClass: "modal-header" }, [
             _c("h5", { staticClass: "modal-title" }, [
-              _vm._v("\n          Confirm Deleting\n        ")
+              _vm._v(
+                "\n          " +
+                  _vm._s(_vm.$t("general.confirm_deleting")) +
+                  "\n        "
+              )
             ]),
             _vm._v(" "),
             _c(
@@ -49666,7 +49755,17 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(0),
+          _c("div", { staticClass: "modal-body" }, [
+            _c("div", [
+              _c("p", [
+                _vm._v(
+                  _vm._s(
+                    _vm.$t("general.are_you_sure_you_want_to_delete_this_item")
+                  )
+                )
+              ])
+            ])
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "modal-footer" }, [
             _c("div", { staticClass: "float-right" }, [
@@ -49679,7 +49778,9 @@ var render = function() {
                 },
                 [
                   _c("i", { staticClass: "fas fa-times" }),
-                  _vm._v(" Cancel\n          ")
+                  _vm._v(
+                    " " + _vm._s(_vm.$t("general.cancel")) + "\n          "
+                  )
                 ]
               ),
               _vm._v(" "),
@@ -49692,7 +49793,9 @@ var render = function() {
                 },
                 [
                   _c("i", { staticClass: "fas fa-trash" }),
-                  _vm._v(" Delete\n          ")
+                  _vm._v(
+                    " " + _vm._s(_vm.$t("general.delete")) + "\n          "
+                  )
                 ]
               )
             ])
@@ -49702,18 +49805,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-body" }, [
-      _c("div", [
-        _c("p", [_vm._v("Are you sure you want to delete this item ?")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -49781,7 +49873,11 @@ var render = function() {
                 _c("div", [
                   _vm.loading
                     ? _c("div", { staticClass: "loading" }, [
-                        _vm._v("\n              Loading...\n            ")
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.$t("genaral.loading")) +
+                            "\n            "
+                        )
                       ])
                     : _vm._e(),
                   _vm._v(" "),
@@ -49891,11 +49987,27 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fas fa-times" }),
-                      _vm._v(" Cancel\n            ")
+                      _vm._v(
+                        " " +
+                          _vm._s(_vm.$t("general.cancel")) +
+                          "\n            "
+                      )
                     ]
                   ),
                   _vm._v(" "),
-                  _vm._m(1)
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: { type: "submit" }
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-save" }),
+                      _vm._v(
+                        " " + _vm._s(_vm.$t("general.save")) + "\n            "
+                      )
+                    ]
+                  )
                 ])
               ])
             ])
@@ -49927,16 +50039,6 @@ var staticRenderFns = [
           }
         })
       ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-      [_c("i", { staticClass: "fas fa-save" }), _vm._v(" Save\n            ")]
     )
   }
 ]
@@ -50030,7 +50132,11 @@ var render = function() {
                         },
                         [
                           _c("i", { staticClass: "fas fa-pen fa-fw" }),
-                          _vm._v(" Edit\n          ")
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.$t("general.edit")) +
+                              "\n          "
+                          )
                         ]
                       ),
                       _vm._v(" "),
@@ -50047,7 +50153,11 @@ var render = function() {
                         },
                         [
                           _c("i", { staticClass: "fas fa-trash" }),
-                          _vm._v(" Delete\n          ")
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.$t("general.delete")) +
+                              "\n          "
+                          )
                         ]
                       )
                     ],
@@ -50175,7 +50285,11 @@ var render = function() {
         _c("div", { staticClass: "modal-content" }, [
           _c("div", { staticClass: "modal-header" }, [
             _c("h5", { staticClass: "modal-title" }, [
-              _vm._v("\n          Confirm Deleting\n        ")
+              _vm._v(
+                "\n          " +
+                  _vm._s(_vm.$t("general.confirm_deleting")) +
+                  "\n        "
+              )
             ]),
             _vm._v(" "),
             _c(
@@ -50189,7 +50303,17 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(0),
+          _c("div", { staticClass: "modal-body" }, [
+            _c("div", [
+              _c("p", [
+                _vm._v(
+                  _vm._s(
+                    _vm.$t("general.are_you_sure_you_want_to_delete_this_item")
+                  )
+                )
+              ])
+            ])
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "modal-footer" }, [
             _c("div", { staticClass: "float-right" }, [
@@ -50202,7 +50326,9 @@ var render = function() {
                 },
                 [
                   _c("i", { staticClass: "fas fa-times" }),
-                  _vm._v(" Cancel\n          ")
+                  _vm._v(
+                    " " + _vm._s(_vm.$t("general.cancel")) + "\n          "
+                  )
                 ]
               ),
               _vm._v(" "),
@@ -50215,7 +50341,9 @@ var render = function() {
                 },
                 [
                   _c("i", { staticClass: "fas fa-trash" }),
-                  _vm._v(" Delete\n          ")
+                  _vm._v(
+                    " " + _vm._s(_vm.$t("general.delete")) + "\n          "
+                  )
                 ]
               )
             ])
@@ -50225,18 +50353,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-body" }, [
-      _c("div", [
-        _c("p", [_vm._v("Are you sure you want to delete this item ?")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -50313,7 +50430,11 @@ var render = function() {
                     _c("div", [
                       _vm.loading
                         ? _c("div", { staticClass: "loading" }, [
-                            _vm._v("\n              Loading...\n            ")
+                            _vm._v(
+                              "\n              " +
+                                _vm._s(_vm.$t("genaral.loading")) +
+                                "\n            "
+                            )
                           ])
                         : _vm._e(),
                       _vm._v(" "),
@@ -51525,11 +51646,29 @@ var render = function() {
                       },
                       [
                         _c("i", { staticClass: "fas fa-times" }),
-                        _vm._v(" Cancel\n            ")
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.$t("general.cancel")) +
+                            "\n            "
+                        )
                       ]
                     ),
                     _vm._v(" "),
-                    _vm._m(0)
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-save" }),
+                        _vm._v(
+                          " " +
+                            _vm._s(_vm.$t("general.save")) +
+                            "\n            "
+                        )
+                      ]
+                    )
                   ])
                 ])
               ])
@@ -51540,18 +51679,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-      [_c("i", { staticClass: "fas fa-save" }), _vm._v(" Save\n            ")]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -51644,7 +51772,11 @@ var render = function() {
                         },
                         [
                           _c("i", { staticClass: "fas fa-pen fa-fw" }),
-                          _vm._v(" Edit\n          ")
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.$t("general.edit")) +
+                              "\n          "
+                          )
                         ]
                       ),
                       _vm._v(" "),
@@ -51678,7 +51810,11 @@ var render = function() {
                         },
                         [
                           _c("i", { staticClass: "fas fa-trash fa-fw" }),
-                          _vm._v(" Delete\n          ")
+                          _vm._v(
+                            " " +
+                              _vm._s(_vm.$t("general.delete")) +
+                              "\n          "
+                          )
                         ]
                       )
                     ],
@@ -51751,7 +51887,11 @@ var render = function() {
               _c("div", [
                 _vm.loading
                   ? _c("div", { staticClass: "loading" }, [
-                      _vm._v("\n            Loading...\n          ")
+                      _vm._v(
+                        "\n            " +
+                          _vm._s(_vm.$t("genaral.loading")) +
+                          "\n          "
+                      )
                     ])
                   : _vm._e(),
                 _vm._v(" "),
@@ -52124,7 +52264,11 @@ var render = function() {
             _c("div", [
               _vm.loading
                 ? _c("div", { staticClass: "loading" }, [
-                    _vm._v("\n            Loading...\n          ")
+                    _vm._v(
+                      "\n            " +
+                        _vm._s(_vm.$t("genaral.loading")) +
+                        "\n          "
+                    )
                   ])
                 : _vm._e(),
               _vm._v(" "),
@@ -52244,7 +52388,11 @@ var render = function() {
                 _c("div", [
                   _vm.loading
                     ? _c("div", { staticClass: "loading" }, [
-                        _vm._v("\n              Loading...\n            ")
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.$t("genaral.loading")) +
+                            "\n            "
+                        )
                       ])
                     : _vm._e(),
                   _vm._v(" "),
@@ -52418,7 +52566,16 @@ var render = function() {
                   ]
                 ),
                 _vm._v(" "),
-                _vm._m(0)
+                _c(
+                  "button",
+                  { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+                  [
+                    _c("i", { staticClass: "fas fa-save" }),
+                    _vm._v(
+                      " " + _vm._s(_vm.$t("general.save")) + "\n          "
+                    )
+                  ]
+                )
               ])
             ])
           ]
@@ -52427,18 +52584,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-      [_c("i", { staticClass: "fas fa-save" }), _vm._v(" Save\n          ")]
-    )
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -52472,7 +52618,11 @@ var render = function() {
         _c("div", { staticClass: "modal-content" }, [
           _c("div", { staticClass: "modal-header" }, [
             _c("h5", { staticClass: "modal-title" }, [
-              _vm._v("\n          Confirm Deleting\n        ")
+              _vm._v(
+                "\n          " +
+                  _vm._s(_vm.$t("general.confirm_deleting")) +
+                  "\n        "
+              )
             ]),
             _vm._v(" "),
             _c(
@@ -52486,7 +52636,17 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(0),
+          _c("div", { staticClass: "modal-body" }, [
+            _c("div", [
+              _c("p", [
+                _vm._v(
+                  _vm._s(
+                    _vm.$t("general.are_you_sure_you_want_to_delete_this_item")
+                  )
+                )
+              ])
+            ])
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "modal-footer" }, [
             _c("div", { staticClass: "float-right" }, [
@@ -52499,7 +52659,9 @@ var render = function() {
                 },
                 [
                   _c("i", { staticClass: "fas fa-times" }),
-                  _vm._v(" Cancel\n          ")
+                  _vm._v(
+                    " " + _vm._s(_vm.$t("general.cancel")) + "\n          "
+                  )
                 ]
               ),
               _vm._v(" "),
@@ -52512,7 +52674,9 @@ var render = function() {
                 },
                 [
                   _c("i", { staticClass: "fas fa-trash" }),
-                  _vm._v(" Delete\n          ")
+                  _vm._v(
+                    " " + _vm._s(_vm.$t("general.delete")) + "\n          "
+                  )
                 ]
               )
             ])
@@ -52522,18 +52686,7 @@ var render = function() {
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-body" }, [
-      _c("div", [
-        _c("p", [_vm._v("Are you sure you want to delete this item ?")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -52613,7 +52766,11 @@ var render = function() {
                           },
                           [
                             _c("i", { staticClass: "fas fa-trash" }),
-                            _vm._v(" Delete\n            ")
+                            _vm._v(
+                              " " +
+                                _vm._s(_vm.$t("general.delete")) +
+                                "\n            "
+                            )
                           ]
                         )
                       ],
@@ -67820,7 +67977,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_sidebar_menu__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_sidebar_menu__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var vue_sidebar_menu_dist_vue_sidebar_menu_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-sidebar-menu/dist/vue-sidebar-menu.css */ "./node_modules/vue-sidebar-menu/dist/vue-sidebar-menu.css");
 /* harmony import */ var vue_sidebar_menu_dist_vue_sidebar_menu_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_sidebar_menu_dist_vue_sidebar_menu_css__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var vue_i18n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-i18n */ "./node_modules/vue-i18n/dist/vue-i18n.esm.js");
+/* harmony import */ var vue_i18n__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-i18n */ "./node_modules/vue-i18n/dist/vue-i18n.esm.js");
 /* harmony import */ var _websanova_vue_auth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @websanova/vue-auth */ "./node_modules/@websanova/vue-auth/src/index.js");
 /* harmony import */ var _websanova_vue_auth__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_websanova_vue_auth__WEBPACK_IMPORTED_MODULE_6__);
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -67842,7 +67999,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_i18n__WEBPACK_IMPORTED_MODULE_5__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_i18n__WEBPACK_IMPORTED_MODULE_7__["default"]);
 
 var tr = __webpack_require__(/*! ./lang/tr */ "./resources/js/lang/tr.js");
 
@@ -67855,7 +68012,7 @@ var translationMessages = {
 var userLang = navigator.language || navigator.userLanguage;
 if (userLang !== 'en' && userLang !== 'tr') userLang = null;
 var locale = 'en';
-var i18n = new vue_i18n__WEBPACK_IMPORTED_MODULE_5__["default"]({
+var i18n = new vue_i18n__WEBPACK_IMPORTED_MODULE_7__["default"]({
   locale: locale,
   messages: translationMessages
 });
@@ -68348,9 +68505,12 @@ module.exports = {
     save: 'Save',
     cancel: 'Cancel',
     edit: 'Edit',
-    are_you_sure_you_want_to_delete: 'Are you sure you wan to delete?',
+    are_you_sure_you_want_to_delete: 'Are you sure you want to delete?',
+    are_you_sure_you_want_to_delete_this_item: 'Are you sure you want to delete this item?',
+    confirm_deleting: 'Confirm Deleting',
     "delete": 'Delete',
-    dont_delete: 'Don\'t Delete'
+    dont_delete: 'Don\'t Delete',
+    loading: 'Loading...'
   },
   sidebar: {
     main_Navigation: 'Main Navigation',
@@ -68368,12 +68528,64 @@ module.exports = {
     applicants: 'Applicants',
     candidates: 'Candidates'
   },
+  form: {
+    name: 'Name',
+    gender: 'Gender',
+    city: 'City',
+    country: 'Country',
+    phone: 'Phone Number',
+    email: 'Email',
+    job_title: 'Job Title',
+    department: 'Department',
+    description: 'Description',
+    employee: 'Çalışan',
+    time_in_date: 'Time In Date',
+    time_in_time: 'Time In Time',
+    time_out_date: 'Time Out Date',
+    time_out_time: 'Time Out Time',
+    note: 'Note',
+    time_in: 'Time In',
+    time_out: 'Time Out'
+  },
   datagrid: {
     slow_request: 'Slow Request',
     no_data: 'No Data'
   },
+  card: {
+    applicants: 'Applicants',
+    candidates: 'Candidates',
+    manage_candidates: 'Manage Candidates',
+    attendance: 'Attendance',
+    entries_last_week: 'Entries Last Week',
+    monitor_attendance: 'Monitor Attendance',
+    leaves: 'Leaves',
+    upcoming: 'Upcoming',
+    leave_management: 'Leave Management',
+    people: 'People',
+    employees: 'Employees',
+    manage_employees: 'Manage Employees',
+    user_roles: 'User Roles',
+    roles: 'Roles',
+    manage_roles: 'Manage Roles',
+    users: 'Users',
+    manage_users: 'Manage Users'
+  },
+  gender_options: {
+    selected: '(Selected Gender)',
+    male: 'Male',
+    female: 'Female'
+  },
+  applicants: {
+    page_title: 'Applicants Settings'
+  },
   candidates: {
-    candidate_list: 'Candidates List'
+    candidate_list: 'Candidates List',
+    candidate_form: 'Candidate Form'
+  },
+  attendance: {
+    page_title: 'Attendance Settings',
+    attendance_form: 'Attendance Form',
+    attendance_list: 'Attendance List'
   }
 };
 
@@ -68398,8 +68610,11 @@ module.exports = {
     cancel: 'İptal',
     edit: 'Düzenle',
     are_you_sure_you_want_to_delete: 'Silmek istediğinize emin misiniz?',
+    are_you_sure_you_want_to_delete_this_item: 'Bu öğeyi silmek istediğinize emin misiniz?',
+    confirm_deleting: 'Silme işlemini Onayla',
     "delete": 'Sil',
-    dont_delete: 'Silme'
+    dont_delete: 'Silme',
+    loading: 'Yükleniyor...'
   },
   sidebar: {
     main_Navigation: 'Ana Menü',
@@ -68417,12 +68632,64 @@ module.exports = {
     applicants: 'Başvuranlar',
     candidates: 'Adaylar'
   },
+  form: {
+    name: 'İsim',
+    gender: 'Cinsiyet',
+    city: 'Şehir',
+    country: 'Ülke',
+    phone: 'Telefon Numarası',
+    email: 'Email',
+    job_title: 'İş Ünvanı',
+    department: 'Departman',
+    description: 'Açıklama',
+    employee: 'Çalışan',
+    time_in_date: 'Tarihteki Zaman',
+    time_in_time: 'Zaman',
+    time_out_date: 'Zaman Aşım Tarihi',
+    time_out_time: 'Zaman Aşım Zamanı',
+    note: 'Not',
+    time_in: 'Giriş Zamanı',
+    time_out: 'Çıkış Zamanı'
+  },
   datagrid: {
     slow_request: 'Yavaş İstek',
     no_data: 'Veri Yok'
   },
+  card: {
+    applicants: 'Başvuru',
+    candidates: 'Adaylar',
+    manage_candidates: 'Adayları Yönet',
+    attendance: 'Katılım',
+    entries_last_week: 'Geçen Hafta Girişler',
+    monitor_attendance: 'Katılımı İzleyin',
+    leaves: 'İzinli',
+    upcoming: 'Yaklaşan',
+    leave_management: 'İzin Yönetimi',
+    people: 'İnsanlar',
+    employees: 'Çalışanlar',
+    manage_employees: 'Çalışanları Yönet',
+    user_roles: 'Kullanıcı Rolleri',
+    roles: 'Roller',
+    manage_roles: 'Rolleri Yönet',
+    users: 'Kullanıcılar',
+    manage_users: 'Kullanıcıları Yönet'
+  },
+  gender_options: {
+    selected: '(Cinsiyet Seçiniz)',
+    male: 'Erkek',
+    female: 'Kadın'
+  },
+  applicants: {
+    page_title: 'Başvuru Adayları'
+  },
   candidates: {
-    candidate_list: 'Adaylar Listesi'
+    candidate_list: 'Adaylar Listesi',
+    candidate_form: 'Aday Formu'
+  },
+  attendance: {
+    page_title: 'Katılım Ayarları',
+    attendance_form: 'Katılım Formu',
+    attendance_list: 'Katılım Listesi'
   }
 };
 
@@ -72439,9 +72706,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\human-resources-management-system\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\xampp\htdocs\human-resources-management-system\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\human-resources-management-system\resources\sass\_theme.scss */"./resources/sass/_theme.scss");
+__webpack_require__(/*! /Users/kerimkuscu/Sites/hrms/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/kerimkuscu/Sites/hrms/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/kerimkuscu/Sites/hrms/resources/sass/_theme.scss */"./resources/sass/_theme.scss");
 
 
 /***/ })
