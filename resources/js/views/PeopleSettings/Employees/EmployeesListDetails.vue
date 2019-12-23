@@ -4,7 +4,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">
-            User Details
+            {{ $t('employees.user_details') }}
           </h5>
 
           <button type="button" class="close" aria-label="Close" @click="goBack">
@@ -21,87 +21,87 @@
             <table v-if="employee" class="table clean-table">
               <tbody>
                 <tr>
-                  <th>Name</th>
+                  <th>{{ $t('form.name') }}</th>
                   <td>{{ employee.name }}</td>
                 </tr>
                 <tr>
-                  <th>Nationality</th>
+                  <th>{{ $t('form.nationality') }}</th>
                   <td>{{ employee.nationality }}</td>
                 </tr>
                 <tr>
-                  <th>Birthday</th>
+                  <th>{{ $t('form.date_of_birth') }}</th>
                   <td>{{ employee.birthday }}</td>
                 </tr>
                 <tr>
-                  <th>Gender</th>
+                  <th>{{ $t('form.gender') }}</th>
                   <td>{{ employee.gender }}</td>
                 </tr>
                 <tr>
-                  <th>Marital Status</th>
+                  <th>{{ $t('form.marital_status') }}</th>
                   <td>{{ employee.marital_status }}</td>
                 </tr>
                 <tr>
-                  <th>Driver Licence</th>
+                  <th>{{ $t('form.driver_license') }}</th>
                   <td>{{ employee.driver_license }}</td>
                 </tr>
                 <tr>
-                  <th>Employment Status</th>
+                  <th>{{ $t('form.employment_status') }}</th>
                   <td>{{ employee.employment_status }}</td>
                 </tr>
                 <tr>
-                  <th>Job Title</th>
+                  <th>{{ $t('form.job_title') }}</th>
                   <td>{{ employee.job_title }}</td>
                 </tr>
                 <tr>
-                  <th>Address</th>
+                  <th>{{ $t('form.address') }}</th>
                   <td>{{ employee.address }}</td>
                 </tr>
                 <tr>
-                  <th>City</th>
+                  <th>{{ $t('form.city') }}</th>
                   <td>{{ employee.city }}</td>
                 </tr>
                 <tr>
-                  <th>Country</th>
+                  <th>{{ $t('form.country') }}</th>
                   <td>{{ employee.country }}</td>
                 </tr>
                 <tr>
-                  <th>Province</th>
+                  <th>{{ $t('form.province') }}</th>
                   <td>{{ employee.province }}</td>
                 </tr>
                 <tr>
-                  <th>Postal Code</th>
+                  <th>{{ $t('form.postal_code') }}</th>
                   <td>{{ employee.postal_code }}</td>
                 </tr>
                 <tr>
-                  <th>Home Phone</th>
+                  <th>{{ $t('form.home_phone') }}</th>
                   <td>{{ employee.home_phone }}</td>
                 </tr>
                 <tr>
-                  <th>Mobile Phone</th>
+                  <th>{{ $t('form.mobile_phone') }}</th>
                   <td>{{ employee.mobile_phone }}</td>
                 </tr>
                 <tr>
-                  <th>Work Phone</th>
+                  <th>{{ $t('form.work_phone') }}</th>
                   <td>{{ employee.work_phone }}</td>
                 </tr>
                 <tr>
-                  <th>Emergency Contact</th>
+                  <th>{{ $t('form.emergency_contact') }}</th>
                   <td>{{ employee.emergency_contact }}</td>
                 </tr>
                 <tr>
-                  <th>Work Email</th>
+                  <th>{{ $t('form.work_email') }}</th>
                   <td>{{ employee.work_email }}</td>
                 </tr>
                 <tr>
-                  <th>Private Email</th>
+                  <th>{{ $t('form.private_email') }}</th>
                   <td>{{ employee.private_email }}</td>
                 </tr>
                 <tr>
-                  <th>Joined Date</th>
+                  <th>{{ $t('form.joined_date') }}</th>
                   <td>{{ employee.joined_date }}</td>
                 </tr>
                 <tr>
-                  <th>Department</th>
+                  <th>{{ $t('form.department') }}</th>
                   <td>{{ employee.department }}</td>
                 </tr>
               </tbody>
@@ -111,7 +111,7 @@
 
         <div class="modal-footer">
           <button class="btn btn-outline-secondary" type="button" @click="goBack">
-            <i class="fas fa-times" /> Close
+            <i class="fas fa-times" /> {{ $t('general.close') }}
           </button>
         </div>
       </div>

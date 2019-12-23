@@ -8,7 +8,7 @@
       </router-link>
 
       <h4>
-        Employee Leave List
+        {{ $t('employee_leave.employee_leave_list') }}
       </h4>
     </div>
 
@@ -42,12 +42,12 @@
             DataGrid
         },
 
-        data: () => ({
+        data: (self = this) => ({
             headers: [
-                {text: 'Leave Type', value: 'leave_type_name', width: '200px', sortable: false},
-                {text: 'Start Time', value: 'started_at', width: '200px', sortable: false},
-                {text: 'End Time', value: 'ended_at', width: '200px', sortable: false},
-                {text: 'Description', value: 'description', sortable: false},
+                {text: self.$i18n.t('form.type'), value: 'leave_type_name', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.start_date'), value: 'started_at', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.end_date'), value: 'ended_at', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.description'), value: 'description', sortable: false},
                 {text: '', value: 'actions', width: '40px', sortable: false},
             ]
 

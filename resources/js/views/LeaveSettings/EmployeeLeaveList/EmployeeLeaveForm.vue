@@ -5,7 +5,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">
-              Employee Leave Form
+              {{ $t('employee_leave.employee_leave_form') }}
             </h5>
 
             <button type="button" class="close" aria-label="Close" @click="cancelForm">
@@ -20,7 +20,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-3 col-form-label required" for="type">Type</label>
+                <label class="col-3 col-form-label required" for="type">{{ $t('form.type') }}</label>
                 <div class="col-9">
                   <select id="type" v-model="form.leave_type_id" class="form-control" :class="{'is-invalid' : form.errors.has('leave_type_id')}">
                     <option value="null">
@@ -36,7 +36,7 @@
               </div>
 
               <div class="form-group row">
-                <label for="start-date" class="col-3 col-form-label required">Start Date</label>
+                <label for="start-date" class="col-3 col-form-label required">{{ $t('form.start_date') }}</label>
                 <div class="col-9">
                   <input id="start-date" v-model="form.started_at" class="form-control" :class="{'is-invalid': form.errors.has('started_at')}" type="date">
                   <span class="invalid-feedback">{{ form.errors.first('started_at') }}</span>
@@ -44,7 +44,7 @@
               </div>
 
               <div class="form-group row">
-                <label for="end-date" class="col-3 col-form-label required">End Date</label>
+                <label for="end-date" class="col-3 col-form-label required">{{ $t('form.end_date') }}</label>
                 <div class="col-9">
                   <input id="end-date" v-model="form.ended_at" class="form-control" :class="{'is-invalid' : form.errors.has('ended_at')}" type="date">
                   <span class="invalid-feedback">{{ form.errors.first('ended_at') }}</span>
@@ -52,7 +52,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-3 col-form-label required" for="description">Description</label>
+                <label class="col-3 col-form-label required" for="description">{{ $t('form.description') }}</label>
                 <div class="col-9">
                   <textarea id="description" v-model="form.description" class="form-control" :class="{'is-invalid' : form.errors.has('description')}" rows="3" placeholder="Description" />
                   <span class="invalid-feedback">{{ form.errors.first('description') }}</span>

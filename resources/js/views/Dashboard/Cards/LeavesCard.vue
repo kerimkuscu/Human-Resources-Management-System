@@ -3,7 +3,7 @@
     <div class="card text-center card-border">
       <div class="card-body">
         <h5 class="card-title title-color">
-          <i class="fas fa-calendar-alt" /> {{ $t('card.leavel') }}
+          <i class="fas fa-calendar-alt" /> {{ $t('card.leaves') }}
         </h5>
         <h3 class="card-text">
           {{ items.length }} {{ $t('card.upcoming') }}

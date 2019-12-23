@@ -5,7 +5,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">
-              Leave Type Form
+              {{ $t('leave_type.leave_type_form') }}
             </h5>
 
             <button type="button" class="close" aria-label="Close" @click="cancelForm">
@@ -20,7 +20,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-5 col-form-label required" for="leave-type">Leave Type</label>
+                <label class="col-5 col-form-label required" for="leave-type">{{ $t('form.type') }}</label>
                 <div class="col-7">
                   <input id="leave-type" v-model="form.leave_type" class="form-control" :class="{'is-invalid': form.errors.has('leave_type')}" type="text" placeholder="Leave Type">
                   <span class="invalid-feedback">{{ form.errors.first('leave_type') }}</span>
@@ -28,7 +28,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-5 col-form-label required" for="leaves-per-day">Leaves Per Day <i class="fas fa-question-circle" data-tooltip="true" title="This is the number of leave days that can be applied by an employee per year (or the current leave period). If the leave period is less than a Year this is the number of leaves for the leave period." /></label>
+                <label class="col-5 col-form-label required" for="leaves-per-day">{{ $t('form.leaves_per_day') }} <i class="fas fa-question-circle" data-tooltip="true" title="This is the number of leave days that can be applied by an employee per year (or the current leave period). If the leave period is less than a Year this is the number of leaves for the leave period." /></label>
                 <div class="col-7">
                   <input id="leaves-per-day" v-model="form.leaves_per_day" class="form-control" :class="{'is-invalid': form.errors.has('leaves_per_day')}" type="number" min="0">
                   <span class="invalid-feedback">{{ form.errors.first('leaves_per_day') }}</span>

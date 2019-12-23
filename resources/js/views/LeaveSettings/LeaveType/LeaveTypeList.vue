@@ -9,7 +9,7 @@
     </router-link>
 
     <h4 class="card-title">
-      Leave Type
+      {{ $t('leave_type.leave_type') }}
     </h4>
 
     <hr>
@@ -46,10 +46,10 @@
           DataGrid
         },
 
-        data: () => ({
+        data: (self = this) => ({
             headers: [
-                {text: 'Leave Type', value: 'leave_type', sortable: false},
-                {text: 'Leave Per Day', value: 'leaves_per_day', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.type'), value: 'leave_type', sortable: false},
+                {text: self.$i18n.t('form.leaves_per_day'), value: 'leaves_per_day', width: '200px', sortable: false},
                 {text: '', value: 'actions', width: '40px', sortable: false},
             ]
 

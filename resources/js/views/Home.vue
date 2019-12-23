@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4 class="card-title">
-      Home
+      {{ $t('genaral.home') }}
     </h4>
     <hr>
 

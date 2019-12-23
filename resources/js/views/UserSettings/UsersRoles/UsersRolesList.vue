@@ -4,7 +4,7 @@
       <hr>
 
       <h4 class="card-title">
-        User Roles
+        {{ $t('user_list.user_roles') }}
       </h4>
 
       <hr>
@@ -38,9 +38,9 @@
           DataGrid
         },
 
-        data: () => ({
+        data: (self = this) => ({
             headers: [
-                {text: 'Role Name', value: 'users_role', sortable: false},
+                {text: self.$i18n.t('form.role_name'), value: 'users_role', sortable: false},
                 {text: '', value: 'actions', width: '40px', sortable: false},
             ]
 

@@ -9,7 +9,7 @@
     </router-link>
 
     <h4 class="card-title">
-      Employees List
+      {{ $t('employees.employees_list') }}
     </h4>
 
     <hr>
@@ -50,11 +50,11 @@
             DataGrid
         },
 
-        data: () => ({
+        data: (self = this) => ({
             headers: [
-                {text: 'Name', value: 'name', width: '200px', sortable: false},
-                {text: 'Job Title', value: 'job_title', width: '200px', sortable: false},
-                {text: 'Work Email', value: 'work_email', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.name'), value: 'name', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.job_title'), value: 'job_title', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.work_email'), value: 'work_email', width: '200px', sortable: false},
                 {text: '', value: 'actions', width: '40px', sortable: false},
             ]
         }),

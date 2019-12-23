@@ -3,7 +3,7 @@
     <hr>
 
     <h4 class="card-title">
-      User List
+      {{ $t('user_list.user_list') }}
     </h4>
 
     <hr>
@@ -17,7 +17,7 @@
 
           <div class="dropdown-menu dropdown-menu-right">
             <router-link :to="{name:'user.user-role-form', params: {id: item.id} }" class="dropdown-item">
-              <i class="fas fa-user-lock" /> Details
+              <i class="fas fa-user-lock" /> {{ $t('user_list.details') }}
             </router-link>
           </div>
         </div>
@@ -36,11 +36,11 @@
             DataGrid
         },
 
-        data: () => ({
+        data: (self = this) => ({
             headers: [
-                {text: 'Name', value: 'name', sortable: false},
-                {text: 'Email', value: 'email', width: '200px', sortable: false},
-                {text: 'Role', value: 'role_id', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.name'), value: 'name', sortable: false},
+                {text: self.$i18n.t('form.email'), value: 'email', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.role'), value: 'role_id', width: '200px', sortable: false},
                 {text: '', value: 'actions', width: '40px', sortable: false},
             ]
         }),

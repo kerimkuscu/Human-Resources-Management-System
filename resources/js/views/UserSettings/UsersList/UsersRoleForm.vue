@@ -5,7 +5,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">
-              User Details
+              {{ $t('user_list.user_details') }}
             </h5>
 
             <button type="button" class="close" aria-label="Close" @click="cancelForm">
@@ -20,21 +20,21 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-3 col-form-label" for="users-name">Name</label>
+                <label class="col-3 col-form-label" for="users-name">{{ $t('form.name') }}</label>
                 <div class="col-9">
                   <input id="users-name" v-model="name" class="form-control" type="text" disabled>
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="col-3 col-form-label" for="users-email">Email</label>
+                <label class="col-3 col-form-label" for="users-email">{{ $t('form.email') }}</label>
                 <div class="col-9">
                   <input id="users-email" v-model="email" class="form-control" type="text" disabled>
                 </div>
               </div>
 
               <div class="form-group row">
-                <label class="col-3 col-form-label required" for="type">Role</label>
+                <label class="col-3 col-form-label required" for="type">{{ $t('form.role') }}</label>
                 <div class="col-9">
                   <select id="type" v-model="form.role_id" class="form-control" :class="{'is-invalid' : form.errors.has('role_id')}">
                     <option value="null">
@@ -53,7 +53,7 @@
 
           <div class="modal-footer">
             <button class="btn btn-outline-secondary" type="button" @click="cancelForm">
-              <i class="fas fa-times" /> Close
+              <i class="fas fa-times" /> {{ $t('general.close') }}
             </button>
             <button type="submit" class="btn btn-primary">
               <i class="fas fa-save" /> {{ $t('general.save') }}

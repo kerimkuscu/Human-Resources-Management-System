@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4 class="card-title">
-      Peoples Settings
+      {{ $t('employees.page_title') }}
     </h4>
 
     <hr>
@@ -10,7 +10,7 @@
       <ul class="nav nav-tabs">
         <li class="nav-item">
           <router-link :to="{ name:'peoples.employees'}" class="nav-link">
-            Employees
+            {{ $t('employees.employees') }}
           </router-link>
         </li>
       </ul>

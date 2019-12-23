@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4 class="card-title">
-      Users Settings
+      {{ $t('user_list.page_title') }}
     </h4>
 
     <hr>
@@ -10,12 +10,12 @@
       <ul class="nav nav-tabs">
         <li class="nav-item">
           <router-link :to="{ name:'user.list'}" class="nav-link">
-            User List
+            {{ $t('user_list.user_list') }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link :to="{ name:'user.role' }" class="nav-link">
-            User Role
+            {{ $t('user_list.user_role') }}
           </router-link>
         </li>
       </ul>

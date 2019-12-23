@@ -4,7 +4,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">
-            User Details
+            {{ $t('user_list.user_details') }}
           </h5>
 
           <button type="button" class="close" aria-label="Close" @click="goBack">
@@ -21,8 +21,8 @@
             <table v-if="user" class="table">
               <thead>
                 <tr>
-                  <th>Name</th>
-                  <th>Email</th>
+                  <th>{{ $t('form.name') }}</th>
+                  <th>{{ $t('form.email') }}</th>
                 </tr>
               </thead>
 
@@ -38,7 +38,7 @@
 
         <div class="modal-footer">
           <button class="btn btn-outline-secondary" type="button" @click="goBack">
-            <i class="fas fa-times" /> Close
+            <i class="fas fa-times" /> {{ $t('general.close') }}
           </button>
         </div>
       </div>

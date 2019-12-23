@@ -94,7 +94,9 @@
               <div class="form-group row">
                 <label class="col-4 col-form-label" for="description">{{ $t('form.description') }}</label>
                 <div class="col-8">
-                  <textarea id="description" v-model="form.description" class="form-control" :class="{'is-invalid' : form.errors.has('description')}" rows="3" placeholder="Description" />
+                  <textarea id="description" v-model="form.description" class="form-control" :class="{'is-invalid' : form.errors.has('description')}" rows="3"
+                            placeholder="Description"
+                  />
                   <span class="invalid-feedback">{{ form.errors.first('description') }}</span>
                 </div>
               </div>
@@ -120,19 +122,16 @@
 <script>
     import Form from 'form-backend-validation';
     import Country from '../../../mixins/country';
+    import Options from '../../../mixins/options';
 
     export default {
 
-        mixins: [Country],
+        mixins: [Country, Options],
 
-        data: (self = this) => ({
+        data: () => ({
             loading: false,
             editingId: false,
             candidates: [],
-            genderOptions: [
-                {value: null, text: self.$i18n.t('gender_options.selected')},
-                {value: 'Male', text: self.$i18n.t('gender_options.male')},
-                {value: 'Female', text: self.$i18n.t('gender_options.female')}],
 
             form: new Form({
                 name: null,

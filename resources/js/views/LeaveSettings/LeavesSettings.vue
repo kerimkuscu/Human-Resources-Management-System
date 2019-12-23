@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4 class="card-title">
-      Leaves Settings
+      {{ $t('leave_type.page_title') }}
     </h4>
 
     <hr>
@@ -10,12 +10,12 @@
       <ul class="nav nav-tabs">
         <li class="nav-item">
           <router-link :to="{ name:'leaves.leave-type'}" class="nav-link">
-            Leave Type
+              {{ $t('leave_type.leave_type') }}
           </router-link>
         </li>
         <li class="nav-item">
           <router-link :to="{ name:'leaves.employee-list' }" class="nav-link">
-            Employee Leave List
+              {{ $t('employee_leave.employee_leave_list') }}
           </router-link>
         </li>
       </ul>
