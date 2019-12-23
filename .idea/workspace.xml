@@ -5,6 +5,37 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/en.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/lang/tr.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/tr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/ApplicantsSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/ApplicantsSettings.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesDeleteForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/ApplicantsSettings/Candidates/CandidatesList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceDeleteForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/Attendance/AttendanceList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/AttendanceSettings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/AttendanceSettings/AttendanceSettings.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/ApplicantsCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/ApplicantsCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/AttendanceCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/AttendanceCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/LeavesCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/LeavesCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/PeoplesCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/PeoplesCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UserRolesCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UserRolesCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UsersCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard/Cards/UsersCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/EmployeeLeaveList/EmployeeLeaveList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeDeleteForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/LeaveSettings/LeaveType/LeaveTypeList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesDeleteForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesListDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/PeopleSettings/Employees/EmployeesListDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersListDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersListDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersRoleForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersList/UsersRoleForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesDeleteForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesDeleteForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/UserSettings/UsersRoles/UsersRolesList.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,8 +284,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.watch" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.lint:fix" />
       </list>
     </recent_temporary>
@@ -726,30 +757,30 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1576010541434" />
-    <state x="250" y="0" key="CommitChangelistDialog2" timestamp="1576734508460">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="234" y="2" key="CommitChangelistDialog2" timestamp="1577091669244">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="234" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1576014183565" />
+    <state x="234" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1577091669244" />
     <state x="250" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1576734508460" />
-    <state width="1323" height="172" key="GridCell.Tab.0.bottom" timestamp="1576735173098">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="203" key="GridCell.Tab.0.bottom" timestamp="1577088695929">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="203" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1576013862977" />
+    <state width="1238" height="203" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1577088695929" />
     <state width="1323" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576735173098" />
-    <state width="1323" height="172" key="GridCell.Tab.0.center" timestamp="1576735173098">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="203" key="GridCell.Tab.0.center" timestamp="1577088695927">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="203" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1576013862976" />
+    <state width="1238" height="203" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1577088695927" />
     <state width="1323" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576735173098" />
-    <state width="1323" height="172" key="GridCell.Tab.0.left" timestamp="1576735173098">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="203" key="GridCell.Tab.0.left" timestamp="1577088695925">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="203" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1576013862974" />
+    <state width="1238" height="203" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1577088695925" />
     <state width="1323" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576735173098" />
-    <state width="1323" height="172" key="GridCell.Tab.0.right" timestamp="1576735173098">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1238" height="203" key="GridCell.Tab.0.right" timestamp="1577088695928">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="203" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1576013862977" />
+    <state width="1238" height="203" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1577088695928" />
     <state width="1323" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576735173098" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1576734204687">
       <screen x="0" y="0" width="1366" height="728" />
@@ -764,10 +795,14 @@
     </state>
     <state x="100" y="100" width="1080" height="600" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.800@0.0.1280.800" timestamp="1576013752177" />
     <state x="100" y="100" width="1080" height="600" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1280.777@0.23.1280.777" timestamp="1576006658738" />
-    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576013714139">
+    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577091609129">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1576013714139" />
+    <state x="298" y="22" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1577091609129" />
+    <state x="232" y="125" width="816" height="550" key="find.popup" timestamp="1577089670486">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="232" y="125" width="816" height="550" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1577089670486" />
     <state x="325" y="113" width="716" height="616" key="search.everywhere.popup" timestamp="1576733380432">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
