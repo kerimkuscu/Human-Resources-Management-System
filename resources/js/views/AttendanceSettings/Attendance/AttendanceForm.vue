@@ -5,7 +5,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">
-              Attendance Form
+              {{ $t('attendance.attendance_form') }}
             </h5>
 
             <button type="button" class="close" aria-label="Close" @click="cancelForm">
@@ -16,11 +16,11 @@
           <div class="modal-body" style="overflow: auto">
             <div>
               <div v-if="loading" class="loading">
-                Loading...
+                {{ $t('genaral.loading') }}
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label required" for="employee">Employee</label>
+                <label class="col-4 col-form-label required" for="employee">{{ $t('form.employee') }}</label>
                 <div class="col-8">
                   <select id="employee" v-model="form.employee_id" class="form-control" :class="{'is-invalid' : form.errors.has('employee_id')}">
                     <option value="null">
@@ -35,7 +35,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label required" for="time-in-date">Time In Date</label>
+                <label class="col-4 col-form-label required" for="time-in-date">{{ $t('form.time_im_date') }}</label>
                 <div class="col-8">
                   <input id="time-in-date" v-model="form.time_in_date" class="form-control" :class="{'is-invalid': form.errors.has('time_in_date')}" type="date">
                   <span class="invalid-feedback">{{ form.errors.first('time_in_date') }}</span>
@@ -43,7 +43,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label required" for="time-in-time-hour">Time In Time</label>
+                <label class="col-4 col-form-label required" for="time-in-time-hour">{{ $t('form.time_in_time') }}</label>
                 <div class="col-4">
                   <input id="time-in-time-hour" v-model="form.time_in_time_hour" class="form-control" :class="{'is-invalid': form.errors.has('time_in_time_hour')}" type="number" max="24" min="0" placeholder="Hour">
                   <span class="invalid-feedback">{{ form.errors.first('time_in_time_hour') }}</span>
@@ -55,7 +55,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label required" for="time-out-date">Time Out Date</label>
+                <label class="col-4 col-form-label required" for="time-out-date">{{ $t('form.time_out_date') }}</label>
                 <div class="col-8">
                   <input id="time-out-date" v-model="form.time_out_date" class="form-control" :class="{'is-invalid': form.errors.has('time_out_date')}" type="date">
                   <span class="invalid-feedback">{{ form.errors.first('time_out_date') }}</span>
@@ -63,7 +63,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label required" for="time-out-time-hour">Time Out Time</label>
+                <label class="col-4 col-form-label required" for="time-out-time-hour">{{ $t('form.time_out_time') }}</label>
                 <div class="col-4">
                   <input id="time-out-time-hour" v-model="form.time_out_time_hour" class="form-control" :class="{'is-invalid': form.errors.has('time_out_time_hour')}" type="number" max="24" min="0" placeholder="Hour">
                   <span class="invalid-feedback">{{ form.errors.first('time_out_time_hour') }}</span>
@@ -75,7 +75,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label" for="note">Note</label>
+                <label class="col-4 col-form-label" for="note">{{ $t('form.note') }}</label>
                 <div class="col-8">
                   <textarea id="note" v-model="form.note" class="form-control" :class="{'is-invalid' : form.errors.has('note')}" rows="3" placeholder="Note" />
                   <span class="invalid-feedback">{{ form.errors.first('note') }}</span>
@@ -87,10 +87,10 @@
           <div class="modal-footer">
             <div class="float-right">
               <button type="submit" class="btn btn-outline-secondary" @click="cancelForm">
-                <i class="fas fa-times" /> Cancel
+                <i class="fas fa-times" /> {{ $t('general.cancel') }}
               </button>
               <button type="submit" class="btn btn-primary">
-                <i class="fas fa-save" /> Save
+                <i class="fas fa-save" /> {{ $t('general.save') }}
               </button>
             </div>
           </div>

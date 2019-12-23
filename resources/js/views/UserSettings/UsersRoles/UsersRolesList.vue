@@ -18,7 +18,7 @@
 
             <div class="dropdown-menu dropdown-menu-right">
               <router-link :to="{name:'user.role-delete', params: {id: item.id} }" class="dropdown-item text-danger btn-delete">
-                <i class="fas fa-trash" /> Delete
+                <i class="fas fa-trash" /> {{ $t('general.delete') }}
               </router-link>
             </div>
           </div>

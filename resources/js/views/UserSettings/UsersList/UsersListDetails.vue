@@ -15,7 +15,7 @@
         <div class="modal-body">
           <div>
             <div v-if="loading" class="loading">
-              Loading...
+              {{ $t('genaral.loading') }}
             </div>
 
             <table v-if="user" class="table">

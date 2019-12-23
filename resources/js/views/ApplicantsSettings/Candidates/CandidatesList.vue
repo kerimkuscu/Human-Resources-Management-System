@@ -9,7 +9,7 @@
     </router-link>
 
     <h4 class="card-title">
-      Candidates List
+      {{ $t('candidates.candidate_list') }}
     </h4>
 
     <hr>
@@ -23,11 +23,11 @@
 
           <div class="dropdown-menu dropdown-menu-right">
             <router-link :to="{name:'applicants.candidates-edit', params: {id: item.id} }" class="dropdown-item">
-              <i class="fas fa-pen fa-fw" /> Edit
+              <i class="fas fa-pen fa-fw" /> {{ $t('general.edit') }}
             </router-link>
 
             <router-link :to="{name:'applicants.candidates-delete', params: {id: item.id} }" class="dropdown-item text-danger btn-delete">
-              <i class="fas fa-trash fa-fw" /> Delete
+              <i class="fas fa-trash fa-fw" /> {{ $t('general.delete') }}
             </router-link>
           </div>
         </div>
@@ -46,13 +46,13 @@
             DataGrid
         },
 
-        data: () => ({
+        data: (self = this) => ({
             headers: [
-                {text: 'Name', value: 'name', width: '200px', sortable: false},
-                {text: 'Phone Number', value: 'phone', width: '200px', sortable: false},
-                {text: 'Email', value: 'email', width: '200px', sortable: false},
-                {text: 'Job Title', value: 'job_title', width: '200px', sortable: false},
-                {text: 'Department', value: 'department', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.name'), value: 'name', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.phone'), value: 'phone', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.email'), value: 'email', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.job_title'), value: 'job_title', width: '200px', sortable: false},
+                {text: self.$i18n.t('form.department'), value: 'department', width: '200px', sortable: false},
                 {text: '', value: 'actions', width: '40px', sortable: false},
             ]
         }),

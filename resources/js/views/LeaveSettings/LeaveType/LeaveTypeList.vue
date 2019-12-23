@@ -23,11 +23,11 @@
 
           <div class="dropdown-menu dropdown-menu-right">
             <router-link :to="{name:'leaves.leave-type-edit', params: {id: item.id} }" class="dropdown-item">
-              <i class="fas fa-pen fa-fw" /> Edit
+              <i class="fas fa-pen fa-fw" /> {{ $t('general.edit') }}
             </router-link>
 
             <router-link :to="{name:'leaves.leave-type-edit', params: {id: item.id} }" class="dropdown-item text-danger btn-delete">
-              <i class="fas fa-trash" /> Delete
+              <i class="fas fa-trash" /> {{ $t('general.delete') }}
             </router-link>
           </div>
         </div>

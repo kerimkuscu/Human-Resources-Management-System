@@ -4,7 +4,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">
-            Confirm Deleting
+            {{ $t('general.confirm_deleting') }}
           </h5>
 
           <button type="button" class="close" aria-label="Close" @click="cancelForm">
@@ -14,17 +14,17 @@
 
         <div class="modal-body">
           <div>
-            <p>Are you sure you want to delete this item ?</p>
+            <p>{{ $t('general.are_you_sure_you_want_to_delete_this_item') }}</p>
           </div>
         </div>
 
         <div class="modal-footer">
           <div class="float-right">
             <button type="button" class="btn btn-outline-secondary" @click="cancelForm">
-              <i class="fas fa-times" /> Cancel
+              <i class="fas fa-times" /> {{ $t('general.cancel') }}
             </button>
             <button type="button" class="btn btn-danger" @click="deleteForm">
-              <i class="fas fa-trash" /> Delete
+              <i class="fas fa-trash" /> {{ $t('general.delete') }}
             </button>
           </div>
         </div>

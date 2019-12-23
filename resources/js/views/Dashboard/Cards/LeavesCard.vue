@@ -3,16 +3,16 @@
     <div class="card text-center card-border">
       <div class="card-body">
         <h5 class="card-title title-color">
-          <i class="fas fa-calendar-alt" /> Leaves
+          <i class="fas fa-calendar-alt" /> {{ $t('card.leavel') }}
         </h5>
         <h3 class="card-text">
-          {{ items.length }} Upcoming
+          {{ items.length }} {{ $t('card.upcoming') }}
         </h3>
       </div>
     </div>
     <div class="card-footer text-center card-border" style="border-top:0">
       <router-link :to="{ name:'leaves.leave-type'}">
-        Leave Management <i class="fas fa-arrow-circle-right" />
+          {{ $t('card.leave_management') }} <i class="fas fa-arrow-circle-right" />
       </router-link>
     </div>
   </div>

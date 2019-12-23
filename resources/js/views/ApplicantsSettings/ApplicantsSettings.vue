@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4 class="card-title">
-      Applicants Settings
+      {{ $t('applicants.page_title') }}
     </h4>
 
     <hr>
@@ -10,7 +10,7 @@
       <ul class="nav nav-tabs">
         <li class="nav-item">
           <router-link :to="{ name:'applicants.candidates-list'}" class="nav-link">
-            Candidates List
+            {{ $t('candidates.candidate_list') }}
           </router-link>
         </li>
       </ul>

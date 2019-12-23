@@ -3,16 +3,16 @@
     <div class="card text-center card-border">
       <div class="card-body">
         <h5 class="card-title title-color">
-          <i class="far fa-clock" /> Attendance
+          <i class="far fa-clock" /> {{ $t('card.attendance') }}
         </h5>
         <h3 class="card-text">
-          {{ items.length }} Entries Last Week
+          {{ items.length }} {{ $t('card.entries_last_week') }}
         </h3>
       </div>
     </div>
     <div class="card-footer text-center card-border" style="border-top:0">
       <router-link :to="{ name:'leaves.leave-type'}">
-        Monitor Attendance <i class="fas fa-arrow-circle-right" />
+          {{ $t('card.monitor_attendance') }} <i class="fas fa-arrow-circle-right" />
       </router-link>
     </div>
   </div>

@@ -23,7 +23,7 @@
 
           <div class="dropdown-menu dropdown-menu-right">
             <router-link :to="{name:'peoples.employees-edit', params: {id: item.id} }" class="dropdown-item">
-              <i class="fas fa-pen fa-fw" /> Edit
+              <i class="fas fa-pen fa-fw" /> {{ $t('general.edit') }}
             </router-link>
 
             <router-link :to="{name:'peoples.employees-show', params: {id: item.id} }" class="dropdown-item">
@@ -31,7 +31,7 @@
             </router-link>
 
             <router-link :to="{name:'peoples.employees-delete', params: {id: item.id} }" class="dropdown-item text-danger btn-delete">
-              <i class="fas fa-trash fa-fw" /> Delete
+              <i class="fas fa-trash fa-fw" /> {{ $t('general.delete') }}
             </router-link>
           </div>
         </div>

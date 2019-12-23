@@ -16,7 +16,7 @@
           <div class="modal-body">
             <div>
               <div v-if="loading" class="loading">
-                Loading...
+                {{ $t('genaral.loading') }}
               </div>
 
               <div class="form-group row">
@@ -40,10 +40,10 @@
           <div class="modal-footer">
             <div class="float-right">
               <button type="submit" class="btn btn-outline-secondary" @click="cancelForm">
-                <i class="fas fa-times" /> Cancel
+                <i class="fas fa-times" /> {{ $t('general.cancel') }}
               </button>
               <button type="submit" class="btn btn-primary">
-                <i class="fas fa-save" /> Save
+                <i class="fas fa-save" /> {{ $t('general.save') }}
               </button>
             </div>
           </div>

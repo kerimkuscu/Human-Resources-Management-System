@@ -5,7 +5,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">
-              Candidate Form
+              {{ $t('candidates.candidate_form') }}
             </h5>
 
             <button type="button" class="close" aria-label="Close" @click="cancelForm">
@@ -16,11 +16,11 @@
           <div class="modal-body">
             <div>
               <div v-if="loading" class="loading">
-                Loading...
+                {{ $t('genaral.loading') }}
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label required" for="name">Name</label>
+                <label class="col-4 col-form-label required" for="name">{{ $t('form.name') }}</label>
                 <div class="col-8">
                   <input id="name" v-model="form.name" class="form-control" :class="{'is-invalid': form.errors.has('name')}" type="text">
                   <span class="invalid-feedback">{{ form.errors.first('name') }}</span>
@@ -28,7 +28,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label" for="gender">Gender</label>
+                <label class="col-4 col-form-label" for="gender">{{ $t('form.gender') }}</label>
                 <div class="col-8">
                   <select id="gender" v-model="form.gender" class="form-control" :class="{'is-invalid': form.errors.has('gender')}">
                     <option v-for="option in genderOptions" :key="option.text" :value="option.value">
@@ -40,7 +40,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label" for="city">City</label>
+                <label class="col-4 col-form-label" for="city">{{ $t('form.city') }}</label>
                 <div class="col-8">
                   <input id="city" v-model="form.city" class="form-control" :class="{'is-invalid': form.errors.has('city')}" type="text" placeholder="City">
                   <span class="invalid-feedback">{{ form.errors.first('city') }}</span>
@@ -48,7 +48,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label" for="country">Country</label>
+                <label class="col-4 col-form-label" for="country">{{ $t('form.country') }}</label>
                 <div class="col-8">
                   <select id="country" v-model="form.country" class="form-control" :class="{'is-invalid': form.errors.has('country')}">
                     <option v-for="option in country" :key="option.text" :value="option.value">
@@ -60,7 +60,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label required" for="phone">Phone</label>
+                <label class="col-4 col-form-label required" for="phone">{{ $t('form.phone') }}</label>
                 <div class="col-8">
                   <input id="phone" v-model="form.phone" class="form-control" :class="{'is-invalid': form.errors.has('phone')}" type="phone" placeholder="Phone Number">
                   <span class="invalid-feedback">{{ form.errors.first('phone') }}</span>
@@ -68,7 +68,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label" for="email">Email</label>
+                <label class="col-4 col-form-label" for="email">{{ $t('form.email') }}</label>
                 <div class="col-8">
                   <input id="email" v-model="form.email" class="form-control" :class="{'is-invalid': form.errors.has('email')}" type="email" placeholder="Email Address">
                   <span class="invalid-feedback">{{ form.errors.first('email') }}</span>
@@ -76,7 +76,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label required" for="job-title">Job Title</label>
+                <label class="col-4 col-form-label required" for="job-title">{{ $t('form.job_title') }}</label>
                 <div class="col-8">
                   <input id="job-title" v-model="form.job_title" class="form-control" :class="{'is-invalid': form.errors.has('job_title')}" type="text" placeholder="Job Title">
                   <span class="invalid-feedback">{{ form.errors.first('job_title') }}</span>
@@ -84,7 +84,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label required" for="department">Department</label>
+                <label class="col-4 col-form-label required" for="department">{{ $t('form.department') }}</label>
                 <div class="col-8">
                   <input id="department" v-model="form.department" class="form-control" :class="{'is-invalid': form.errors.has('department')}" type="text" placeholder="Department">
                   <span class="invalid-feedback">{{ form.errors.first('department') }}</span>
@@ -92,7 +92,7 @@
               </div>
 
               <div class="form-group row">
-                <label class="col-4 col-form-label" for="description">Description</label>
+                <label class="col-4 col-form-label" for="description">{{ $t('form.description') }}</label>
                 <div class="col-8">
                   <textarea id="description" v-model="form.description" class="form-control" :class="{'is-invalid' : form.errors.has('description')}" rows="3" placeholder="Description" />
                   <span class="invalid-feedback">{{ form.errors.first('description') }}</span>
@@ -104,10 +104,10 @@
           <div class="modal-footer">
             <div class="float-right">
               <button type="submit" class="btn btn-outline-secondary" @click="cancelForm">
-                <i class="fas fa-times" /> Cancel
+                <i class="fas fa-times" /> {{ $t('general.cancel') }}
               </button>
               <button type="submit" class="btn btn-primary">
-                <i class="fas fa-save" /> Save
+                <i class="fas fa-save" /> {{ $t('general.save') }}
               </button>
             </div>
           </div>
@@ -125,14 +125,14 @@
 
         mixins: [Country],
 
-        data: () => ({
+        data: (self = this) => ({
             loading: false,
             editingId: false,
             candidates: [],
             genderOptions: [
-                {value: null, text: '(Selected Gender)'},
-                {value: 'Male', text: 'Male'},
-                {value: 'Female', text: 'Female'}],
+                {value: null, text: self.$i18n.t('gender_options.selected')},
+                {value: 'Male', text: self.$i18n.t('gender_options.male')},
+                {value: 'Female', text: self.$i18n.t('gender_options.female')}],
 
             form: new Form({
                 name: null,

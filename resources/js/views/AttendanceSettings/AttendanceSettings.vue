@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4 class="card-title">
-      Attendance Settings
+      {{ $t('attendance.page_title') }}
     </h4>
 
     <hr>
@@ -10,7 +10,7 @@
       <ul class="nav nav-tabs">
         <li class="nav-item">
           <router-link :to="{ name:'attendance.attendance-list'}" class="nav-link">
-            Attendance List
+            {{ $t('attendance.attendance_list') }}
           </router-link>
         </li>
       </ul>

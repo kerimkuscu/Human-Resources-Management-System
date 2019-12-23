@@ -3,16 +3,16 @@
     <div class="card text-center card-border">
       <div class="card-body">
         <h5 class="card-title title-color">
-          <i class="fas fa-users" /> People
+          <i class="fas fa-users" /> {{ $t('card.people') }}
         </h5>
         <h3 class="card-text">
-          {{ items.length }} Employees
+          {{ items.length }} {{ $t('card.employees') }}
         </h3>
       </div>
     </div>
     <div class="card-footer text-center card-border" style="border-top:0">
       <router-link :to="{ name:'peoples.employees'}">
-        Manage Employees <i class="fas fa-arrow-circle-right" />
+          {{ $t('card.manage_employees') }} <i class="fas fa-arrow-circle-right" />
       </router-link>
     </div>
   </div>

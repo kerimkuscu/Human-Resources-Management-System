@@ -3,16 +3,16 @@
     <div class="card text-center card-border">
       <div class="card-body">
         <h5 class="card-title title-color">
-          <i class="fas fa-lock" /> User Roles
+          <i class="fas fa-lock" /> {{ $t('card.user_roles') }}
         </h5>
         <h3 class="card-text">
-          {{ items.length }} Roles
+          {{ items.length }} {{ $t('card.roles') }}
         </h3>
       </div>
     </div>
     <div class="card-footer text-center card-border" style="border-top:0">
       <router-link :to="{ name:'user.role'}">
-        Manage Roles <i class="fas fa-arrow-circle-right" />
+          {{ $t('card.manage_roles') }} <i class="fas fa-arrow-circle-right" />
       </router-link>
     </div>
   </div>

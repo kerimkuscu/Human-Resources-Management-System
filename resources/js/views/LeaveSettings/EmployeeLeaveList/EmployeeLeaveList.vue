@@ -23,7 +23,7 @@
 
           <div class="dropdown-menu dropdown-menu-right">
             <router-link :to="{name:'leaves.edit', params: {id: item.id} }" class="dropdown-item">
-              <i class="fas fa-pen fa-fw" /> Edit
+              <i class="fas fa-pen fa-fw" /> {{ $t('general.edit') }}
             </router-link>
           </div>
         </div>

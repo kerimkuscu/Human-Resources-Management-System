@@ -34,7 +34,6 @@ const i18n = new VueI18n({
     messages: translationMessages,
 });
 
-
 import VueAuth from '@websanova/vue-auth';
 
 Vue.axios = window.axios;
