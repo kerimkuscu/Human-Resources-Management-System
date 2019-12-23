@@ -1,11 +1,13 @@
 module.exports = {
     general: {
         page_title: 'HRMS',
+        home: 'Anasayfa',
         tr: 'Türkçe',
         en: 'English',
         page_not_found: 'Sayfa Bulunamadı',
         login: 'Giriş',
         logout: 'Çıkış',
+        close: 'Kapat',
         save: 'Kaydet',
         cancel: 'İptal',
         edit: 'Düzenle',
@@ -51,7 +53,29 @@ module.exports = {
         time_out_time: 'Zaman Aşım Zamanı',
         note: 'Not',
         time_in: 'Giriş Zamanı',
-        time_out: 'Çıkış Zamanı'
+        time_out: 'Çıkış Zamanı',
+        type: 'İzin Tipi',
+        start_date: 'Başlangıç Tarihi',
+        end_date: 'Bitiş Tarihi',
+        leaves_per_day: 'Günlük İzin',
+        name_surname: 'İsim Soyisim',
+        nationality: 'Milliyet',
+        date_of_birth: 'Doğum Tarihi',
+        marital_status: 'Medeni Durum',
+        driver_license: 'Ehliyet',
+        employment_status: 'Çalışma Durumu',
+        address: 'Adres',
+        province: 'Bölge',
+        postal_code: 'Posta Kodu',
+        home_phone: 'Ev Numarası',
+        mobile_phone: 'Mobil Numara',
+        work_phone: 'İş Numarası',
+        emergency_contact: 'Acil İletişim',
+        work_email: 'İş Email',
+        private_email: 'Özel Email',
+        joined_date: 'Katılım Tarihi',
+        role: 'Rol',
+        role_name: 'Rol Adı',
     },
 
     datagrid: {
@@ -64,7 +88,7 @@ module.exports = {
         candidates: 'Adaylar',
         manage_candidates: 'Adayları Yönet',
         attendance: 'Katılım',
-        entries_last_week: 'Geçen Hafta Girişler',
+        entries_last_week: 'Geçmiş Girişler',
         monitor_attendance: 'Katılımı İzleyin',
         leaves: 'İzinli',
         upcoming: 'Yaklaşan',
@@ -80,9 +104,34 @@ module.exports = {
     },
 
     gender_options: {
-        selected: '(Cinsiyet Seçiniz)',
+        selected: '(Cinsiyetinizi Seçiniz)',
         male: 'Erkek',
         female: 'Kadın'
+    },
+
+    marital_status_options: {
+        selected: '(Medeni Durumunuzu Seçiniz)',
+        married: 'Evli',
+        single: 'Bekar',
+        divorced: 'Boşanmış',
+        widowed: 'Dul',
+        other: 'Diğer',
+    },
+
+    driver_license_options: {
+        selected: '(Sürücü Belgenizi Seçiniz)',
+        yes: 'Var',
+        no: 'Yok',
+    },
+
+    employment_status_options: {
+        selected: '(Çalışma Şeklinizi Seçiniz)',
+        full_time_contract: 'Tam Zamanlı Sözleşme',
+        full_time_internship: 'Tam Zamanlı Staj',
+        full_time_permanent: 'Tam Zamanlı Kalıcı',
+        part_time_contract: 'Yarı Zamanlı Sözleşme',
+        part_time_internship: 'Yarı Zamanlı Staj',
+        part_time_permanent: 'Yarı Zamanlı Kalıcı',
     },
 
     applicants: {
@@ -99,4 +148,31 @@ module.exports = {
         attendance_form: 'Katılım Formu',
         attendance_list: 'Katılım Listesi'
     },
+
+    employee_leave: {
+        employee_leave_form: 'Çalışan İzin Formu',
+        employee_leave_list: 'Çalışan İzin Listesi',
+    },
+
+    leave_type: {
+        page_title: 'İzin Ayarları',
+        leave_type: 'İzin Tipi',
+        leave_type_form: 'İzin Tipi Formu',
+    },
+
+    employees: {
+        employees: 'Çalışanlar',
+        employees_form: 'Çalışan Formu',
+        employees_list: 'Çalışan Listesi',
+        user_details: 'Kullanıcı Detayları',
+        page_title: 'Kullanıcı Ayarları',
+    },
+
+    user_list: {
+        user_list: 'Kullanıcı Listesi',
+        details: 'Detaylar',
+        user_details: 'Kullanıcı Detayları',
+        user_roles: 'Kullanıcı Rolleri',
+        page_title: 'Kullanıcı Ayarları',
+    }
 };
